@@ -1,0 +1,13 @@
+/index.php (Status: 200)
+/themes (Status: 301) => do check
+/public (Status: 301)
+/admin (Status: 301)
+/plugins (Status: 403)
+/db (Status: 403)
+/cache (Status: 403)
+/inc (Status: 403)
+/LICENSE (Status: 200)
+/var (Status: 403)
+/CHANGELOG (Status: 200) => Must check
+/CREDITS (Status: 200)
+/locales (Status: 301)

