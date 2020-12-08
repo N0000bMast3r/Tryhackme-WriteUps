@@ -1,0 +1,24 @@
+- Nikto v2.1.5
+---------------------------------------------------------------------------
++ Target IP:          10.10.94.190
++ Target Hostname:    10.10.94.190
++ Target Port:        80
++ Start Time:         2020-11-03 13:52:19 (GMT5.5)
+---------------------------------------------------------------------------
++ Server: Apache/2.4.7 (Ubuntu)
++ Server leaks inodes via ETags, header found with file /, fields: 0xbd1 0x5ae57bb9a1192 
++ The anti-clickjacking X-Frame-Options header is not present.
++ "robots.txt" retrieved but it does not contain any 'disallow' entries (which is odd).
++ Allowed HTTP Methods: GET, HEAD, POST, OPTIONS 
++ OSVDB-3092: /admin/: This might be interesting...
++ OSVDB-3092: /backup/: This might be interesting...
++ OSVDB-3268: /img/: Directory indexing found.
++ OSVDB-3092: /img/: This might be interesting...
++ OSVDB-3092: /secret/: This might be interesting...
++ OSVDB-3092: /cgi-bin/test.cgi: This might be interesting...
++ OSVDB-3233: /icons/README: Apache default file found.
++ /admin/index.html: Admin login page/section found.
++ 6544 items checked: 8 error(s) and 12 item(s) reported on remote host
++ End Time:           2020-11-03 14:26:24 (GMT5.5) (2045 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
