@@ -1,0 +1,63 @@
+# Nmap 7.80 scan initiated Thu Oct  8 18:42:58 2020 as: nmap -A -sC -sV -T4 -Pn -vv -p- -oN nmap/initial 10.10.148.121
+Increasing send delay for 10.10.148.121 from 0 to 5 due to 883 out of 2206 dropped probes since last increase.
+Increasing send delay for 10.10.148.121 from 5 to 10 due to 8918 out of 22294 dropped probes since last increase.
+Nmap scan report for 10.10.148.121
+Host is up, received user-set (0.20s latency).
+Scanned at 2020-10-08 18:42:59 IST for 1071s
+Not shown: 65531 closed ports
+Reason: 65531 resets
+PORT      STATE SERVICE REASON         VERSION
+22/tcp    open  ssh     syn-ack ttl 62 OpenSSH 7.9p1 Debian 10+deb10u2 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 55:17:c1:d4:97:ba:8d:82:b9:60:81:39:e4:aa:1e:e8 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCqaXDoAAvwHBvNhrHfjZaxCgLbQAImpPRiPxxetRqPQYVPusw2lV6HPV1j2ymgdsaA7bNP8jroSq54c2mVLyYVYwbdUscYuLMj/RflPxHx/18J2LF0FnhyRsX8iszNqQ+BqDQ74O2hyN/Cqbwy8pm6i75QRIBlyFRzFwihqSqCDp9OO75Y9wr2+iQX8yzL7CJjnS5w+vEdnGsf88Mzs/NZxB2ZHoDf3lw8uMo0iHg23GfPntVilr01AP6szDOHIMlMMk6pMqkU7MrXvJz+Ij+MP8b1+5T0uBB4MgtrUyQLXyRZGX4M30YGdR+jnfAjIKEjAEqrSyotr+l+hLEgUNHT
+|   256 8d:f5:4b:ab:23:ed:a3:c0:e9:ca:90:e9:80:be:14:44 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBCjzHLHSekU/G6uRjXbHIsERaRTzJ+a1lVwvIXkLoaqhlHIM616JxWkaUD0CxzLjrnSjxKsjI1YXcrHYFNd2rys=
+|   256 3e:ae:91:86:81:12:04:e4:70:90:b1:40:ef:b7:f1:b6 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHR259lx5M/24wvX1dnbS1ehHzmK4sr1B7aZqsfIesOB
+80/tcp    open  http    syn-ack ttl 62 Apache httpd 2.4.43 ((Unix))
+| http-methods: 
+|   Supported Methods: GET POST OPTIONS HEAD TRACE
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.4.43 (Unix)
+|_http-title: Site doesn't have a title (text/html).
+1337/tcp  open  http    syn-ack ttl 63 nginx 1.14.0 (Ubuntu)
+| http-methods: 
+|_  Supported Methods: GET OPTIONS HEAD
+|_http-server-header: nginx/1.14.0 (Ubuntu)
+|_http-title: Help Alex!
+65499/tcp open  ssh     syn-ack ttl 63 OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 b9:b6:aa:93:8d:aa:b7:f3:af:71:9d:7f:c5:83:1d:63 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDIefQd78mUpATjIg691Z6jdxWq6XjvivNMdaV3PrE70ee0YPwQxQwNYswl7v1k+r9c1PENL8ol4wokp/nk2omQP3Iwua/STVYo6Xdh9DIgC7x68FWaJn/t24zhKKZ/v8vHIIulI5sdHTQzapVgIqhZFHW1JhvmdObuKGccGRQddPElr2pwguwSdNOzW21h8LPMr7wEiafbaLhM09fEN0UUWwDF4RfFo5GoW7Mhz4Y64PxlH6CbrAS/z0sPe7F3nx2/YNdvM83VNNtGCSOnSbmt0AbgZHh/Zv05RM8p1QR4EoMSi4ogQW6VH78GNRROG2V+P56u1VQ/Je6CXLMWML69
+|   256 64:98:14:38:ff:38:05:7e:25:ae:5d:33:2d:b6:78:f3 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEFh4xjNznqUWlomutlVT1AIG/RmduH5bjmze2euH63jQRqYS1h8Y4Negc4cw4CXm3HpkxtYctO4VAaGwHCGNWk=
+|   256 ef:2e:60:3a:de:ea:2b:25:7d:26:da:b5:6b:5b:c4:3a (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIC/31imc1cKaUsvUlgomJ1RGFpLTNcb1YDT+TDXJ03R5
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=10/8%OT=22%CT=1%CU=33352%PV=Y%DS=2%DC=T%G=Y%TM=5F7F148
+OS:A%P=x86_64-pc-linux-gnu)SEQ(SP=107%GCD=1%ISR=10D%TI=Z%CI=Z%II=I%TS=A)OPS
+OS:(O1=M508ST11NW6%O2=M508ST11NW6%O3=M508NNT11NW6%O4=M508ST11NW6%O5=M508ST1
+OS:1NW6%O6=M508ST11)WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)ECN
+OS:(R=Y%DF=Y%T=3F%W=FAF0%O=M508NNSNW6%CC=Y%Q=)T1(R=Y%DF=Y%T=3F%S=O%A=S+%F=A
+OS:S%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=3F%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R
+OS:=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F
+OS:=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%
+OS:T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD
+OS:=S)
+
+Uptime guess: 2.379 days (since Tue Oct  6 09:55:34 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=263 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 587/tcp)
+HOP RTT       ADDRESS
+1   246.82 ms 10.8.0.1
+2   246.79 ms 10.10.148.121
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Oct  8 19:00:50 2020 -- 1 IP address (1 host up) scanned in 1071.63 seconds
