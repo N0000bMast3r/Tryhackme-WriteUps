@@ -1,0 +1,50 @@
+# Nmap 7.80 scan initiated Tue Oct  6 11:44:45 2020 as: nmap -A -sC -sV -T4 -Pn -vv -p- -oN nmap/initial 10.10.187.124
+Increasing send delay for 10.10.187.124 from 0 to 5 due to 1251 out of 3126 dropped probes since last increase.
+Nmap scan report for 10.10.187.124
+Host is up, received user-set (0.18s latency).
+Scanned at 2020-10-06 11:44:45 IST for 736s
+Not shown: 65533 closed ports
+Reason: 65533 resets
+PORT   STATE SERVICE REASON         VERSION
+22/tcp open  ssh     syn-ack ttl 63 OpenSSH 7.2p2 Ubuntu 4ubuntu2.8 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 e8:da:b7:0d:a7:a1:cc:8e:ac:4b:19:6d:25:2b:3e:77 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDHy6u+PbjzbKZyYYJwrdwKQPHa7m8AgiJwNQSx4Tp1IOOf2y8QZTm3/iln/TJsLNdRuOORhMymecTm0H8X+Oqq481qx5hcLb4ax88tzD/yHMYIWpgMVphjZRzvBpuYmL6tS25ltX5C8VUyIfAAp5UfmwTJTpQc6yUsf/SzA1JfHRMKYrKarm+HyiTA7Md5en7DkYf/Cc3D2RTvgmzyUEES1sWXIKlqG+Hw5Q3LBTf+x3Klv4j/nTjRnQ11uGXQUV+bf/hctQ+pd5lcOACdyvW1XDOoKVVFy794JUBZIE8KFJlDF9kDDk+/9KcXPFmwHRc7EhcvoOXI0IgdY9hHbA5v
+|   256 c1:0c:5a:db:6c:d6:a3:15:96:85:21:e9:48:65:28:42 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNClIhCJbrZ4E0DajP2/THDkSRCFIIz+E4n0lwO2uwYKXLH+ZkmJfWPIS0G1imPiAl86M4waW46uhq+zd2zf7nY=
+|   256 0f:1a:6a:d1:bb:cb:a6:3e:bd:8f:99:8d:da:2f:30:86 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPhnACR59xmsr8aznDId/sXX28PkUm6kKDeoNMHsgY3O
+80/tcp open  http    syn-ack ttl 63 Apache httpd 2.4.18 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+| http-robots.txt: 1 disallowed entry 
+|_/StuxCTF/
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: Default Page
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=10/6%OT=22%CT=1%CU=36493%PV=Y%DS=2%DC=T%G=Y%TM=5F7C0E3
+OS:5%P=x86_64-pc-linux-gnu)SEQ(SP=106%GCD=1%ISR=10A%TI=Z%CI=I%II=I%TS=8)OPS
+OS:(O1=M508ST11NW6%O2=M508ST11NW6%O3=M508NNT11NW6%O4=M508ST11NW6%O5=M508ST1
+OS:1NW6%O6=M508ST11)WIN(W1=68DF%W2=68DF%W3=68DF%W4=68DF%W5=68DF%W6=68DF)ECN
+OS:(R=Y%DF=Y%T=40%W=6903%O=M508NNSNW6%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=A
+OS:S%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R
+OS:=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F
+OS:=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%
+OS:T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD
+OS:=S)
+
+Uptime guess: 0.007 days (since Tue Oct  6 11:47:13 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=262 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 8888/tcp)
+HOP RTT       ADDRESS
+1   194.41 ms 10.8.0.1
+2   194.38 ms 10.10.187.124
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Oct  6 11:57:01 2020 -- 1 IP address (1 host up) scanned in 735.88 seconds
