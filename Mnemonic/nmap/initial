@@ -1,0 +1,75 @@
+# Nmap 7.80 scan initiated Wed Nov  4 12:46:26 2020 as: nmap -A -sC -sV -T4 -Pn -vv -p- -oN nmap/initial 10.10.29.204
+Increasing send delay for 10.10.29.204 from 0 to 5 due to 532 out of 1329 dropped probes since last increase.
+Warning: 10.10.29.204 giving up on port because retransmission cap hit (6).
+adjust_timeouts2: packet supposedly had rtt of -357646 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -357646 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1298764 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1298764 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1653925 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1653925 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -426690 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -426690 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -162918 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -162918 microseconds.  Ignoring time.
+Nmap scan report for 10.10.29.204
+Host is up, received user-set (0.18s latency).
+Scanned at 2020-11-04 12:46:28 IST for 1129s
+Not shown: 65518 closed ports
+Reason: 65518 resets
+PORT      STATE    SERVICE REASON         VERSION
+21/tcp    open     ftp     syn-ack ttl 63 vsftpd 3.0.3
+80/tcp    open     http    syn-ack ttl 63 Apache httpd 2.4.29 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: OPTIONS HEAD GET POST
+| http-robots.txt: 1 disallowed entry 
+|_/webmasters/*
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+|_http-title: Site doesn't have a title (text/html).
+94/tcp    filtered objcall no-response
+1337/tcp  open     ssh     syn-ack ttl 63 OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 e0:42:c0:a5:7d:42:6f:00:22:f8:c7:54:aa:35:b9:dc (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC+cUIYV9ABbcQFihgqbuJQcxu2FBvx0gwPk5Hn+Eu05zOEpZRYWLq2CRm3++53Ty0R7WgRwayrTTOVt6V7yEkCoElcAycgse/vY+U4bWr4xFX9HMNElYH1UztZnV12il/ep2wVd5nn//z4fOllUZJlGHm3m5zWF/k5yIh+8x7T7tfYNsoJdjUqQvB7IrcKidYxg/hPDWoZ/C+KMXij1n3YXVoDhQwwR66eUF1le90NybORg5ogCfBLSGJQhZhALBLLmxAVOSc4e+nhT/wkhTkHKGzUzW6PzA7fTN3Pgt81+m9vaxVm/j7bXG3RZSzmKlhrmdjEHFUkLmz6bjYu3201
+|   256 23:eb:a9:9b:45:26:9c:a2:13:ab:c1:ce:07:2b:98:e0 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOJp4tEjJbtHZZtdwGUu6frTQk1CzigA1PII09LP2Edpj6DX8BpTwWQ0XLNSx5bPKr5sLO7Hn6fM6f7yOy8SNHU=
+|   256 35:8f:cb:e2:0d:11:2c:0b:63:f2:bc:a0:34:f3:dc:49 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIiax5oqQ7hT7CgO0CC7FlvGf3By7QkUDcECjpc9oV9k
+16538/tcp filtered unknown no-response
+16904/tcp filtered unknown no-response
+18702/tcp filtered unknown no-response
+19733/tcp filtered unknown no-response
+26823/tcp filtered unknown no-response
+29292/tcp filtered unknown no-response
+30841/tcp filtered unknown no-response
+35841/tcp filtered unknown no-response
+44153/tcp filtered unknown no-response
+46286/tcp filtered unknown no-response
+46912/tcp filtered unknown no-response
+50878/tcp filtered unknown no-response
+50967/tcp filtered unknown no-response
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=11/4%OT=21%CT=1%CU=42082%PV=Y%DS=2%DC=T%G=Y%TM=5FA259B
+OS:5%P=x86_64-pc-linux-gnu)SEQ(SP=FD%GCD=1%ISR=102%TI=Z%CI=Z%TS=A)OPS(O1=M5
+OS:08ST11NW6%O2=M508ST11NW6%O3=M508NNT11NW6%O4=M508ST11NW6%O5=M508ST11NW6%O
+OS:6=M508ST11)WIN(W1=F4B3%W2=F4B3%W3=F4B3%W4=F4B3%W5=F4B3%W6=F4B3)ECN(R=Y%D
+OS:F=Y%T=40%W=F507%O=M508NNSNW6%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0
+OS:%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=
+OS:Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%
+OS:RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%I
+OS:PL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 42.003 days (since Wed Sep 23 13:01:18 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=253 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 8080/tcp)
+HOP RTT       ADDRESS
+1   172.35 ms 10.8.0.1
+2   176.95 ms 10.10.29.204
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov  4 13:05:17 2020 -- 1 IP address (1 host up) scanned in 1131.52 seconds
