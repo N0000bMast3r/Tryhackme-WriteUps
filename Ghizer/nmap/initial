@@ -1,0 +1,140 @@
+# Nmap 7.80 scan initiated Mon Oct  5 10:44:16 2020 as: nmap -A -sC -sV -T4 -Pn -vv -p- -oN nmap/initial 10.10.33.183
+Increasing send delay for 10.10.33.183 from 0 to 5 due to 1210 out of 3024 dropped probes since last increase.
+adjust_timeouts2: packet supposedly had rtt of -255268 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -255268 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -260509 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -260509 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -192979 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -192979 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -188854 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -188854 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -354130 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -354130 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1488478 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1488478 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -3079472 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -3079472 microseconds.  Ignoring time.
+Nmap scan report for 10.10.33.183
+Host is up, received user-set (0.19s latency).
+Scanned at 2020-10-05 10:44:18 IST for 1110s
+Not shown: 65529 closed ports
+Reason: 65529 resets
+PORT      STATE SERVICE    REASON         VERSION
+21/tcp    open  ftp?       syn-ack ttl 63
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, FourOhFourRequest, GenericLines, GetRequest, HTTPOptions, Help, RTSPRequest, X11Probe: 
+|     220 Welcome to Anonymous FTP server (vsFTPd 3.0.3)
+|     Please login with USER and PASS.
+|   Kerberos, NULL, RPCCheck, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|_    220 Welcome to Anonymous FTP server (vsFTPd 3.0.3)
+80/tcp    open  http       syn-ack ttl 63 Apache httpd 2.4.18 ((Ubuntu))
+|_http-favicon: Unknown favicon MD5: B55AD3F0C0A029568074402CE92ACA23
+|_http-generator: LimeSurvey http://www.limesurvey.org
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title:         LimeSurvey    
+443/tcp   open  ssl/http   syn-ack ttl 63 Apache httpd 2.4.18 ((Ubuntu))
+|_http-generator: WordPress 5.4.2
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: Ghizer &#8211; Just another WordPress site
+| ssl-cert: Subject: commonName=ubuntu
+| Issuer: commonName=ubuntu
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2020-07-23T17:27:31
+| Not valid after:  2030-07-21T17:27:31
+| MD5:   afb1 a2b9 1183 2e49 f707 9d1a 7198 9ca3
+| SHA-1: 37f1 945f 6bc4 3fad 3f0f ca8d 3788 2c17 cc25 0792
+| -----BEGIN CERTIFICATE-----
+| MIICsjCCAZqgAwIBAgIJAIIhLFTsAdpUMA0GCSqGSIb3DQEBCwUAMBExDzANBgNV
+| BAMMBnVidW50dTAeFw0yMDA3MjMxNzI3MzFaFw0zMDA3MjExNzI3MzFaMBExDzAN
+| BgNVBAMMBnVidW50dTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALm4
+| +BEIDO1MIeQZQkUZfeEqegkSYi8IGF2zvpL2zpUOCjcpm9pFZwj/ZT8g/nbdhVpX
+| Q0z3eWzFKRRZdthTOfCtNkZjQhJlpR+Fvc7QDUHSG+ugZL0nIuQMKaniom6OVuQg
+| 3nyxPehC9eYOjovV6m3TOWVHRYMRpf54RHHwwvpHwHkJAEcg7oHwBgP/JeW3h20r
+| G/Ri8FpPZs49xYArZ15te9ofw0TUigqx03RguwKLYr+/i7+UFwmzU93+ylz/PE16
+| HVfEBAFGIY52wWkc5Pt3+B+T5HZqVLqAW8LNcxSuugiMkgV1r4QQlBgNpc026aZR
+| EG6sF9C57EOQgyBVihECAwEAAaMNMAswCQYDVR0TBAIwADANBgkqhkiG9w0BAQsF
+| AAOCAQEAXYtbViAQzTFPjlPzwItXfMsyYYkH9guFsI9l0A6/6xa6CCwklJAF1vjz
+| tpHg338NRn4CXobk9Y6aopmUsNhFwlryS5YwPQ1s5ml6GHaDQ7ijG52J4Uj1J4o5
+| nRlDgqXi8EM/Dl5cgwHBnQ3k/u3uoPp/H0jIfXK/jskVurNb/sT6Raj5TEgcgMMm
+| 8Hzj0jqSROhDZFtU93z8OCZWBaO8u+wVj0xtdHpg+X8UQalIrASlsSNn1i50lU2p
+| 0C+eASFiDrOue7gzDDO4pdYrxmG5MiRNrfKQPLv3IvT0gEgCgkulRLo//CeY1tQ9
+| 7KFSteW6LSwpqHdP08faw+/nJnfnXQ==
+|_-----END CERTIFICATE-----
+|_ssl-date: TLS randomness does not represent time
+| tls-alpn: 
+|_  http/1.1
+18002/tcp open  java-rmi   syn-ack ttl 63 Java RMI
+| rmi-dumpregistry: 
+|   jmxrmi
+|     javax.management.remote.rmi.RMIServerImpl_Stub
+|     @127.0.1.1:40657
+|     extends
+|       java.rmi.server.RemoteStub
+|       extends
+|_        java.rmi.server.RemoteObject
+37555/tcp open  tcpwrapped syn-ack ttl 63
+40657/tcp open  java-rmi   syn-ack ttl 63 Java RMI
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port21-TCP:V=7.80%I=7%D=10/5%Time=5F7AAF3B%P=x86_64-pc-linux-gnu%r(NULL
+SF:,33,"220\x20Welcome\x20to\x20Anonymous\x20FTP\x20server\x20\(vsFTPd\x20
+SF:3\.0\.3\)\n")%r(GenericLines,58,"220\x20Welcome\x20to\x20Anonymous\x20F
+SF:TP\x20server\x20\(vsFTPd\x203\.0\.3\)\n530\x20Please\x20login\x20with\x
+SF:20USER\x20and\x20PASS\.\n")%r(Help,58,"220\x20Welcome\x20to\x20Anonymou
+SF:s\x20FTP\x20server\x20\(vsFTPd\x203\.0\.3\)\n530\x20Please\x20login\x20
+SF:with\x20USER\x20and\x20PASS\.\n")%r(GetRequest,58,"220\x20Welcome\x20to
+SF:\x20Anonymous\x20FTP\x20server\x20\(vsFTPd\x203\.0\.3\)\n530\x20Please\
+SF:x20login\x20with\x20USER\x20and\x20PASS\.\n")%r(HTTPOptions,58,"220\x20
+SF:Welcome\x20to\x20Anonymous\x20FTP\x20server\x20\(vsFTPd\x203\.0\.3\)\n5
+SF:30\x20Please\x20login\x20with\x20USER\x20and\x20PASS\.\n")%r(RTSPReques
+SF:t,58,"220\x20Welcome\x20to\x20Anonymous\x20FTP\x20server\x20\(vsFTPd\x2
+SF:03\.0\.3\)\n530\x20Please\x20login\x20with\x20USER\x20and\x20PASS\.\n")
+SF:%r(RPCCheck,33,"220\x20Welcome\x20to\x20Anonymous\x20FTP\x20server\x20\
+SF:(vsFTPd\x203\.0\.3\)\n")%r(DNSVersionBindReqTCP,58,"220\x20Welcome\x20t
+SF:o\x20Anonymous\x20FTP\x20server\x20\(vsFTPd\x203\.0\.3\)\n530\x20Please
+SF:\x20login\x20with\x20USER\x20and\x20PASS\.\n")%r(DNSStatusRequestTCP,58
+SF:,"220\x20Welcome\x20to\x20Anonymous\x20FTP\x20server\x20\(vsFTPd\x203\.
+SF:0\.3\)\n530\x20Please\x20login\x20with\x20USER\x20and\x20PASS\.\n")%r(S
+SF:SLSessionReq,33,"220\x20Welcome\x20to\x20Anonymous\x20FTP\x20server\x20
+SF:\(vsFTPd\x203\.0\.3\)\n")%r(TerminalServerCookie,33,"220\x20Welcome\x20
+SF:to\x20Anonymous\x20FTP\x20server\x20\(vsFTPd\x203\.0\.3\)\n")%r(TLSSess
+SF:ionReq,33,"220\x20Welcome\x20to\x20Anonymous\x20FTP\x20server\x20\(vsFT
+SF:Pd\x203\.0\.3\)\n")%r(Kerberos,33,"220\x20Welcome\x20to\x20Anonymous\x2
+SF:0FTP\x20server\x20\(vsFTPd\x203\.0\.3\)\n")%r(SMBProgNeg,33,"220\x20Wel
+SF:come\x20to\x20Anonymous\x20FTP\x20server\x20\(vsFTPd\x203\.0\.3\)\n")%r
+SF:(X11Probe,58,"220\x20Welcome\x20to\x20Anonymous\x20FTP\x20server\x20\(v
+SF:sFTPd\x203\.0\.3\)\n530\x20Please\x20login\x20with\x20USER\x20and\x20PA
+SF:SS\.\n")%r(FourOhFourRequest,58,"220\x20Welcome\x20to\x20Anonymous\x20F
+SF:TP\x20server\x20\(vsFTPd\x203\.0\.3\)\n530\x20Please\x20login\x20with\x
+SF:20USER\x20and\x20PASS\.\n");
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=10/5%OT=21%CT=1%CU=30137%PV=Y%DS=2%DC=T%G=Y%TM=5F7AB00
+OS:0%P=x86_64-pc-linux-gnu)SEQ(SP=103%GCD=1%ISR=109%TI=Z%CI=Z%II=I%TS=A)SEQ
+OS:(SP=103%GCD=1%ISR=109%TI=Z%CI=Z%TS=A)OPS(O1=M508ST11NW7%O2=M508ST11NW7%O
+OS:3=M508NNT11NW7%O4=M508ST11NW7%O5=M508ST11NW7%O6=M508ST11)WIN(W1=F4B3%W2=
+OS:F4B3%W3=F4B3%W4=F4B3%W5=F4B3%W6=F4B3)ECN(R=Y%DF=Y%T=40%W=F507%O=M508NNSN
+OS:W7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%D
+OS:F=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O
+OS:=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W
+OS:=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%R
+OS:IPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 43.249 days (since Sun Aug 23 05:03:41 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=260 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE (using port 1720/tcp)
+HOP RTT       ADDRESS
+1   217.95 ms 10.8.0.1
+2   217.80 ms 10.10.33.183
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Oct  5 11:02:49 2020 -- 1 IP address (1 host up) scanned in 1112.48 seconds
