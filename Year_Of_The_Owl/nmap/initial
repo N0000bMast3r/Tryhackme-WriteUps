@@ -1,0 +1,117 @@
+# Nmap 7.91 scan initiated Tue Jan 19 09:19:29 2021 as: nmap -sC -sV -T4 -Pn -p- -vv -oN nmap/initial 10.10.82.140
+Nmap scan report for 10.10.82.140
+Host is up, received user-set (0.17s latency).
+Scanned at 2021-01-19 09:19:30 EST for 327s
+Not shown: 65527 filtered ports
+Reason: 65527 no-responses
+PORT      STATE SERVICE       REASON          VERSION
+80/tcp    open  http          syn-ack ttl 127 Apache httpd 2.4.46 ((Win64) OpenSSL/1.1.1g PHP/7.4.10)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.46 (Win64) OpenSSL/1.1.1g PHP/7.4.10
+|_http-title: Year of the Owl
+139/tcp   open  netbios-ssn   syn-ack ttl 127 Microsoft Windows netbios-ssn
+443/tcp   open  ssl/http      syn-ack ttl 127 Apache httpd 2.4.46 ((Win64) OpenSSL/1.1.1g PHP/7.4.10)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.46 (Win64) OpenSSL/1.1.1g PHP/7.4.10
+|_http-title: Year of the Owl
+| ssl-cert: Subject: commonName=localhost
+| Issuer: commonName=localhost
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2009-11-10T23:48:47
+| Not valid after:  2019-11-08T23:48:47
+| MD5:   a0a4 4cc9 9e84 b26f 9e63 9f9e d229 dee0
+| SHA-1: b023 8c54 7a90 5bfa 119c 4e8b acca eacf 3649 1ff6
+| -----BEGIN CERTIFICATE-----
+| MIIBnzCCAQgCCQC1x1LJh4G1AzANBgkqhkiG9w0BAQUFADAUMRIwEAYDVQQDEwls
+| b2NhbGhvc3QwHhcNMDkxMTEwMjM0ODQ3WhcNMTkxMTA4MjM0ODQ3WjAUMRIwEAYD
+| VQQDEwlsb2NhbGhvc3QwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMEl0yfj
+| 7K0Ng2pt51+adRAj4pCdoGOVjx1BmljVnGOMW3OGkHnMw9ajibh1vB6UfHxu463o
+| J1wLxgxq+Q8y/rPEehAjBCspKNSq+bMvZhD4p8HNYMRrKFfjZzv3ns1IItw46kgT
+| gDpAl1cMRzVGPXFimu5TnWMOZ3ooyaQ0/xntAgMBAAEwDQYJKoZIhvcNAQEFBQAD
+| gYEAavHzSWz5umhfb/MnBMa5DL2VNzS+9whmmpsDGEG+uR0kM1W2GQIdVHHJTyFd
+| aHXzgVJBQcWTwhp84nvHSiQTDBSaT6cQNQpvag/TaED/SEQpm0VqDFwpfFYuufBL
+| vVNbLkKxbK2XwUvu0RxoLdBMC/89HqrZ0ppiONuQ+X2MtxE=
+|_-----END CERTIFICATE-----
+|_ssl-date: TLS randomness does not represent time
+| tls-alpn: 
+|_  http/1.1
+445/tcp   open  microsoft-ds? syn-ack ttl 127
+3306/tcp  open  mysql?        syn-ack ttl 127
+| fingerprint-strings: 
+|   NULL: 
+|_    Host 'ip-10-8-107-21.eu-west-1.compute.internal' is not allowed to connect to this MariaDB server
+| mysql-info: 
+|_  MySQL Error: Host 'ip-10-8-107-21.eu-west-1.compute.internal' is not allowed to connect to this MariaDB server
+3389/tcp  open  ms-wbt-server syn-ack ttl 127 Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: YEAR-OF-THE-OWL
+|   NetBIOS_Domain_Name: YEAR-OF-THE-OWL
+|   NetBIOS_Computer_Name: YEAR-OF-THE-OWL
+|   DNS_Domain_Name: year-of-the-owl
+|   DNS_Computer_Name: year-of-the-owl
+|   Product_Version: 10.0.17763
+|_  System_Time: 2021-01-19T14:24:13+00:00
+| ssl-cert: Subject: commonName=year-of-the-owl
+| Issuer: commonName=year-of-the-owl
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2020-09-16T19:04:21
+| Not valid after:  2021-03-18T19:04:21
+| MD5:   a4ad f32c 5473 eee3 2d2c ca88 c231 7879
+| SHA-1: 1824 b248 b428 857e 8ce6 f1f3 d60d 333a d679 5c5b
+| -----BEGIN CERTIFICATE-----
+| MIIC4jCCAcqgAwIBAgIQFnYpvP/X27lLNvLGGW6FnDANBgkqhkiG9w0BAQsFADAa
+| MRgwFgYDVQQDEw95ZWFyLW9mLXRoZS1vd2wwHhcNMjAwOTE2MTkwNDIxWhcNMjEw
+| MzE4MTkwNDIxWjAaMRgwFgYDVQQDEw95ZWFyLW9mLXRoZS1vd2wwggEiMA0GCSqG
+| SIb3DQEBAQUAA4IBDwAwggEKAoIBAQC3636hkJl+hlDY3UMk/U1JJ3wW8JvIyrAI
+| KWgFuf5+VzSW9Jtsjmvvoon3wPMbRc2K7RbEn/WfnQGP1m2UaA8lDrpFkDAE7+FZ
+| tJFgjGkIys8YzcxdRGD5stzeSotytSVt/zgVyci67yJCBcihoyp5+w05OBFaYQWa
+| U2VT1QpdijRqqTPcTx6CVgHJzgwRVUXvrPaOcfM2DZOF2knhEmuBBpMwEJCh/sqB
+| pezD5/PDJ+5bC6CVj5gJCJXULr8nGR7DZnfyR+uwGnDoRXl/7jWSdGhprwbo1v/M
+| iU8BuKT1vZuF7dXRACTlLHlsqqtEh0d3wMLnmWvTGNYQc8wS6VuVAgMBAAGjJDAi
+| MBMGA1UdJQQMMAoGCCsGAQUFBwMBMAsGA1UdDwQEAwIEMDANBgkqhkiG9w0BAQsF
+| AAOCAQEAISrU6a8Nhh2IWZkgdeczge0rxk8e2pSxp0vwWfF2sVhvrMV3m/d2Sm7i
+| oUwc3tToj7Sgns/KMrTzEq7KPgIRlTDung/TQtv/Rs0T+SdQZAVp+tWZVSOu3jkA
+| XFowMSV+TgoHSvfKv8xsGJvqjUW6sGGD69g22ruUrVQA9ipk4nT5BKJ1nTmd3XvA
+| 7+WnNpZ7LfZT/7dws1IZp5TrbIj2tEUyJP8rA4UzMwcp6KM5c0Z7S0X82Z0WPRVk
+| XaZWU3Ypqx+eE2Nn1Cb8yHUgQwc1bzx7r+aMiqdFATAybYXVgJjNNNq1VsMOFMnO
+| qaEfWPcd+z1+jDQPhfdLPgLIjytp8g==
+|_-----END CERTIFICATE-----
+|_ssl-date: 2021-01-19T14:24:55+00:00; 0s from scanner time.
+5985/tcp  open  http          syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+47001/tcp open  http          syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port3306-TCP:V=7.91%I=7%D=1/19%Time=6006EB7B%P=x86_64-pc-linux-gnu%r(NU
+SF:LL,68,"d\0\0\x01\xffj\x04Host\x20'ip-10-8-107-21\.eu-west-1\.compute\.i
+SF:nternal'\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20Mari
+SF:aDB\x20server");
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 0s, deviation: 0s, median: -1s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 47554/tcp): CLEAN (Timeout)
+|   Check 2 (port 32211/tcp): CLEAN (Timeout)
+|   Check 3 (port 42494/udp): CLEAN (Timeout)
+|   Check 4 (port 48039/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2021-01-19T14:24:16
+|_  start_date: N/A
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Jan 19 09:24:57 2021 -- 1 IP address (1 host up) scanned in 327.81 seconds
