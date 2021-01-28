@@ -1,0 +1,111 @@
+_______________________________________________________________
+         __          _______   _____
+         \ \        / /  __ \ / ____|
+          \ \  /\  / /| |__) | (___   ___  __ _ _ __ ®
+           \ \/  \/ / |  ___/ \___ \ / __|/ _` | '_ \
+            \  /\  /  | |     ____) | (__| (_| | | | |
+             \/  \/   |_|    |_____/ \___|\__,_|_| |_|
+
+         WordPress Security Scanner by the WPScan Team
+                         Version 3.8.11
+       Sponsored by Automattic - https://automattic.com/
+       @_WPScan_, @ethicalhack3r, @erwan_lr, @firefart
+_______________________________________________________________
+
+[32m[+][0m URL: http://10.10.155.57/wordpress/ [10.10.155.57]
+[32m[+][0m Started: Tue Jan  5 11:27:40 2021
+
+Interesting Finding(s):
+
+[32m[+][0m Headers
+ | Interesting Entry: Server: Apache/2.4.29 (Ubuntu)
+ | Found By: Headers (Passive Detection)
+ | Confidence: 100%
+
+[32m[+][0m XML-RPC seems to be enabled: http://10.10.155.57/wordpress/xmlrpc.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+ | References:
+ |  - http://codex.wordpress.org/XML-RPC_Pingback_API
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_ghost_scanner
+ |  - https://www.rapid7.com/db/modules/auxiliary/dos/http/wordpress_xmlrpc_dos
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_xmlrpc_login
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_pingback_access
+
+[32m[+][0m WordPress readme found: http://10.10.155.57/wordpress/readme.html
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[32m[+][0m Upload directory has listing enabled: http://10.10.155.57/wordpress/wp-content/uploads/
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[32m[+][0m The external WP-Cron seems to be enabled: http://10.10.155.57/wordpress/wp-cron.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 60%
+ | References:
+ |  - https://www.iplocation.net/defend-wordpress-from-ddos
+ |  - https://github.com/wpscanteam/wpscan/issues/1299
+
+[32m[+][0m WordPress version 5.5.1 identified (Insecure, released on 2020-09-01).
+ | Found By: Rss Generator (Passive Detection)
+ |  - http://10.10.155.57/wordpress/index.php/feed/, <generator>https://wordpress.org/?v=5.5.1</generator>
+ |  - http://10.10.155.57/wordpress/index.php/comments/feed/, <generator>https://wordpress.org/?v=5.5.1</generator>
+
+[32m[+][0m WordPress theme in use: twentytwenty
+ | Location: http://10.10.155.57/wordpress/wp-content/themes/twentytwenty/
+ | Last Updated: 2020-12-09T00:00:00.000Z
+ | Readme: http://10.10.155.57/wordpress/wp-content/themes/twentytwenty/readme.txt
+ | [33m[!][0m The version is out of date, the latest version is 1.6
+ | Style URL: http://10.10.155.57/wordpress/wp-content/themes/twentytwenty/style.css?ver=1.5
+ | Style Name: Twenty Twenty
+ | Style URI: https://wordpress.org/themes/twentytwenty/
+ | Description: Our default theme for 2020 is designed to take full advantage of the flexibility of the block editor...
+ | Author: the WordPress team
+ | Author URI: https://wordpress.org/
+ |
+ | Found By: Css Style In Homepage (Passive Detection)
+ |
+ | Version: 1.5 (80% confidence)
+ | Found By: Style (Passive Detection)
+ |  - http://10.10.155.57/wordpress/wp-content/themes/twentytwenty/style.css?ver=1.5, Match: 'Version: 1.5'
+
+[32m[+][0m Enumerating All Plugins (via Passive Methods)
+[32m[+][0m Checking Plugin Versions (via Passive and Aggressive Methods)
+
+[34m[i][0m Plugin(s) Identified:
+
+[32m[+][0m mail-masta
+ | Location: http://10.10.155.57/wordpress/wp-content/plugins/mail-masta/
+ | Latest Version: 1.0 (up to date)
+ | Last Updated: 2014-09-19T07:52:00.000Z
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ |
+ | Version: 1.0 (100% confidence)
+ | Found By: Readme - Stable Tag (Aggressive Detection)
+ |  - http://10.10.155.57/wordpress/wp-content/plugins/mail-masta/readme.txt
+ | Confirmed By: Readme - ChangeLog Section (Aggressive Detection)
+ |  - http://10.10.155.57/wordpress/wp-content/plugins/mail-masta/readme.txt
+
+[32m[+][0m reflex-gallery
+ | Location: http://10.10.155.57/wordpress/wp-content/plugins/reflex-gallery/
+ | Latest Version: 3.1.7 (up to date)
+ | Last Updated: 2019-05-10T16:05:00.000Z
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ |
+ | Version: 3.1.7 (80% confidence)
+ | Found By: Readme - Stable Tag (Aggressive Detection)
+ |  - http://10.10.155.57/wordpress/wp-content/plugins/reflex-gallery/readme.txt
+
+[33m[!][0m No WPScan API Token given, as a result vulnerability data has not been output.
+[33m[!][0m You can get a free API token with 50 daily requests by registering at https://wpscan.com/register
+
+[32m[+][0m Finished: Tue Jan  5 11:27:50 2021
+[32m[+][0m Requests Done: 6
+[32m[+][0m Cached Requests: 32
+[32m[+][0m Data Sent: 1.793 KB
+[32m[+][0m Data Received: 11.85 KB
+[32m[+][0m Memory used: 216.746 MB
+[32m[+][0m Elapsed time: 00:00:10
