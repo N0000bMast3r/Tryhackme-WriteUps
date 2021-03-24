@@ -1,0 +1,622 @@
+# Nmap 7.91 scan initiated Fri Feb 12 10:33:04 2021 as: nmap -sV --script=banner -vv -p 1-100 -o nmap/100_ports 10.10.59.207
+Increasing send delay for 10.10.59.207 from 0 to 5 due to 17 out of 55 dropped probes since last increase.
+Nmap scan report for 10.10.59.207
+Host is up, received syn-ack (0.18s latency).
+Scanned at 2021-02-12 10:33:04 EST for 158s
+
+PORT    STATE SERVICE      REASON  VERSION
+1/tcp   open  tcpmux?      syn-ack
+| banner: 550 12345 00000000000000000000000000000000000000000000000000000
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0000000000000000000000000000000000000000000000000000000
+2/tcp   open  compressnet? syn-ack
+| banner: 550 12345 00000000000000000000000000000000000000000000000000000
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0000000000000000000000000000000000000000000000000000000
+3/tcp   open  compressnet? syn-ack
+| banner: 550 12345 00000000000000000000000000000000000000000000000000000
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0000000000000000000000000000000000000000000000000000000
+4/tcp   open  unknown      syn-ack
+| banner: 550 12345 00000000000000000000000000000000000000000000000000000
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0000000000000000000000000000000000000000000000000000000
+5/tcp   open  rje?         syn-ack
+| banner: 550 12345 00000000000000000000000000000000000000000000000000000
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0000000000000000000000000000000000000000000000000000000
+6/tcp   open  unknown      syn-ack
+| banner: 550 12345 0ffffffffffffffffffffffffffffffffffffffffffffffffffff
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0ffffffffffffffffffffffffffffffffffffffffffffffffffff00
+7/tcp   open  echo?        syn-ack
+| banner: 550 12345 0fffffffffffff777778887777777777cffffffffffffffffffff
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0fffffffffffff777778887777777777cffffffffffffffffffff00
+8/tcp   open  unknown      syn-ack
+| banner: 550 12345 0fffffffffff8000000000000000008888887cfcfffffffffffff
+|_00
+| fingerprint-strings: 
+|   NULL, SIPOptions: 
+|_    550 12345 0fffffffffff8000000000000000008888887cfcfffffffffffff00
+9/tcp   open  discard?     syn-ack
+| banner: 550 12345 0ffffffffff80000088808000000888800000008887ffffffffff
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0ffffffffff80000088808000000888800000008887ffffffffff00
+10/tcp  open  unknown      syn-ack
+| banner: 550 12345 0fffffffff70000088800888800088888800008800007ffffffff
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0fffffffff70000088800888800088888800008800007ffffffff00
+11/tcp  open  systat?      syn-ack
+| banner: 550 12345 0fffffffff000088808880000000000000088800000008fffffff
+|_00
+| fingerprint-strings: 
+|   JavaRMI, NULL: 
+|_    550 12345 0fffffffff000088808880000000000000088800000008fffffff00
+12/tcp  open  unknown      syn-ack
+| banner: 550 12345 0ffffffff80008808880000000880000008880088800008ffffff
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0ffffffff80008808880000000880000008880088800008ffffff00
+13/tcp  open  daytime?     syn-ack
+| banner: 550 12345 0ffffffff000000888000000000800000080000008800007fffff
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0ffffffff000000888000000000800000080000008800007fffff00
+14/tcp  open  unknown      syn-ack
+| banner: 550 12345 0fffffff8000000000008888000000000080000000000007fffff
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0fffffff8000000000008888000000000080000000000007fffff00
+15/tcp  open  netstat?     syn-ack
+| banner: 550 12345 0ffffff70000000008cffffffc0000000080000000000008fffff
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0ffffff70000000008cffffffc0000000080000000000008fffff00
+16/tcp  open  unknown      syn-ack
+| banner: 550 12345 0ffffff8000000008ffffff007f8000000007cf7c80000007ffff
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0ffffff8000000008ffffff007f8000000007cf7c80000007ffff00
+17/tcp  open  qotd?        syn-ack
+| banner: 550 12345 0fffff7880000780f7cffff7800f8000008fffffff80808807fff
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0fffff7880000780f7cffff7800f8000008fffffff80808807fff00
+18/tcp  open  msp?         syn-ack
+| banner: 550 12345 0fff78000878000077800887fc8f80007fffc7778800000880cff
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0fff78000878000077800887fc8f80007fffc7778800000880cff00
+19/tcp  open  chargen?     syn-ack
+| banner: 550 12345 0ff70008fc77f7000000f80008f8000007f0000000000000888ff
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0ff70008fc77f7000000f80008f8000007f0000000000000888ff00
+20/tcp  open  ftp-data?    syn-ack
+| banner: 550 12345 0ff0008f00008ffc787f70000000000008f000000087fff8088cf
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0ff0008f00008ffc787f70000000000008f000000087fff8088cf00
+21/tcp  open  ftp?         syn-ack
+| banner: 550 12345 0f7000f800770008777 go to port 12345 80008f7f700880cf
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0f7000f800770008777 go to port 12345 80008f7f700880cf00
+22/tcp  open  ssh?         syn-ack
+| banner: 550 12345 0f8008c008fff8000000000000780000007f800087708000800ff
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0f8008c008fff8000000000000780000007f800087708000800ff00
+23/tcp  open  telnet?      syn-ack
+| banner: 550 12345 0f8008707ff07ff8000008088ff800000000f7000000f800808ff
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0f8008707ff07ff8000008088ff800000000f7000000f800808ff00
+24/tcp  open  priv-mail?   syn-ack
+| banner: 550 12345 0f7000f888f8007ff7800000770877800000cf780000ff00807ff
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0f7000f888f8007ff7800000770877800000cf780000ff00807ff00
+25/tcp  open  smtp?        syn-ack
+| banner: 550 12345 0ff0808800cf0000ffff70000f877f70000c70008008ff8088fff
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0ff0808800cf0000ffff70000f877f70000c70008008ff8088fff00
+26/tcp  open  rsftp?       syn-ack
+| banner: 550 12345 0ff70800008ff800f007fff70880000087f70000007fcf7007fff
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0ff70800008ff800f007fff70880000087f70000007fcf7007fff00
+27/tcp  open  nsw-fe?      syn-ack
+| banner: 550 12345 0fff70000007fffcf700008ffc778000078000087ff87f700ffff
+|_00
+| fingerprint-strings: 
+|   HTTPOptions, NULL: 
+|_    550 12345 0fff70000007fffcf700008ffc778000078000087ff87f700ffff00
+28/tcp  open  unknown      syn-ack
+| banner: 550 12345 0ffffc000000f80fff700007787cfffc7787fffff0788f708ffff
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0ffffc000000f80fff700007787cfffc7787fffff0788f708ffff00
+29/tcp  open  msg-icp?     syn-ack
+| banner: 550 12345 0fffff7000008f00fffff78f800008f887ff880770778f708ffff
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0fffff7000008f00fffff78f800008f887ff880770778f708ffff00
+30/tcp  open  unknown      syn-ack
+| banner: 550 12345 0ffffff8000007f0780cffff700000c000870008f07fff707ffff
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0ffffff8000007f0780cffff700000c000870008f07fff707ffff00
+31/tcp  open  msg-auth?    syn-ack
+| banner: 550 12345 0ffffcf7000000cfc00008fffff777f7777f777fffffff707ffff
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0ffffcf7000000cfc00008fffff777f7777f777fffffff707ffff00
+32/tcp  open  unknown      syn-ack
+| banner: 550 12345 0cccccff0000000ff000008c8cffffffffffffffffffff807ffff
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0cccccff0000000ff000008c8cffffffffffffffffffff807ffff00
+33/tcp  open  dsp?         syn-ack
+| banner: 550 12345 0fffffff70000000ff8000c700087fffffffffffffffcf808ffff
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0fffffff70000000ff8000c700087fffffffffffffffcf808ffff00
+34/tcp  open  unknown      syn-ack
+| banner: 550 12345 0ffffffff800000007f708f000000c0888ff78f78f777c008ffff
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0ffffffff800000007f708f000000c0888ff78f78f777c008ffff00
+35/tcp  open  priv-print?  syn-ack
+| banner: 550 12345 0fffffffff800000008fff7000008f0000f808f0870cf7008ffff
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0fffffffff800000008fff7000008f0000f808f0870cf7008ffff00
+36/tcp  open  unknown      syn-ack
+| banner: 550 12345 0ffffffffff7088808008fff80008f0008c00770f78ff0008ffff
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0ffffffffff7088808008fff80008f0008c00770f78ff0008ffff00
+37/tcp  open  time?        syn-ack
+| banner: 550 12345 0fffffffffffc8088888008cffffff7887f87ffffff800000ffff
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0fffffffffffc8088888008cffffff7887f87ffffff800000ffff00
+38/tcp  open  rap?         syn-ack
+| banner: 550 12345 0fffffffffffff7088888800008777ccf77fc777800000000ffff
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0fffffffffffff7088888800008777ccf77fc777800000000ffff00
+39/tcp  open  rlp?         syn-ack
+| banner: 550 12345 0fffffffffffffff800888880000000000000000000800800cfff
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0fffffffffffffff800888880000000000000000000800800cfff00
+40/tcp  open  unknown      syn-ack
+| banner: 550 12345 0fffffffffffffffff70008878800000000000008878008007fff
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0fffffffffffffffff70008878800000000000008878008007fff00
+41/tcp  open  graphics?    syn-ack
+| banner: 550 12345 0fffffffffffffffffff700008888800000000088000080007fff
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0fffffffffffffffffff700008888800000000088000080007fff00
+42/tcp  open  nameserver?  syn-ack
+| banner: 550 12345 0fffffffffffffffffffffc800000000000000000088800007fff
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0fffffffffffffffffffffc800000000000000000088800007fff00
+43/tcp  open  whois?       syn-ack
+| banner: 550 12345 0fffffffffffffffffffffff7800000000000008888000008ffff
+|_00
+| fingerprint-strings: 
+|   NULL, RPCCheck: 
+|_    550 12345 0fffffffffffffffffffffff7800000000000008888000008ffff00
+44/tcp  open  mpm-flags?   syn-ack
+| banner: 550 12345 0fffffffffffffffffffffffff7878000000000000000000cffff
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0fffffffffffffffffffffffff7878000000000000000000cffff00
+45/tcp  open  mpm?         syn-ack
+| banner: 550 12345 0ffffffffffffffffffffffffffffffc880000000000008ffffff
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0ffffffffffffffffffffffffffffffc880000000000008ffffff00
+46/tcp  open  mpm-snd?     syn-ack
+| banner: 550 12345 0ffffffffffffffffffffffffffffffffff7788888887ffffffff
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0ffffffffffffffffffffffffffffffffff7788888887ffffffff00
+47/tcp  open  ni-ftp?      syn-ack
+| banner: 550 12345 0ffffffffffffffffffffffffffffffffffffffffffffffffffff
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0ffffffffffffffffffffffffffffffffffffffffffffffffffff00
+48/tcp  open  auditd?      syn-ack
+| banner: 550 12345 00000000000000000000000000000000000000000000000000000
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0000000000000000000000000000000000000000000000000000000
+49/tcp  open  tacacs?      syn-ack
+| banner: 550 12345 00000000000000000000000000000000000000000000000000000
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0000000000000000000000000000000000000000000000000000000
+50/tcp  open  re-mail-ck?  syn-ack
+| banner: 550 12345 00000000000000000000000000000000000000000000000000000
+|_00
+| fingerprint-strings: 
+|   NULL: 
+|_    550 12345 0000000000000000000000000000000000000000000000000000000
+51/tcp  open  telnet       syn-ack Lancom fIgAePXqI DSL/ISDN router telnetd 844124
+| banner: \xFF\xFB\x01\xFF\xFB\x03\x0D\x0A\x0D\x0A#\x0D\x0A| LANCOM fIgAe
+|_PXqI ADSL/ISDN\x0D\x0A| Ver. 844124 /
+52/tcp  open  xns-time?    syn-ack
+| banner: 000a\xFFSMBr0000\x88\x03000000000000000@\x0600\x010\x11\x060\x0
+|_2\x0A0\x010vnnd\xFF\xFF\x00\x00yoht0\x03000
+| fingerprint-strings: 
+|   NULL: 
+|     000a
+|     SMBr0000
+|     000000000000000@
+|     0vnnd
+|_    yoht0
+53/tcp  open  ssh          syn-ack meow SSH ROOTKIT (protocol 893795)
+|_banner: SSH-893795-meow roototkt by rebel
+54/tcp  open  http         syn-ack Catwalk (Canon imageRUNNER C5000-series printer http config)
+| banner: HTTP/1.1 302 Moved Temporarily\x0D\x0AServer: Catwalk\x0D\x0ADa
+| te: i\x0D\x0ALocation: https://null:8443/\x0D\x0AContent-Length: 0\x0D\
+|_x0AConnection: close
+55/tcp  open  pop3         syn-ack MDaemon pop3d 1 (Chinese)
+| banner: +OK R POP MDaemon 1 \xD7\xBC\xB1\xB8\xBA\xC3 <MDAEMON-LVhdxk@bW
+|_dyTyXrc>
+56/tcp  open  http         syn-ack Intel Con. Management Engine httpd G
+| banner: HTTP/1.1 302 Found\x0D\x0ALocation: http:///logon.htm\x0D\x0ACo
+|_ntent-Length: 0\x0D\x0AServer: Intel(R) Con. Management Engine G
+|_http-server-header: Intel(R) Con. Management Engine G
+57/tcp  open  priv-term?   syn-ack
+|_banner: rblsmtpd: 899130 pid 1y220 rblsmtpd.local
+| fingerprint-strings: 
+|   NULL: 
+|_    rblsmtpd: 899130 pid 1y220 rblsmtpd.local
+58/tcp  open  xns-mail?    syn-ack
+| banner: HTTP/1.0 200 OK\x0D\x0Af\x0D\x0A\x0D\x0A<!DOCTYPE html PUBLIC "
+| -//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dt
+| d">\x0A<html><head><title>BitTorrent download info</title>\x0A?</head>\
+|_x0A<body>\x0A<h3>BitTorrent download info</h3>\x0A<ul>\x0A<li><stron...
+| fingerprint-strings: 
+|   NULL: 
+|     HTTP/1.0 200 OK
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+|     <html><head><title>BitTorrent download info</title>
+|     ?</head>
+|     <body>
+|     <h3>BitTorrent download info</h3>
+|     <ul>
+|_    <li><strong>tracker version:</strong> 9fgG</li>
+59/tcp  open  nntp         syn-ack Intersquish nntpd
+| banner: 200 PE news server ready - posting ok\x0D\x0A100 Help text foll
+|_ows
+60/tcp  open  ftp          syn-ack VxWorks ftpd 6.K...M
+|_banner: 220 VxWorks (VxWorks6\x88K\xCA\x91\xFBM) FTP server ready
+61/tcp  open  ni-mail?     syn-ack
+| banner: HTTP/1.0 405 Method Not Allowed\x0D\x0AContent-Type: text/html\
+| x0D\x0ACache-Control: public\x0D\x0APragma: cache\x0D\x0AmLast-Modified
+| : Thu, 01 Jan 1970 00:00:00 GMT\x0D\x0AAccept-Ranges: bytes\x0D\x0AConn
+|_ection: close
+| fingerprint-strings: 
+|   NULL: 
+|     HTTP/1.0 405 Method Not Allowed
+|     Content-Type: text/html
+|     Cache-Control: public
+|     Pragma: cache
+|     mLast-Modified: Thu, 01 Jan 1970 00:00:00 GMT
+|     Accept-Ranges: bytes
+|_    Connection: close
+62/tcp  open  acas?        syn-ack
+| banner: HTTP/1.0 200 OK\x0A\x0Al<TITLE>eSVNC Desktop [bMx]</TITLE>m<APP
+| LET CODE=VncViewer.class ARCHIVE=VncViewer.jar WIDTH=9HEIGHT=2v<PARAM N
+|_AME=PORT VALUE=9
+| fingerprint-strings: 
+|   NULL: 
+|     HTTP/1.0 200 OK
+|_    l<TITLE>eSVNC Desktop [bMx]</TITLE>m<APPLET CODE=VncViewer.class ARCHIVE=VncViewer.jar WIDTH=9HEIGHT=2v<PARAM NAME=PORT VALUE=9
+63/tcp  open  via-ftp?     syn-ack
+| banner: HTTP/1.1 200 OK\x0D\x0AETag: n\x0D\x0ALast-Modified: r\x0D\x0AC
+| ontent-Type: text/html\x0D\x0AContent-Length: 0r\x0ADate: h\x0D\x0AConn
+| ection: close\x0D\x0AServer: wifi-security-server\x0D\x0A\x0D\x0A<html>
+|_\x0D\x0A<head>\x0D\x0A<meta http-equiv="refresh" content="1; URL=/wi...
+| fingerprint-strings: 
+|   NULL: 
+|     HTTP/1.1 200 OK
+|     ETag: n
+|     Last-Modified: r
+|     Content-Type: text/html
+|     Content-Length: 0r
+|     Date: h
+|     Connection: close
+|     Server: wifi-security-server
+|     <html>
+|     <head>
+|     <meta http-equiv="refresh" content="1; URL=/wifiserver">
+|     </head>
+|     <body>
+|     </body>
+|_    </html>
+64/tcp  open  covia?       syn-ack
+| banner: 20y uRlYpnZVh InterNetNews NNRP server INN Py ready (?:posting 
+|_ok|no posting).?
+| fingerprint-strings: 
+|   NULL: 
+|_    20y uRlYpnZVh InterNetNews NNRP server INN Py ready (?:posting ok|no posting).?
+65/tcp  open  tacacs-ds?   syn-ack
+| banner: HTTP/1.1 302 Moved Temporarily\x0D\x0ALocation: http://7:7apex\
+| x0D\x0AContent-Type: text/html;charset=ISO-8859-1\x0D\x0AContent-Langua
+| ge: en-US\x0D\x0ADate: x\x0D\x0AConnection: close\x0D\x0A\x0D\x0A<html>
+|_\x0D\x0A<head><title>Document moved</title></head>
+| fingerprint-strings: 
+|   NULL: 
+|     HTTP/1.1 302 Moved Temporarily
+|     Location: http://7:7apex
+|     Content-Type: text/html;charset=ISO-8859-1
+|     Content-Language: en-US
+|     Date: x
+|     Connection: close
+|     <html>
+|_    <head><title>Document moved</title></head>
+66/tcp  open  http         syn-ack Monkey httpd
+|_banner: HTTP/1.1 776 k\x0D\x0AServer: Monkey Server
+|_http-server-header: Monkey Server
+67/tcp  open  dhcps?       syn-ack
+| banner: 0gxb\xFFSMBr0000\x81\x01000000000000000oh00\x010\x11\x060\x03\x
+| 7F0\x010\xFF\xFF00\xFF\xFF000000\xFD\xB300rgpdccylnu\x08"0vcntdkmk?:i0+
+|_00?:k0+00
+| fingerprint-strings: 
+|   NULL: 
+|     0gxb
+|     SMBr0000
+|     000000000000000oh00
+|     000000
+|     00rgpdccylnu
+|_    "0vcntdkmk?:i0+00?:k0+00
+68/tcp  open  http         syn-ack MiniShare http interface
+| banner: HTTP/1.1 200 OK\x0D\x0AContent-Type: text/html\x0D\x0A\x0D\x0Ab
+| <title>MiniShare</title>\x0D\x0Au<td class="total" colspan="2">Total: 0
+|_files</td><td class="totalsize">R\xC2\xCE\x09F\x05\x07?\xB7</td></tr>
+69/tcp  open  telnet       syn-ack Campbell Scientific NL-100/105 Ethernet-to-serial bridge telnetd
+| banner: \xFF\xFC"\xFF\xFB\x01\x0D\x0APassword: \x0D\x0Abad password\x0D
+| \x0A| p|Campbell Scientific NL-100/105 Ethernet-to-serial bridge telnet
+|_d
+70/tcp  open  gopher?      syn-ack
+|_banner: 72:32:04  1844/08/70
+| fingerprint-strings: 
+|   NULL: 
+|_    72:32:04 1844/08/70
+71/tcp  open  ftp          syn-ack Xlight ftpd 770744868
+|_banner: 220 Xlight FTP Server 770744868 ready...
+72/tcp  open  http         syn-ack Galleon TiVo Application Port http config
+|_banner: HTTP/1.0 404 no application for: /\x0D\x0AServer: HttpServer
+|_http-server-header: HttpServer
+73/tcp  open  netrjs-3?    syn-ack
+|_banner: *KISMET: 0.0.0 9\x01Kismet\x01 92S+ \x0A*PROTOCOLS:
+| fingerprint-strings: 
+|   NULL: 
+|     *KISMET: 0.0.0 9
+|     Kismet
+|     92S+ 
+|_    *PROTOCOLS:
+74/tcp  open  ftp          syn-ack Encrypted FTP
+|_banner: 220 awaiting Input
+75/tcp  open  ftp-proxy    syn-ack DeleGate ftp proxy 4215
+|_banner: 220- eGZD PROXY-FTP server (DeleGate/4215) ready.
+76/tcp  open  deos?        syn-ack
+|_banner: 220k214 Pure-FTPd - http://pureftpd.org/?
+| fingerprint-strings: 
+|   NULL: 
+|_    220k214 Pure-FTPd - http://pureftpd.org/?
+77/tcp  open  smtp         syn-ack Kerio Connect smtpd inXKPw
+|_banner: 220 tjxmX Kerio Connect inXKPw ESMTP ready
+78/tcp  open  ftp          syn-ack 3Com ftpd IuDSZ
+|_banner: 220 3Com FTP Server Version IuDSZ
+79/tcp  open  http         syn-ack Virata-EmWeb 42
+| banner: HTTP/1.1 036 m\x0D\x0AServer: Virata-EmWeb/R42\x0D\x0Af<TITLE>o
+|_ptiPoint6dvance Home Page</TITLE>
+|_http-server-header: Virata-EmWeb/R42
+80/tcp  open  ftp          syn-ack Alcatel OmniPCX ftpd
+|_banner: 220 Alize Session Manager FTP Server
+81/tcp  open  http         syn-ack Port25 PowerMTA mail gateway http admin
+| banner: HTTP/1.0 403 Access denied.  Please consult the http-access dir
+| ective in the User's Guide for more information.\x0D\x0AContent-Type: t
+| ext/html\x0D\x0A\x0D\x0A<html><body>Access denied.  Please consult the 
+|_http-access directive in the User's Guide for more information.</bod...
+82/tcp  open  xfer?        syn-ack
+|_banner: rbnb
+| fingerprint-strings: 
+|   NULL: 
+|_    rbnb
+83/tcp  open  smtp         syn-ack LiteMail smtpd
+|_banner: 220 LiteMail SMTP Server Ready.
+84/tcp  open  http-proxy   syn-ack Polipo http proxy
+|_banner: HTTP/1.1 041 c\x0D\x0AServer: Polipo
+|_http-server-header: Polipo
+85/tcp  open  mit-ml-dev?  syn-ack
+| banner: HTTP/1.0 200 OK\x0D\x0AExpires: Mon, 1 Jan 2001 12:00:01 GMT\x0
+|_D\x0AcServer: Ubicom/Z\x0D\x0Aj<title>s*CradlePoint MBRxGateway
+| fingerprint-strings: 
+|   NULL: 
+|     HTTP/1.0 200 OK
+|     Expires: Mon, 1 Jan 2001 12:00:01 GMT
+|     cServer: Ubicom/Z
+|_    j<title>s*CradlePoint MBRxGateway
+86/tcp  open  http         syn-ack Galty Technologies GaltyExplorer httpd
+|_banner: HTTP/1.1 902 y<title>Welcome to the Galty client depl</title>
+87/tcp  open  priv-term-l? syn-ack
+| banner: {type INIT} {up 7 {auth 8 {name {! lu\x98\x86\xFE}} {ip 1033203
+|_82} {max 5 {port 4
+| fingerprint-strings: 
+|   NULL: 
+|     {type INIT} {up 7 {auth 8 {name {! lu
+|_    103320382} {max 5 {port 4
+88/tcp  open  http-proxy   syn-ack Freenet FProxy (node id aZSHNX)
+| banner: HTTP/1.1 200 OK\x0D\x0AConnection: close\x0D\x0Ax<title>Browse 
+|_Freenet (aZSHNX) - Freenet</title>
+89/tcp  open  su-mit-tg?   syn-ack
+| banner: HTTP/1.0 401 Unauthorized\x0D\x0AWWW-Authenticate: Basic realm=
+| "FW-1"\x0D\x0AContent-Type: text/html\x0D\x0AContent-Length: 7r\x0A\x0D
+| \x0A<TITLE>Error</TITLE>\x0A<BODY>\x0A<H1>Error 401</H1>\x0A\x0AFW-1 at
+|_ Fq:
+| fingerprint-strings: 
+|   NULL: 
+|     HTTP/1.0 401 Unauthorized
+|     WWW-Authenticate: Basic realm="FW-1"
+|     Content-Type: text/html
+|     Content-Length: 7r
+|     <TITLE>Error</TITLE>
+|     <BODY>
+|     <H1>Error 401</H1>
+|_    FW-1 at Fq:
+90/tcp  open  ssh          syn-ack (protocol 216)
+|_banner: SSH-216-OpenSSH_DJsoC--pwexp0r?
+| fingerprint-strings: 
+|   NULL: 
+|_    SSH-216-OpenSSH_DJsoC--pwexp0r?
+91/tcp  open  telnet       syn-ack Ricoh maintenance telnetd
+| banner: \xFF\xFB\x01\xFF\xFB\x03\x0ARICOH Maintenance Shell.   \x0A\x0D
+|_User access verification.
+92/tcp  open  npp?         syn-ack
+|_banner: 0\x18\x82iMaze server JC/HUK 1605
+| fingerprint-strings: 
+|   NULL: 
+|_    iMaze server JC/HUK 1605
+93/tcp  open  telnet       syn-ack Tru64 UNIX gated
+| banner: \xFF\xFB\x01Password? \x0D\x0A500 Configuration error. Disconne
+|_cting!
+94/tcp  open  http         syn-ack Gemtek Systems GemtekBalticHTTPD x
+|_banner: HTTP/1.0 178 b\x0AServer: GemtekBalticHTTPD/x
+|_http-server-header: GemtekBalticHTTPD/x
+95/tcp  open  supdup?      syn-ack
+| banner: HTTP/1.554 b\x0D\x0AServer: Apache  -OOPS Development Organizat
+|_ion-
+| fingerprint-strings: 
+|   NULL: 
+|     HTTP/1.554 b
+|_    Server: Apache -OOPS Development Organization-
+96/tcp  open  smtp         syn-ack Microsoft Exchange 2010 smtpd (not available)
+|_banner: 421 4.3.2 Service not available
+97/tcp  open  http         syn-ack RapidLogic httpd A (EqualLogic PeerStorage PS100E NAS device)
+| banner: HTTP/1.0 200 OK\x0D\x0AServer: RapidLogic/A\x0D\x0Ar<title>nwkg
+|_rp2 Group Manager</title>
+|_http-server-header: RapidLogic/A
+98/tcp  open  linuxconf?   syn-ack
+| banner: 02\x02\x01\x01a-\x0A\x01\x02\x040\x04&requested protocol versio
+|_n not allowed
+| fingerprint-strings: 
+|   NULL: 
+|_    &requested protocol version not allowed
+99/tcp  open  metagram?    syn-ack
+|_banner: @ABCDEFGHIJKLMNOPQRSTUVWXYZ
+| fingerprint-strings: 
+|   NULL: 
+|_    @ABCDEFGHIJKLMNOPQRSTUVWXYZ
+100/tcp open  http         syn-ack Panasonic GT30 TV http admin
+|_banner: HTTP/1.1 400 Bad Request\x0D\x0ACONNECTION: close
+9 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port1-TCP:V=7.91%I=7%D=2/12%Time=60269FB6%P=x86_64-pc-linux-gnu%r(NULL,
+SF:41,"550\x2012345\x20000000000000000000000000000000000000000000000000000
+SF:0000");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2-TCP:V=7.91%I=7%D=2/12%Time=60269FB6%P=x86_64-pc-linux-gnu%r(NULL,
+SF:41,"550\x2012345\x20000000000000000000000000000000000000000000000000000
+SF:0000");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port3-TCP:V=7.91%I=7%D=2/12%Time=60269FB6%P=x86_64-pc-linux-gnu%r(NULL,
+SF:41,"550\x2012345\x20000000000000000000000000000000000000000000000000000
+SF:0000");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port4-TCP:V=7.91%I=7%D=2/12%Time=60269FB6%P=x86_64-pc-linux-gnu%r(NULL,
+SF:41,"550\x2012345\x20000000000000000000000000000000000000000000000000000
+SF:0000");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port5-TCP:V=7.91%I=7%D=2/12%Time=60269FB6%P=x86_64-pc-linux-gnu%r(NULL,
+SF:41,"550\x2012345\x20000000000000000000000000000000000000000000000000000
+SF:0000");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port6-TCP:V=7.91%I=7%D=2/12%Time=60269FB6%P=x86_64-pc-linux-gnu%r(NULL,
+SF:41,"550\x2012345\x200ffffffffffffffffffffffffffffffffffffffffffffffffff
+SF:ff00");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port7-TCP:V=7.91%I=7%D=2/12%Time=60269FB6%P=x86_64-pc-linux-gnu%r(NULL,
+SF:41,"550\x2012345\x200fffffffffffff777778887777777777cffffffffffffffffff
+SF:ff00");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8-TCP:V=7.91%I=7%D=2/12%Time=60269FB6%P=x86_64-pc-linux-gnu%r(NULL,
+SF:41,"550\x2012345\x200fffffffffff8000000000000000008888887cfcfffffffffff
+SF:ff00")%r(SIPOptions,41,"550\x2012345\x200fffffffffff8000000000000000008
+SF:888887cfcfffffffffffff00");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port9-TCP:V=7.91%I=7%D=2/12%Time=60269FB6%P=x86_64-pc-linux-gnu%r(NULL,
+SF:41,"550\x2012345\x200ffffffffff80000088808000000888800000008887ffffffff
+SF:ff00");
+Service Info: Hosts: R, PE, eGZD, tjxmX; OSs: Windows, VxWorks, Tru64 UNIX, FreeBSD 8.0; Devices: router, printer, bridge, media device, PBX; CPE: cpe:/h:canon:imagerunner_c5000, cpe:/o:microsoft:windows, cpe:/o:windriver:vxworks, cpe:/o:compaq:tru64, cpe:/o:freebsd:freebsd:8.0
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Feb 12 10:35:42 2021 -- 1 IP address (1 host up) scanned in 157.71 seconds
