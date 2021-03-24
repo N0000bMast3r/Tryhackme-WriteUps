@@ -1,0 +1,10 @@
+support@bank.a
+contact@bank.a
+cyber@bank.a
+admins@bank.a
+sam@bank.a
+admin0@bank.a
+super_user@bank.a
+admin@bank.a
+control_admin@bank.a
+it_admin@bank.a
