@@ -1,0 +1,19 @@
+# Nmap 7.91 scan initiated Wed Mar  3 10:06:50 2021 as: nmap -sC -sV -T4 -Pn -vv -p- -oN nmap/initial 10.10.104.242
+Nmap scan report for magician (10.10.104.242)
+Host is up, received user-set (0.17s latency).
+Scanned at 2021-03-03 10:06:51 EST for 1097s
+Not shown: 65533 closed ports
+Reason: 65533 conn-refused
+PORT     STATE SERVICE REASON  VERSION
+21/tcp   open  ftp     syn-ack vsftpd 2.0.8 or later
+8081/tcp open  http    syn-ack nginx 1.14.0 (Ubuntu)
+|_http-favicon: Unknown favicon MD5: CA4D0E532A1010F93901DFCB3A9FC682
+| http-methods: 
+|_  Supported Methods: GET HEAD
+|_http-server-header: nginx/1.14.0 (Ubuntu)
+|_http-title: magician
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Mar  3 10:25:08 2021 -- 1 IP address (1 host up) scanned in 1098.12 seconds
