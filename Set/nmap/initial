@@ -1,0 +1,66 @@
+# Nmap 7.91 scan initiated Mon May 10 10:03:54 2021 as: nmap -sC -sV -T4 -Pn -A -vvv -oN nmap/initial 10.10.218.222
+Nmap scan report for 10.10.218.222
+Host is up, received user-set (0.17s latency).
+Scanned at 2021-05-10 10:03:55 EDT for 91s
+Not shown: 997 filtered ports
+Reason: 997 no-responses
+PORT    STATE SERVICE       REASON  VERSION
+135/tcp open  msrpc         syn-ack Microsoft Windows RPC
+443/tcp open  ssl/http      syn-ack Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+| ssl-cert: Subject: commonName=set.windcorp.thm
+| Subject Alternative Name: DNS:set.windcorp.thm, DNS:seth.windcorp.thm
+| Issuer: commonName=set.windcorp.thm
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2020-06-07T15:00:22
+| Not valid after:  2036-10-07T15:10:21
+| MD5:   d0eb 717c f7ef 3515 00d2 5d67 4beb dd69
+| SHA-1: 9571 4370 bd9b cc80 08ef 7d1e 0dfc bbc2 251c e077
+| -----BEGIN CERTIFICATE-----
+| MIIDQTCCAimgAwIBAgIQPqCqVnulP4RF1x6k8HNXqDANBgkqhkiG9w0BAQsFADAb
+| MRkwFwYDVQQDDBBzZXQud2luZGNvcnAudGhtMB4XDTIwMDYwNzE1MDAyMloXDTM2
+| MTAwNzE1MTAyMVowGzEZMBcGA1UEAwwQc2V0LndpbmRjb3JwLnRobTCCASIwDQYJ
+| KoZIhvcNAQEBBQADggEPADCCAQoCggEBAMm4DQZ+hDcuel1PQ+DKGJXKo8dF2mR+
+| SJHlyPssa2iZx43jTijsYp+MxRPxSYzSuDy5M0eOIySHBN0JGWSKHLclNiwhDgAU
+| niPdrrPgreA1Hs1Zw5UN7iLEz56R7NhEPctUwZb6+ETjO4x91TU3JMenEF+1ZLv3
+| ss3X3MXKdv8y/KuHNPXsFf1ubioYKV3gmdsSlwLQpcATQ7LjeMdncAN62/OvXpVQ
+| sFAdJkO1/LXIJquNdMzdim3PvFyPBStY6oX9sD5AiJ9/iMa91aqYjL8MXw7zPS4N
+| FKpW/Ksx1AxbG41LQieEeGwEcC6Yq2ohSUNk3/RUrUA3IxN3up94t20CAwEAAaOB
+| gDB+MA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUH
+| AwEwLgYDVR0RBCcwJYIQc2V0LndpbmRjb3JwLnRobYIRc2V0aC53aW5kY29ycC50
+| aG0wHQYDVR0OBBYEFNQ2+9chAM4hq3nKcxQtg8Ah/1A/MA0GCSqGSIb3DQEBCwUA
+| A4IBAQBB6BNqxh1cxyeeQ2D1VQ4D7nqGjp0oLNuwFFVd1Pk9f0aWWm0w1ovqOcCR
+| 8BrCTJJlk/FjIYUrqLBvgkyFx7cL706tEGrFtZwi1KtMg8qReBQQBYVKa7jjN8/U
+| dWRrbYwNuPmmojFZ1dZWilw++vCSkXxIKHbP6vvZDs7XewFYCT3Snbo/gFc3FCdy
+| DwXM5ZQkzZnfTs6dAURqf8L7AVMxwBLow1Wl3nLuxoFQ3ypu5AyWCLROK8n5h82h
+| mJLZQ6ectkh1JzoHaP8zA0Q0hxMvflatVAUDSztATJ7bJ81yok9I1eA4Eu+QI+sO
+| 2yLhYxKlaeRK4AJ226n7dOxyrr8d
+|_-----END CERTIFICATE-----
+|_ssl-date: 2021-05-10T14:05:27+00:00; +2s from scanner time.
+| tls-alpn: 
+|_  http/1.1
+445/tcp open  microsoft-ds? syn-ack
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 1s, deviation: 0s, median: 0s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 20544/tcp): CLEAN (Timeout)
+|   Check 2 (port 2509/tcp): CLEAN (Timeout)
+|   Check 3 (port 13797/udp): CLEAN (Timeout)
+|   Check 4 (port 27221/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2021-05-10T14:04:50
+|_  start_date: N/A
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon May 10 10:05:26 2021 -- 1 IP address (1 host up) scanned in 92.20 seconds
