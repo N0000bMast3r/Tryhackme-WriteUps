@@ -1,0 +1,124 @@
+# Nmap 7.91 scan initiated Mon May 24 03:32:39 2021 as: nmap -sC -sV -T4 -Pn -A -vvv -p- -oN nmap/initial 10.10.43.184
+Nmap scan report for 10.10.43.184
+Host is up, received user-set (0.19s latency).
+Scanned at 2021-05-24 03:32:40 EDT for 841s
+Not shown: 65519 closed ports
+Reason: 65519 conn-refused
+PORT      STATE SERVICE       REASON  VERSION
+21/tcp    open  ftp           syn-ack Microsoft ftpd
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_11-14-20  04:26PM                  173 notice.txt
+| ftp-syst: 
+|_  SYST: Windows_NT
+80/tcp    open  http          syn-ack Apache httpd 2.4.46 ((Win64) OpenSSL/1.1.1g PHP/7.4.11)
+|_http-favicon: Unknown favicon MD5: 6EB4A43CB64C97F76562AF703893C8FD
+| http-methods: 
+|   Supported Methods: GET POST OPTIONS HEAD TRACE
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.4.46 (Win64) OpenSSL/1.1.1g PHP/7.4.11
+|_http-title: Simple Slide Show
+135/tcp   open  msrpc         syn-ack Microsoft Windows RPC
+139/tcp   open  netbios-ssn   syn-ack Microsoft Windows netbios-ssn
+443/tcp   open  ssl/http      syn-ack Apache httpd 2.4.46 ((Win64) OpenSSL/1.1.1g PHP/7.4.11)
+|_http-favicon: Unknown favicon MD5: 6EB4A43CB64C97F76562AF703893C8FD
+| http-methods: 
+|   Supported Methods: GET POST OPTIONS HEAD TRACE
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.4.46 (Win64) OpenSSL/1.1.1g PHP/7.4.11
+|_http-title: Simple Slide Show
+| ssl-cert: Subject: commonName=localhost
+| Issuer: commonName=localhost
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2009-11-10T23:48:47
+| Not valid after:  2019-11-08T23:48:47
+| MD5:   a0a4 4cc9 9e84 b26f 9e63 9f9e d229 dee0
+| SHA-1: b023 8c54 7a90 5bfa 119c 4e8b acca eacf 3649 1ff6
+| -----BEGIN CERTIFICATE-----
+| MIIBnzCCAQgCCQC1x1LJh4G1AzANBgkqhkiG9w0BAQUFADAUMRIwEAYDVQQDEwls
+| b2NhbGhvc3QwHhcNMDkxMTEwMjM0ODQ3WhcNMTkxMTA4MjM0ODQ3WjAUMRIwEAYD
+| VQQDEwlsb2NhbGhvc3QwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMEl0yfj
+| 7K0Ng2pt51+adRAj4pCdoGOVjx1BmljVnGOMW3OGkHnMw9ajibh1vB6UfHxu463o
+| J1wLxgxq+Q8y/rPEehAjBCspKNSq+bMvZhD4p8HNYMRrKFfjZzv3ns1IItw46kgT
+| gDpAl1cMRzVGPXFimu5TnWMOZ3ooyaQ0/xntAgMBAAEwDQYJKoZIhvcNAQEFBQAD
+| gYEAavHzSWz5umhfb/MnBMa5DL2VNzS+9whmmpsDGEG+uR0kM1W2GQIdVHHJTyFd
+| aHXzgVJBQcWTwhp84nvHSiQTDBSaT6cQNQpvag/TaED/SEQpm0VqDFwpfFYuufBL
+| vVNbLkKxbK2XwUvu0RxoLdBMC/89HqrZ0ppiONuQ+X2MtxE=
+|_-----END CERTIFICATE-----
+|_ssl-date: TLS randomness does not represent time
+| tls-alpn: 
+|_  http/1.1
+445/tcp   open  microsoft-ds? syn-ack
+3389/tcp  open  ms-wbt-server syn-ack Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: DESKTOP-997GG7D
+|   NetBIOS_Domain_Name: DESKTOP-997GG7D
+|   NetBIOS_Computer_Name: DESKTOP-997GG7D
+|   DNS_Domain_Name: DESKTOP-997GG7D
+|   DNS_Computer_Name: DESKTOP-997GG7D
+|   Product_Version: 10.0.18362
+|_  System_Time: 2021-05-24T08:02:35+00:00
+| ssl-cert: Subject: commonName=DESKTOP-997GG7D
+| Issuer: commonName=DESKTOP-997GG7D
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2021-01-31T18:46:06
+| Not valid after:  2021-08-02T18:46:06
+| MD5:   d1e4 d8ce c27e f320 bce5 7c68 419b 9643
+| SHA-1: 0deb 19c3 f73b 8076 c441 be8c 70c6 573c e264 03a6
+| -----BEGIN CERTIFICATE-----
+| MIIC4jCCAcqgAwIBAgIQPfZxdAS+HKNL+id10EeMKTANBgkqhkiG9w0BAQsFADAa
+| MRgwFgYDVQQDEw9ERVNLVE9QLTk5N0dHN0QwHhcNMjEwMTMxMTg0NjA2WhcNMjEw
+| ODAyMTg0NjA2WjAaMRgwFgYDVQQDEw9ERVNLVE9QLTk5N0dHN0QwggEiMA0GCSqG
+| SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCkdIFrbwCkV+QStYp75HfvS9j38xvFtmvO
+| xGkaCWjA+oNW0itBR/t+CP+BLbAPW6qqt17pCs9I49ovz0PgGZ/j0FP8IJs4mi9g
+| aWDerGM6cNgwagk28VpVutTYkvhHlJjPeT9CMxLLTCR5gERyuxB0LeqpV8XoBlgB
+| zY/IrMnO7eaiYJNnp1cZFHtNEVNJK0Z5w4HaHSfhU7k9r3MNE6ldkjuMNrgElZya
+| a1VgcKSB7GK5J9cyG3R+dxwBrvgaW/sjau2MmB5gNm1jye+ntk1/h5sWXYAb6rf2
+| T+OFdPTD+A6m1azV1lQO5qNCiRq826PBfK4MoZii9m3hebxp7JchAgMBAAGjJDAi
+| MBMGA1UdJQQMMAoGCCsGAQUFBwMBMAsGA1UdDwQEAwIEMDANBgkqhkiG9w0BAQsF
+| AAOCAQEAOR8rz9/N2K2z2O+Ll+ImMgmNoBbg577vjdur7sqKnLtf120LTc6VBFgx
+| eBbNQi5vQsRz/Oykfoz9QQEdiZCIunn+10/o0715Mn80l2eQntRHHvwLDHNi4txM
+| J5A7MUreuJccp4UmkrW2IRY9wmg2CZfCIMbpoyg/L3yoBblydZH/VGwU6FFd1dE2
+| KzuZ8F7EJ2yAg+Z6D9CawHgKLQLOeVHz0MbMQ7mwPQ3NMsKG3MpyLuGDrE30PBSD
+| Ss8Cs4rclhW9RLUVcif4sYhC75gm0vXlCqHzoFrXeUg8AHas8FpQsGtz75urOqn+
+| 3xHEbjlSAlD0kpQ4eGxd83YU9SbnQA==
+|_-----END CERTIFICATE-----
+|_ssl-date: 2021-05-24T08:02:48+00:00; +16m10s from scanner time.
+5040/tcp  open  unknown       syn-ack
+5900/tcp  open  vnc           syn-ack VNC (protocol 3.8)
+| vnc-info: 
+|   Protocol version: 3.8
+|   Security types: 
+|     Ultra (17)
+|_    VNC Authentication (2)
+49664/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49665/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49666/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49667/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49668/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49670/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49677/tcp open  msrpc         syn-ack Microsoft Windows RPC
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 16m10s, deviation: 0s, median: 16m10s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 16828/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 20063/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 5740/udp): CLEAN (Timeout)
+|   Check 4 (port 65171/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2021-05-24T08:02:34
+|_  start_date: N/A
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon May 24 03:46:41 2021 -- 1 IP address (1 host up) scanned in 841.35 seconds
