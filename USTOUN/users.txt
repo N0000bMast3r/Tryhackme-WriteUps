@@ -1,0 +1,3 @@
+krbtgt
+SVC-Kerb
+DC$

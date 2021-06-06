@@ -1,0 +1,105 @@
+# Nmap 7.91 scan initiated Sun Apr 11 09:41:57 2021 as: nmap -sC -sV -A -T4 -Pn -vvv -O -oN nmap/initial 10.10.30.152
+adjust_timeouts2: packet supposedly had rtt of -164952 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -164952 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -139458 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -139458 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -190611 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -190611 microseconds.  Ignoring time.
+Nmap scan report for 10.10.30.152
+Host is up, received user-set (0.28s latency).
+Scanned at 2021-04-11 09:41:58 EDT for 139s
+Not shown: 988 closed ports
+Reason: 988 resets
+PORT     STATE SERVICE        REASON          VERSION
+53/tcp   open  domain         syn-ack ttl 127 Simple DNS Plus
+88/tcp   open  kerberos-sec   syn-ack ttl 127 Microsoft Windows Kerberos (server time: 2021-04-11 13:42:23Z)
+135/tcp  open  msrpc          syn-ack ttl 127 Microsoft Windows RPC
+139/tcp  open  netbios-ssn    syn-ack ttl 127 Microsoft Windows netbios-ssn
+389/tcp  open  ldap           syn-ack ttl 127 Microsoft Windows Active Directory LDAP (Domain: ustoun.local0., Site: Default-First-Site-Name)
+445/tcp  open  microsoft-ds?  syn-ack ttl 127
+464/tcp  open  kpasswd5?      syn-ack ttl 127
+593/tcp  open  ncacn_http     syn-ack ttl 127 Microsoft Windows RPC over HTTP 1.0
+636/tcp  open  tcpwrapped     syn-ack ttl 127
+3268/tcp open  ldap           syn-ack ttl 127 Microsoft Windows Active Directory LDAP (Domain: ustoun.local0., Site: Default-First-Site-Name)
+3269/tcp open  tcpwrapped     syn-ack ttl 127
+3389/tcp open  ms-wbt-server? syn-ack ttl 127
+| rdp-ntlm-info: 
+|   Target_Name: DC01
+|   NetBIOS_Domain_Name: DC01
+|   NetBIOS_Computer_Name: DC
+|   DNS_Domain_Name: ustoun.local
+|   DNS_Computer_Name: DC.ustoun.local
+|   DNS_Tree_Name: ustoun.local
+|   Product_Version: 10.0.17763
+|_  System_Time: 2021-04-11T13:44:00+00:00
+| ssl-cert: Subject: commonName=DC.ustoun.local
+| Issuer: commonName=DC.ustoun.local
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2021-01-31T19:39:34
+| Not valid after:  2021-08-02T19:39:34
+| MD5:   fce5 375e 0190 ebc1 bf6e f384 468f 69f6
+| SHA-1: dbe7 28d6 1980 1221 c9cb 712a 911e 99b2 303e 5de7
+| -----BEGIN CERTIFICATE-----
+| MIIC4jCCAcqgAwIBAgIQWPJp5aVu8JlPCbMkI/U6AjANBgkqhkiG9w0BAQsFADAa
+| MRgwFgYDVQQDEw9EQy51c3RvdW4ubG9jYWwwHhcNMjEwMTMxMTkzOTM0WhcNMjEw
+| ODAyMTkzOTM0WjAaMRgwFgYDVQQDEw9EQy51c3RvdW4ubG9jYWwwggEiMA0GCSqG
+| SIb3DQEBAQUAA4IBDwAwggEKAoIBAQDErxES6mfg1M0Ur5tZJHE8BKV+voQAWLa4
+| gKJfNi0av9nZ80wp2gJnQmHmZC0ACVpQUufMU9vlaCnk35rqsyM0/igqigSqWXAM
+| OY/876ZWGbo5R1g3PjH4bE3mdPtPAJF0wfS8aZ8CdHlmuGDFlJmnu6qFEP/PoACC
+| tf1S/vky+8GVs4uLFyxZOY5mam5PNULQvsMz2ycOPwj2CYwgWnrnA52N6m/6O9v7
+| XK+K6XBSGHamrHR5EYFXG+u1vItwm4qpUZerUhZl2/WVKIIN4pDXWDCrS59nsVvc
+| UC3fDPcgzruHIVJcA+g+CsEYdidS+E1NO3e3ZnWBeWE77ZCSDyTNAgMBAAGjJDAi
+| MBMGA1UdJQQMMAoGCCsGAQUFBwMBMAsGA1UdDwQEAwIEMDANBgkqhkiG9w0BAQsF
+| AAOCAQEAj9XeCOtYI4LrmeM7qZVQYuuDHIDosWkIw0LMpin4/gt0CDaEB1/uXUnX
+| JnBUEHWMDdjzC22hTsTdUIntZgJAk81aQbPm3qMvSE1AXPCCfsN7GehA4kX/n42X
+| xiz2rwZo/5DYH0JOWj8iCZyFMiXqSwQm3GWbG4LuTOct+x/rv0UwhyCvdllVRtwz
+| P9BM/9qZqy3LecKtJh6UUo8FZ8zkekT9nsJ9/vCv3/THRUMOtEtSXdZUUqccXwRm
+| 0HVLxT09wdGGbwdOzzdQSQfLmewi3rSZQf9liaXDtpkK60qrzj4zcyGG2QvX+9EI
+| pZV0B4rzCUDWrpaTOsv8z7Qlgeb2GA==
+|_-----END CERTIFICATE-----
+|_ssl-date: 2021-04-11T13:44:08+00:00; 0s from scanner time.
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.91%E=4%D=4/11%OT=53%CT=1%CU=41217%PV=Y%DS=2%DC=T%G=Y%TM=6072FD3
+OS:1%P=x86_64-pc-linux-gnu)SEQ(SP=104%GCD=1%ISR=109%TI=I%CI=I%II=I%SS=S%TS=
+OS:U)SEQ(SP=FE%GCD=1%ISR=10E%TI=I%CI=I%TS=U)OPS(O1=M505NW8NNS%O2=M505NW8NNS
+OS:%O3=M505NW8%O4=M505NW8NNS%O5=M505NW8NNS%O6=M505NNS)WIN(W1=FFFF%W2=FFFF%W
+OS:3=FFFF%W4=FFFF%W5=FFFF%W6=FF70)ECN(R=Y%DF=Y%T=80%W=FFFF%O=M505NW8NNS%CC=
+OS:Y%Q=)T1(R=Y%DF=Y%T=80%S=O%A=S+%F=AS%RD=0%Q=)T2(R=Y%DF=Y%T=80%W=0%S=Z%A=S
+OS:%F=AR%O=%RD=0%Q=)T3(R=Y%DF=Y%T=80%W=0%S=Z%A=O%F=AR%O=%RD=0%Q=)T4(R=Y%DF=
+OS:Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%
+OS:RD=0%Q=)T6(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=80%W=0
+OS:%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIP
+OS:CK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=80%CD=Z)
+
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=257 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: Host: DC; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 0s, deviation: 0s, median: 0s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 12648/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 48115/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 57378/udp): CLEAN (Timeout)
+|   Check 4 (port 61799/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled and required
+| smb2-time: 
+|   date: 2021-04-11T13:44:02
+|_  start_date: N/A
+
+TRACEROUTE (using port 21/tcp)
+HOP RTT       ADDRESS
+1   199.23 ms 10.8.0.1
+2   217.60 ms 10.10.30.152
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Apr 11 09:44:17 2021 -- 1 IP address (1 host up) scanned in 141.30 seconds
