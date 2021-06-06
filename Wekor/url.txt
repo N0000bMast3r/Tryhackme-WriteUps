@@ -1,0 +1,9 @@
+/workshop
+/root
+/lol
+/agent
+/feed
+/crawler
+/boot
+/comingreallysoon
+/interesting
