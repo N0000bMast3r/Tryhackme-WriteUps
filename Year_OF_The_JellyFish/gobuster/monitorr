@@ -1,0 +1,6 @@
+/index.php            (Status: 200) [Size: 14974]
+/data                 (Status: 301) [Size: 343] [--> https://monitorr.robyns-petshop.thm/data/]
+/assets               (Status: 301) [Size: 345] [--> https://monitorr.robyns-petshop.thm/assets/]
+/robots.txt           (Status: 200) [Size: 87]
+/settings.php         (Status: 200) [Size: 16335]
+/LICENSE.txt          (Status: 200) [Size: 1086]
