@@ -1,0 +1,41 @@
+# Nmap 7.91 scan initiated Sun Mar 28 09:35:06 2021 as: nmap -sC -sV -T4 -Pn -T4 -p- -vv -oN nmap/initial 10.10.53.84
+Warning: 10.10.53.84 giving up on port because retransmission cap hit (6).
+Nmap scan report for 10.10.53.84
+Host is up, received user-set (0.18s latency).
+Scanned at 2021-03-28 09:35:08 EDT for 1000s
+Not shown: 65509 closed ports
+Reason: 65509 conn-refused
+PORT      STATE    SERVICE      REASON      VERSION
+3026/tcp  filtered agri-gateway no-response
+8080/tcp  open     http         syn-ack     Node.js Express framework
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: VulnNet &ndash; Your reliable news source &ndash; Try Now!
+12841/tcp filtered unknown      no-response
+15534/tcp filtered unknown      no-response
+16680/tcp filtered unknown      no-response
+18876/tcp filtered unknown      no-response
+21247/tcp filtered unknown      no-response
+28016/tcp filtered unknown      no-response
+28760/tcp filtered unknown      no-response
+32975/tcp filtered unknown      no-response
+35171/tcp filtered unknown      no-response
+36269/tcp filtered unknown      no-response
+36585/tcp filtered unknown      no-response
+36855/tcp filtered unknown      no-response
+37501/tcp filtered unknown      no-response
+39658/tcp filtered unknown      no-response
+41816/tcp filtered unknown      no-response
+49390/tcp filtered unknown      no-response
+50795/tcp filtered unknown      no-response
+52236/tcp filtered unknown      no-response
+52689/tcp filtered unknown      no-response
+56254/tcp filtered unknown      no-response
+57571/tcp filtered unknown      no-response
+58327/tcp filtered unknown      no-response
+58861/tcp filtered unknown      no-response
+58885/tcp filtered unknown      no-response
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Mar 28 09:51:48 2021 -- 1 IP address (1 host up) scanned in 1001.69 seconds
