@@ -1,0 +1,183 @@
+# Nmap 7.91 scan initiated Fri Feb  5 05:58:34 2021 as: nmap -sC -sV -T4 -Pn -vv -p- -oN nmap/initial 10.10.46.65
+Warning: 10.10.46.65 giving up on port because retransmission cap hit (6).
+Nmap scan report for 10.10.46.65
+Host is up, received user-set (0.20s latency).
+Scanned at 2021-02-05 05:58:35 EST for 1348s
+Not shown: 65504 closed ports
+Reason: 65504 conn-refused
+PORT      STATE    SERVICE  REASON      VERSION
+21/tcp    open     ftp      syn-ack     vsftpd 3.0.3
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| -r--r--r--    1 ftp      ftp       1401357 Sep 21  2019 1.jpg
+| -r--r--r--    1 ftp      ftp        233977 Sep 21  2019 2.jpg
+| -r--r--r--    1 ftp      ftp        524615 Sep 21  2019 3.jpg
+| -r--r--r--    1 ftp      ftp        771076 Sep 21  2019 4.jpg
+| -r--r--r--    1 ftp      ftp       1644395 Sep 21  2019 5.jpg
+|_-r--r--r--    1 ftp      ftp         40355 Sep 21  2019 6.jpg
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to ::ffff:10.8.107.21
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 1
+|      vsFTPd 3.0.3 - secure, fast, stable
+|_End of status
+22/tcp    open     ssh      syn-ack     OpenSSH 7.6p1 Ubuntu 4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 58:d2:86:99:c2:62:2d:95:d0:75:9c:4e:83:b6:1b:ca (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCZI18bQI+0NL2MQbBBpj229t/z6a4d2hvdHZBD/A1WJ18n1JIycdXxbDoX7iPzuZQYVJftVI4TJekwNE7P8BHM0V4s77eSJHq1A1WTfC97BavzMu6m3MdvWCkJVxDZ7Gthmry7AQ+O7eevmni42Ps8pRS5V5aopmfIZOTmiOU5nwCOG8bl+U9AXxf9kuqInux/ncu7mmTQOB1viDUthIzXmUuqa03Q3PUlzK4FAGZmun3PQ6skqxpAvyQh/JebCvk9qcCG8lPmsMiMwqPSButy/k0PM6ydUPlBjdq4r4gJ6V5SXOhnjR4y6lo2aeMvyPkcDhZILzGBPCJ2pUIQBxmb
+|   256 db:87:9e:06:43:c7:6e:00:7b:c3:bc:a1:97:dd:5e:83 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFk76H2boYFswUk7qzq1+klm7u5HyYtzmaF3r4WK6fyIWeC2W1AOZgOPm2I1pXHPrOynEwiinOlWE04QWnaA+mY=
+|   256 6b:40:84:e6:9c:bc:1c:a8:de:b2:a1:8b:a3:6a:ef:f0 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKCnOLHnD6QCU3i75PdGPmmb4MpMX6otoHuX2ysgz+4J
+80/tcp    open     http     syn-ack     Apache httpd 2.4.29
+| http-methods: 
+|_  Supported Methods: POST OPTIONS HEAD GET
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+|_http-title: 404 Not Found
+443/tcp   open     ssl/http syn-ack     Apache httpd 2.4.29 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: POST OPTIONS HEAD GET
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+|_http-title: You found Finn
+| ssl-cert: Subject: commonName=adventure-time.com/organizationName=Candy Corporate Inc./stateOrProvinceName=Candy Kingdom/countryName=CK/emailAddress=bubblegum@land-of-ooo.com/organizationalUnitName=CC
+| Issuer: commonName=adventure-time.com/organizationName=Candy Corporate Inc./stateOrProvinceName=Candy Kingdom/countryName=CK/emailAddress=bubblegum@land-of-ooo.com/organizationalUnitName=CC
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2019-09-20T08:29:36
+| Not valid after:  2020-09-19T08:29:36
+| MD5:   fe38 d852 1fab ee33 b560 42ab 3e53 c129
+| SHA-1: 66ba 29fa 3a0e 26f6 d31b c61b ed83 61a1 609f e621
+| -----BEGIN CERTIFICATE-----
+| MIIEEzCCAvugAwIBAgIUbcVV6csztEzfPt+tkvEXDwDTNuEwDQYJKoZIhvcNAQEL
+| BQAwgZgxCzAJBgNVBAYTAkNLMRYwFAYDVQQIDA1DYW5keSBLaW5nZG9tMR0wGwYD
+| VQQKDBRDYW5keSBDb3Jwb3JhdGUgSW5jLjELMAkGA1UECwwCQ0MxGzAZBgNVBAMM
+| EmFkdmVudHVyZS10aW1lLmNvbTEoMCYGCSqGSIb3DQEJARYZYnViYmxlZ3VtQGxh
+| bmQtb2Ytb29vLmNvbTAeFw0xOTA5MjAwODI5MzZaFw0yMDA5MTkwODI5MzZaMIGY
+| MQswCQYDVQQGEwJDSzEWMBQGA1UECAwNQ2FuZHkgS2luZ2RvbTEdMBsGA1UECgwU
+| Q2FuZHkgQ29ycG9yYXRlIEluYy4xCzAJBgNVBAsMAkNDMRswGQYDVQQDDBJhZHZl
+| bnR1cmUtdGltZS5jb20xKDAmBgkqhkiG9w0BCQEWGWJ1YmJsZWd1bUBsYW5kLW9m
+| LW9vby5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDIsPkc5wZq
+| 3vwvIPUao4OrBkQ/qcRuykZ9BRiyVNqSiwolBlkBoV+Fro4kC5EFg0a05njaC+3K
+| hebtBRK8w3JpOP/wJV7vfPgBkjid/wyt1ejRrxtCVdquJAExkX8pAWC4N93fZV7f
+| LqED5A3mixWNS6c/hjzjeNfxhtxMF2sVYnvHCoysWtYPx3btpsxmBTGiO3Ae/ram
+| 6XNMS62db71qarseenXJNWg/YVLnNxsK5Qh3Fyqq0yIMvAeePAgcOfnImgJesp12
+| 01qzdF9nYLjatzaCs7UzjooY3DSJt13oAwuDi7xobQfixUylNotuhKUNIHtOmZ/5
+| HQiiK+hvGYJDAgMBAAGjUzBRMB0GA1UdDgQWBBROc7+FG51+kgTPa4tQsbciaZvn
+| KzAfBgNVHSMEGDAWgBROc7+FG51+kgTPa4tQsbciaZvnKzAPBgNVHRMBAf8EBTAD
+| AQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBfcgRIbZ6seeRNPzWGs5rOkQh77pFLUTKo
+| 2ZU3oFBJ632AYHOs1UhjWYeKGslPXloK9qHbBoDdL6uJU5FFsD1B7bMa4PLN7nuM
+| 0QcwXpqIlO7Fo6n00yY6IEey9jomTwLe8th+R8V8vNWd5gfQ9cey79WXnuekkez9
+| 49UMv3z7jIgW3eWSw/AHV+Vdc8t9+SLSPxciCgfxYEp4Avl0u2qzSfoKJsmHDKMp
+| p89GR4+2BjnmsYtFs5RL8KNAr4P3xD+QT6/VZdTWnARV9r/7CFn+ZD2C9BQJ8OX2
+| n+oi/jgOP0wo6FEb7YMKaoUGlqKl+xTlgy5KF/zpQAovH01KngtW
+|_-----END CERTIFICATE-----
+|_ssl-date: TLS randomness does not represent time
+| tls-alpn: 
+|_  http/1.1
+5627/tcp  filtered ninaf    no-response
+8298/tcp  filtered unknown  no-response
+14737/tcp filtered unknown  no-response
+15902/tcp filtered unknown  no-response
+18303/tcp filtered unknown  no-response
+21405/tcp filtered unknown  no-response
+27340/tcp filtered unknown  no-response
+28106/tcp filtered unknown  no-response
+29241/tcp filtered unknown  no-response
+30380/tcp filtered unknown  no-response
+31337/tcp open     Elite?   syn-ack
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, RPCCheck, SSLSessionReq: 
+|     Hello Princess Bubblegum. What is the magic word?
+|     magic word is not
+|   DNSVersionBindReqTCP: 
+|     Hello Princess Bubblegum. What is the magic word?
+|     magic word is not 
+|     version
+|     bind
+|   GenericLines, NULL: 
+|     Hello Princess Bubblegum. What is the magic word?
+|   GetRequest: 
+|     Hello Princess Bubblegum. What is the magic word?
+|     magic word is not GET / HTTP/1.0
+|   HTTPOptions: 
+|     Hello Princess Bubblegum. What is the magic word?
+|     magic word is not OPTIONS / HTTP/1.0
+|   Help: 
+|     Hello Princess Bubblegum. What is the magic word?
+|     magic word is not HELP
+|   RTSPRequest: 
+|     Hello Princess Bubblegum. What is the magic word?
+|     magic word is not OPTIONS / RTSP/1.0
+|   SIPOptions: 
+|     Hello Princess Bubblegum. What is the magic word?
+|     magic word is not OPTIONS sip:nm SIP/2.0
+|     Via: SIP/2.0/TCP nm;branch=foo
+|     From: <sip:nm@nm>;tag=root
+|     <sip:nm2@nm2>
+|     Call-ID: 50000
+|     CSeq: 42 OPTIONS
+|     Max-Forwards: 70
+|     Content-Length: 0
+|     Contact: <sip:nm@nm>
+|_    Accept: application/sdp
+31450/tcp filtered unknown  no-response
+34837/tcp filtered unknown  no-response
+40364/tcp filtered unknown  no-response
+42491/tcp filtered unknown  no-response
+44889/tcp filtered unknown  no-response
+46180/tcp filtered unknown  no-response
+48286/tcp filtered unknown  no-response
+51313/tcp filtered unknown  no-response
+52938/tcp filtered unknown  no-response
+53960/tcp filtered unknown  no-response
+56836/tcp filtered unknown  no-response
+58516/tcp filtered unknown  no-response
+61305/tcp filtered unknown  no-response
+61538/tcp filtered unknown  no-response
+62107/tcp filtered unknown  no-response
+64714/tcp filtered unknown  no-response
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port31337-TCP:V=7.91%I=7%D=2/5%Time=601D297D%P=x86_64-pc-linux-gnu%r(NU
+SF:LL,32,"Hello\x20Princess\x20Bubblegum\.\x20What\x20is\x20the\x20magic\x
+SF:20word\?\n")%r(GetRequest,57,"Hello\x20Princess\x20Bubblegum\.\x20What\
+SF:x20is\x20the\x20magic\x20word\?\nThe\x20magic\x20word\x20is\x20not\x20G
+SF:ET\x20/\x20HTTP/1\.0\n")%r(SIPOptions,124,"Hello\x20Princess\x20Bubbleg
+SF:um\.\x20What\x20is\x20the\x20magic\x20word\?\nThe\x20magic\x20word\x20i
+SF:s\x20not\x20OPTIONS\x20sip:nm\x20SIP/2\.0\r\nVia:\x20SIP/2\.0/TCP\x20nm
+SF:;branch=foo\r\nFrom:\x20<sip:nm@nm>;tag=root\r\nTo:\x20<sip:nm2@nm2>\r\
+SF:nCall-ID:\x2050000\r\nCSeq:\x2042\x20OPTIONS\r\nMax-Forwards:\x2070\r\n
+SF:Content-Length:\x200\r\nContact:\x20<sip:nm@nm>\r\nAccept:\x20applicati
+SF:on/sdp\n")%r(GenericLines,32,"Hello\x20Princess\x20Bubblegum\.\x20What\
+SF:x20is\x20the\x20magic\x20word\?\n")%r(HTTPOptions,5B,"Hello\x20Princess
+SF:\x20Bubblegum\.\x20What\x20is\x20the\x20magic\x20word\?\nThe\x20magic\x
+SF:20word\x20is\x20not\x20OPTIONS\x20/\x20HTTP/1\.0\n")%r(RTSPRequest,5B,"
+SF:Hello\x20Princess\x20Bubblegum\.\x20What\x20is\x20the\x20magic\x20word\
+SF:?\nThe\x20magic\x20word\x20is\x20not\x20OPTIONS\x20/\x20RTSP/1\.0\n")%r
+SF:(RPCCheck,75,"Hello\x20Princess\x20Bubblegum\.\x20What\x20is\x20the\x20
+SF:magic\x20word\?\nThe\x20magic\x20word\x20is\x20not\x20\x80\0\0\(r\xfe\x
+SF:1d\x13\0\0\0\0\0\0\0\x02\0\x01\x86\xa0\0\x01\x97\|\0\0\0\0\0\0\0\0\0\0\
+SF:0\0\0\0\0\0\0\0\0\0\n")%r(DNSVersionBindReqTCP,69,"Hello\x20Princess\x2
+SF:0Bubblegum\.\x20What\x20is\x20the\x20magic\x20word\?\nThe\x20magic\x20w
+SF:ord\x20is\x20not\x20\0\x1e\0\x06\x01\0\0\x01\0\0\0\0\0\0\x07version\x04
+SF:bind\0\0\x10\0\x03\n")%r(DNSStatusRequestTCP,57,"Hello\x20Princess\x20B
+SF:ubblegum\.\x20What\x20is\x20the\x20magic\x20word\?\nThe\x20magic\x20wor
+SF:d\x20is\x20not\x20\0\x0c\0\0\x10\0\0\0\0\0\0\0\0\0\n")%r(Help,4D,"Hello
+SF:\x20Princess\x20Bubblegum\.\x20What\x20is\x20the\x20magic\x20word\?\nTh
+SF:e\x20magic\x20word\x20is\x20not\x20HELP\n")%r(SSLSessionReq,A1,"Hello\x
+SF:20Princess\x20Bubblegum\.\x20What\x20is\x20the\x20magic\x20word\?\nThe\
+SF:x20magic\x20word\x20is\x20not\x20\x16\x03\0\0S\x01\0\0O\x03\0\?G\xd7\xf
+SF:7\xba,\xee\xea\xb2`~\xf3\0\xfd\x82{\xb9\xd5\x96\xc8w\x9b\xe6\xc4\xdb<=\
+SF:xdbo\xef\x10n\0\0\(\0\x16\0\x13\0\n\0f\0\x05\0\x04\0e\0d\0c\0b\0a\0`\0\
+SF:x15\0\x12\0\t\0\x14\0\x11\0\x08\0\x06\0\x03\x01\0\n");
+Service Info: Host: 127.0.1.1; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Feb  5 06:21:03 2021 -- 1 IP address (1 host up) scanned in 1348.93 seconds

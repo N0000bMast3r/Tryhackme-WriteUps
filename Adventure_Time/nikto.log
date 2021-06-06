@@ -1,0 +1,17 @@
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          10.10.46.65
++ Target Hostname:    10.10.46.65
++ Target Port:        80
++ Start Time:         2021-02-05 05:59:12 (GMT-5)
+---------------------------------------------------------------------------
++ Server: Apache/2.4.29 (Ubuntu)
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ Apache/2.4.29 appears to be outdated (current is at least Apache/2.4.37). Apache 2.2.34 is the EOL for the 2.x branch.
++ Allowed HTTP Methods: POST, OPTIONS, HEAD, GET 
++ OSVDB-3233: /icons/README: Apache default file found.
++ 7889 requests: 0 error(s) and 4 item(s) reported on remote host
++ End Time:           2021-02-05 06:27:08 (GMT-5) (1676 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
