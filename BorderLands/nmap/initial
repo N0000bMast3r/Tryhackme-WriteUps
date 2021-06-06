@@ -1,0 +1,36 @@
+# Nmap 7.91 scan initiated Sun Jan  3 05:27:14 2021 as: nmap -sC -sV -T4 -Pn -vvv -p- -oN nmap/initial 10.10.20.175
+Nmap scan report for 10.10.20.175
+Host is up, received user-set (0.18s latency).
+Scanned at 2021-01-03 05:27:14 EST for 237s
+Not shown: 65532 filtered ports
+Reason: 65532 no-responses
+PORT     STATE  SERVICE    REASON         VERSION
+22/tcp   open   ssh        syn-ack ttl 63 OpenSSH 7.2p2 Ubuntu 4ubuntu2.8 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 3c:97:d2:6f:93:9f:16:8b:f9:99:9f:bf:0a:c1:d9:45 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDU55XsWGncM5QQ1VfuCJIt3NcY2U0pSYPX329uUD/QJhYypisQNmGz8oU+eyrcEfp9lvvedk34B79xafaXI/5kjCk7g0A6oaaZUFZk3VLD8VOFjIbkc2UP9GtCG1fRqdoWelwCspiJ/SaxpDC7RgbAuC/6PUD+K99AENCsMP775/cr4wnN0wa+mqrzBXzFU2gY1W3i+Q45VhgnbjFLJptc76Cqs8EUD0K0Iu19sMhoW0WcDRz7rh9OLD+4z0h+cVOtUP5XTTrWtzmMPXdf4bx6Ghvi71X4jRc9wJyT+6+YtaBlQs4XkusFLYgiUDpf4uohOyClLvD+oriIMhV9uGxv
+|   256 a9:8c:0f:ad:a4:45:45:de:46:f7:25:f1:64:44:e3:89 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAHh2BXOntK/oyLJFefEkZB2omll4KaHUZe4oZt4ygrcDs2dlz3h5KkP0h2HrcAUlOpd/On06dSNQEMSMXk8n00=
+|   256 a7:2f:27:bf:d5:76:ec:ef:fb:b5:56:ba:d5:96:95:4e (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINNY0Y0RW1nPMYA/Sy11yWlga9NVZEPGIvCET2mMODtU
+80/tcp   open   http       syn-ack ttl 62 nginx 1.14.0 (Ubuntu)
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+| http-git: 
+|   10.10.20.175:80/.git/
+|     Git repository found!
+|     .git/config matched patterns 'user'
+|     Repository description: Unnamed repository; edit this file 'description' to name the...
+|_    Last commit message: added mobile apk for beta testing. 
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-server-header: nginx/1.14.0 (Ubuntu)
+|_http-title: Context Information Security - HackBack 2
+8080/tcp closed http-proxy reset ttl 62
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Jan  3 05:31:11 2021 -- 1 IP address (1 host up) scanned in 237.48 seconds
