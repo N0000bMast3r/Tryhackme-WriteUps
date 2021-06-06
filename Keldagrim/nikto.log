@@ -1,0 +1,15 @@
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          10.10.243.132
++ Target Hostname:    10.10.243.132
++ Target Port:        80
++ Start Time:         2021-05-15 10:01:19 (GMT-4)
+---------------------------------------------------------------------------
++ Server: Werkzeug/1.0.1 Python/3.6.9
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ Cookie session created without the httponly flag
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ Allowed HTTP Methods: GET, HEAD, OPTIONS 
++ OSVDB-6659: /0bgnvxK6idYIEkZZQhuq1O1kjhWb7SwVvFMcx0yIRyneZVZo1s2hwuKBkCMOWmQjJJV8zQzTelmezOxqNbda213hZRjRRMOnjzOXg12c3UVnfF0KKQDMoRmBJxSEhnNqWEsPuIr4FQV8KKsY1rT7bn5cMhgrMXo2DfSXfxPgWHYt3rEUMeacRlZAZ9mgyeDGSbYNtlHXE5oajy7LOPFviV36uB5xP5s<font%20size=50>DEFACED<!--//--: MyWebServer 1.0.2 is vulnerable to HTML injection. Upgrade to a later version.
