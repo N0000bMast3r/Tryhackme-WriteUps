@@ -1,0 +1,18 @@
+# Nmap 7.91 scan initiated Fri Mar 26 11:23:56 2021 as: nmap -sC -sV -T4 -Pn -vv -oN nmap/initial 10.10.24.164
+Increasing send delay for 10.10.24.164 from 0 to 5 due to 11 out of 21 dropped probes since last increase.
+Nmap scan report for 10.10.24.164
+Host is up, received user-set (0.18s latency).
+Scanned at 2021-03-26 11:23:57 EDT for 35s
+Not shown: 998 closed ports
+Reason: 998 conn-refused
+PORT   STATE SERVICE REASON  VERSION
+21/tcp open  ftp     syn-ack vsftpd 2.0.8 or later
+80/tcp open  http    syn-ack Apache httpd 2.4.29 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: GET POST OPTIONS HEAD
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+|_http-title: Apache2 Ubuntu Default Page: It works
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Mar 26 11:24:32 2021 -- 1 IP address (1 host up) scanned in 36.04 seconds
