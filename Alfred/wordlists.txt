@@ -1,0 +1,8 @@
+admin
+default
+jenkins
+password
+Admin
+Default
+Jenkins
+Password
