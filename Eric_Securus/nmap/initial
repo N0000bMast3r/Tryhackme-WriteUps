@@ -1,0 +1,27 @@
+# Nmap 7.91 scan initiated Fri May 14 01:47:32 2021 as: nmap -sC -sV -T4 -Pn -vvv -A -oN nmap/initial 10.10.160.217
+Nmap scan report for 10.10.160.217
+Host is up, received user-set (0.24s latency).
+Scanned at 2021-05-14 01:47:32 EDT for 64s
+Not shown: 998 closed ports
+Reason: 998 conn-refused
+PORT   STATE SERVICE REASON  VERSION
+22/tcp open  ssh     syn-ack OpenSSH 6.7p1 Debian 5+deb8u8 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 b1:ac:a9:92:d3:2a:69:91:68:b4:6a:ac:45:43:fb:ed (DSA)
+| ssh-dss AAAAB3NzaC1kc3MAAACBAPWmD4IaPbJQU46GEKX8pUal0IbZzIykktEuUh5boCKMuwsetNGanzNZYFd6eGWRd+zqr6nRnRFQPDiDZtt6DDz7NcJcXliGifQehWEEmskzfhdGSuh+kBUQaqXskCKZi0U/l9P0kvP6bD2SdsXqiYTBGQxN6a4Do1fyE2OoVYgPAAAAFQD4r+hmmsHGFfn0SV1mjGpoHpFwuwAAAIAnnoGwYiWDRAwFoPLkLYWahNwCbLAhVXOb1cnr8NxZN+uRMqEdtoZHNUbTd7ki8j5WpkZhMjFEyZQJg+MNQjUSxISlE1SoBTI8BmAUDAEvgPNyr0CDCS42rAY98JTMhaoZ8FOzgoatLmJWWgWqM+8YHCN4XHoVgm1vMagLsWxW5AAAAIBGW3tnTGis3+eWROnisRfyoo3zawOnd7oijjK7CAiIuxfqc3ESTzeLlkL0QBAIv/1PBGoZSTwg53aZqctO2/BgSNGMWDts3xnqpsEGNyo520Br/cBUyi6rRBotV1kL9tIT4VwdP33F/bjiHHRclfCmOtVYWmkst+HUSqS2yPn1WQ==
+|   2048 3a:3f:9f:59:29:c8:20:d7:3a:c5:04:aa:82:36:68:3f (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0zYWd7C1JANU5TctI7lB/tyS9Aid6x5Dh2PnD7fpz6C9Apv9Y/YJzaCUYgqME41ZDxIIiegV02OSCkKFmXvr9gVVKaFHyUVhQ9Zb3FyQeGgWEL3004HIL+G06afXPlsRzNBb5VoqUte+5bigJT5UkyncAfWn+8bWLnFmuXDi5PZ4Pz0RHx9HzCwJ5G26DogQUI6M0zQkhJHzD+nWdIExvoY1L9UN4oZzCuaUF3Tcel3dDnbgi1RaZlfFi3r5NNUtQ7OVijWnms7nYNN7b77CZZWMhE6yMYI8+3ya99CfzA/oYsHv+t8XSbRyAdm5KvETrD8yoBrE14F2FekQQNggx
+|   256 f9:2f:bb:e3:ab:95:ee:9e:78:7c:91:18:7d:95:84:ab (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAOH4ypeTzhthRbvcrzqVbbWXG1imFdejEQIo53fimAkjsOcrmEDWwT7Lskm5qyz4dmhGmfsH90xzOgQ+Bm6Nuk=
+|   256 49:0e:6f:cb:ec:6c:a5:97:67:cc:3c:31:ad:94:a4:54 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK7iJO0KhscqLrJgy+mvB3Y+5U+WpOiBAxCr4TKu7pJB
+80/tcp open  http    syn-ack nginx 1.6.2
+|_http-generator: Bolt
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Graece donan, Latine voluptatem vocant. | Erit Securus 1
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri May 14 01:48:36 2021 -- 1 IP address (1 host up) scanned in 64.05 seconds
