@@ -1,0 +1,4 @@
+Shell:      console, shell
+Bash:       bash, sh, zsh
+PowerShell: powershell, ps
+DOS:        dos, bat, cmd
