@@ -1,0 +1,22 @@
+# Nmap 7.91 scan initiated Thu Jun  3 05:06:07 2021 as: nmap -sC -sV -T4 -Pn -vv -A -oN nmap/initial 10.10.96.125
+Warning: 10.10.96.125 giving up on port because retransmission cap hit (6).
+Nmap scan report for 10.10.96.125
+Host is up, received user-set (0.24s latency).
+Scanned at 2021-06-03 05:06:08 EDT for 102s
+Not shown: 995 closed ports
+Reason: 995 conn-refused
+PORT     STATE    SERVICE     REASON      VERSION
+512/tcp  filtered exec        no-response
+1521/tcp filtered oracle      no-response
+4449/tcp filtered privatewire no-response
+8009/tcp open     ajp13       syn-ack     Apache Jserv (Protocol v1.3)
+| ajp-methods: 
+|_  Supported methods: GET HEAD POST OPTIONS
+8080/tcp open     http        syn-ack     Apache Tomcat 9.0.30
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Apache Tomcat/9.0.30
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Jun  3 05:07:50 2021 -- 1 IP address (1 host up) scanned in 102.50 seconds
