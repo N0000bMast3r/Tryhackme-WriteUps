@@ -1,0 +1,36 @@
+# Nmap 7.91 scan initiated Sun Apr  4 01:32:33 2021 as: nmap -sC -sV -T4 -Pn -p- -vvv -O -oN nmap/initial 10.10.8.41
+Nmap scan report for 10.10.8.41
+Host is up, received user-set (0.20s latency).
+Scanned at 2021-04-04 01:32:35 EDT for 401s
+Not shown: 65534 filtered ports
+Reason: 65534 no-responses
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 63 nginx 1.14.0 (Ubuntu)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: not allowed
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+Aggressive OS guesses: Crestron XPanel control system (90%), ASUS RT-N56U WAP (Linux 3.4) (87%), Linux 3.1 (87%), Linux 3.16 (87%), Linux 3.2 (87%), HP P2000 G3 NAS device (87%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (87%), Linux 2.6.32 (86%), Infomir MAG-250 set-top box (86%), Ubiquiti AirMax NanoStation WAP (Linux 2.6.32) (86%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.91%E=4%D=4/4%OT=80%CT=%CU=%PV=Y%G=N%TM=60695104%P=x86_64-pc-linux-gnu)
+SEQ(SP=100%GCD=1%ISR=10D%TI=Z%II=I%TS=A)
+OPS(O1=M505ST11NW6%O2=M505ST11NW6%O3=M505NNT11NW6%O4=M505ST11NW6%O5=M505ST11NW6%O6=M505ST11)
+WIN(W1=F4B3%W2=F4B3%W3=F4B3%W4=F4B3%W5=F4B3%W6=F4B3)
+ECN(R=Y%DF=Y%TG=40%W=F507%O=M505NNSNW6%CC=Y%Q=)
+T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=Y%DF=Y%TG=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)
+U1(R=N)
+IE(R=Y%DFI=N%TG=40%CD=S)
+
+Uptime guess: 30.647 days (since Thu Mar  4 09:07:54 2021)
+TCP Sequence Prediction: Difficulty=256 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Apr  4 01:39:16 2021 -- 1 IP address (1 host up) scanned in 403.32 seconds
