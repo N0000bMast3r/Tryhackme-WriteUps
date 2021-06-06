@@ -1,0 +1,19 @@
+# Nmap 7.91 scan initiated Sat Jun  5 02:53:32 2021 as: nmap -sC -sV -T4 -A -p22 -vv -Pn -oN nmap/initial 10.10.166.33
+Nmap scan report for 10.10.166.33
+Host is up, received user-set (0.28s latency).
+Scanned at 2021-06-05 02:53:32 EDT for 8s
+
+PORT   STATE SERVICE REASON  VERSION
+22/tcp open  ssh     syn-ack OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 fe:e7:f2:f6:74:65:a6:dd:f2:94:cd:45:fd:f3:2b:2a (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDHVsUg1GJYLWn/T/EkTfAMV4tdmLEiJvPP4cCCbx7hFt3ma0FAQpMMAoXFP12+hePBYXwJfMv1epkGg0+ur9VZRSfudeSjfR+pVuPE+LjuKU8v02Fo3Wi9xkV2rOuqGkXz09xxI34OwWka/JXFYe/MEXNWCMlSYtWUx+kiOQLG83x7t9rPxXuJ4KBsCnFRm2tEgoW0M3L/PX/97bLRu/A2clOnmyPsL1kwU4MBN3UZkQJCptM+EkqQqo8NMOlw3Sa6JnpGImHdSMBrGUoFo6yL+3i+KMR3foIVbW8WtTY+EKfaDt0e5MAhT1YLgZHdkR58Dh0kPoVRk59iw2divYll
+|   256 34:a3:16:aa:b3:1f:83:ac:91:a3:31:b4:45:94:3c:c9 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJf9gbS/xBNED4k9vQscQ6Xi4VMzkK2MuFW0YJs5OQ854rlmaELtcwjEIZ9o+2SOVXwx8vH101rlIFQC0pISFP0=
+|   256 75:23:c0:66:c7:2c:6e:12:0a:f7:04:61:2b:c6:12:62 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ7ai11Zz/i/bAw8SQG0aBJfcYjdIiQQiAXhV8/9b3km
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Jun  5 02:53:40 2021 -- 1 IP address (1 host up) scanned in 8.18 seconds
