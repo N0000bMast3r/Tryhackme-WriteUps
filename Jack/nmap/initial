@@ -1,0 +1,49 @@
+# Nmap 7.91 scan initiated Wed May 12 02:07:48 2021 as: nmap -sC -sV -T4 -Pn -A -vvv -oN nmap/initial 10.10.28.89
+Warning: 10.10.28.89 giving up on port because retransmission cap hit (6).
+Nmap scan report for jack.thm (10.10.28.89)
+Host is up, received user-set (0.31s latency).
+Scanned at 2021-05-12 02:07:49 EDT for 83s
+Not shown: 979 closed ports
+Reason: 979 conn-refused
+PORT      STATE    SERVICE        REASON      VERSION
+22/tcp    open     ssh            syn-ack     OpenSSH 7.2p2 Ubuntu 4ubuntu2.7 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 3e:79:78:08:93:31:d0:83:7f:e2:bc:b6:14:bf:5d:9b (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDgHGMuutSoQktLWJfDa8F4+zCvINuPv8+mL2sHPJmSfFDaQ3jlsxitYWH7FWdj3zPzXLW01aY+AySXW593T3XZpzCSAjm3ImnPtNTaQsbsdkgmhj8eZ3q9hPxU5UD5593K+/FDdIiN5xIBLegm6y0SAd3sRtpdrcpHpkqOIZvoCyJTV7ncbRY0gppvfTEObo2PiCtzh31gbaDPrJICPnDuuF5aWAUTeUMc0YcMYaB9cCvfVT6Y1Cdfh4IwMHslafXRhRt5tn5l47xR0xwd3cddUEez/CHxiNthNTgv+BSo+TPPciPAiCN3QGSqTcPQ74RvFiAznL2irkENq+Qws2A3
+|   256 3a:67:9f:af:7e:66:fa:e3:f8:c7:54:49:63:38:a2:93 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLzJknVQsubSrZMKNLlNAP1HXXuXzhtAf24ScY17eIS03NfxjFwiSESz8xKwVcmbODQGc+b9PvepngTTGlVrMf4=
+|   256 8c:ef:55:b0:23:73:2c:14:09:45:22:ac:84:cb:40:d2 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG/WxvJRsI0dvT84mxR/y3AH3C8KP/1Njv4wP6DylZeQ
+80/tcp    open     http           syn-ack     Apache httpd 2.4.18 ((Ubuntu))
+|_http-favicon: Unknown favicon MD5: D41D8CD98F00B204E9800998ECF8427E
+|_http-generator: WordPress 5.3.2
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+| http-robots.txt: 1 disallowed entry 
+|_/wp-admin/
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: Jack&#039;s Personal Site &#8211; Blog for Jacks writing adven...
+264/tcp   filtered bgmp           no-response
+1011/tcp  filtered unknown        no-response
+1037/tcp  filtered ams            no-response
+1045/tcp  filtered fpitp          no-response
+1132/tcp  filtered kvm-via-ip     no-response
+1277/tcp  filtered miva-mqs       no-response
+1999/tcp  filtered tcp-id-port    no-response
+2179/tcp  filtered vmrdp          no-response
+3077/tcp  filtered orbix-loc-ssl  no-response
+3551/tcp  filtered apcupsd        no-response
+4006/tcp  filtered pxc-spvr       no-response
+5200/tcp  filtered targus-getdata no-response
+5822/tcp  filtered unknown        no-response
+6004/tcp  filtered X11:4          no-response
+7007/tcp  filtered afs3-bos       no-response
+8873/tcp  filtered dxspider       no-response
+9943/tcp  filtered unknown        no-response
+11111/tcp filtered vce            no-response
+14441/tcp filtered unknown        no-response
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed May 12 02:09:12 2021 -- 1 IP address (1 host up) scanned in 83.93 seconds
