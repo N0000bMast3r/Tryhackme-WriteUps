@@ -1,0 +1,128 @@
+# Nmap 7.91 scan initiated Wed Jun 30 02:16:27 2021 as: nmap -sC -sV -T4 -Pn -A -p22,3000,4444 -vv -oN nmap/inital envizon.thm
+Warning: Hit PCRE_ERROR_MATCHLIMIT when probing for service http with the regex '^HTTP/1\.0 404 Not Found\r\n(?:[^<]+|<(?!/head>))*?<style>\nbody \{ background-color: #fcfcfc; color: #333333; margin: 0; padding:0; \}\nh1 \{ font-size: 1\.5em; font-weight: normal; background-color: #9999cc; min-height:2em; line-height:2em; border-bottom: 1px inset black; margin: 0; \}\nh1, p \{ padding-left: 10px; \}\ncode\.url \{ background-color: #eeeeee; font-family:monospace; padding:0 2px;\}\n</style>'
+Warning: Hit PCRE_ERROR_MATCHLIMIT when probing for service http with the regex '^HTTP/1\.0 404 Not Found\r\n(?:[^<]+|<(?!/head>))*?<style>\nbody \{ background-color: #ffffff; color: #000000; \}\nh1 \{ font-family: sans-serif; font-size: 150%; background-color: #9999cc; font-weight: bold; color: #000000; margin-top: 0;\}\n</style>'
+Nmap scan report for envizon.thm (10.10.148.190)
+Host is up, received user-set (0.17s latency).
+Scanned at 2021-06-30 02:16:28 EDT for 126s
+
+PORT     STATE  SERVICE  REASON       VERSION
+22/tcp   open   ssh      syn-ack      OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 cb:98:15:ed:13:41:b4:d5:53:72:53:54:c7:56:e6:6a (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDNSZjRB9DbErY2cE90THiV1aUQQSrasvfpCkkqAOI+pmrG+tNh2tCbMwhCg50s89GyIbsL0S0YSI3Ep1ayR5MUxVCKb9vrCBzyGgo42pM5kXpGcQToKbwlFTTenQywsBE+oGiITr/JTnG5U7HNvumabq4H2+HWJzsyW3A/MK0xahCkeb2M95xjpuW6PfgTsT+JUqK+kZcXu675fgRiMZvCoA14crRcRLAhXBYFs4SgKmCREPmWhTNkP/WZrUCZ3aH9eEwL8BWshU55ZzLZkJ7w0uzc5xQ16WgH3NH/Y9f8tDai2x8xk8ed95+aQDCHQHFvqg89B3ScmuZEyiK6Ht+N
+|   256 c8:f2:71:60:0d:aa:f9:a0:d1:01:e5:61:30:97:ba:f7 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFnt3W3qmVzwO7X/II/iTHJhDQif0ErqqtQBbYzgm/zC0TjothESUCQ1bv8jwMgFShmpjP38AHcMOrZO3msMDHw=
+|   256 11:23:45:6f:40:7a:9c:e4:d4:f1:05:ac:45:d5:ff:1a (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINa2b7qBu6Rj+ki3Z2gHqTrEGhFhodRP83M3HtBgEwWH
+3000/tcp open   ssl/ppp? syn-ack
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, GenericLines, RPCCheck, RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|   GetRequest: 
+|     HTTP/1.0 301 Moved Permanently
+|     Location: https://localhost/scans
+|     Content-Type: text/html
+|     Cache-Control: no-cache
+|     X-Request-Id: 1d2a113f-6cb0-4c63-b5e9-bd8716f163e6
+|     X-Runtime: 0.002603
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     Content-Length: 89
+|     <html><body>You are being <a href="https://localhost/scans">redirected</a>.</body></html>
+|   HTTPOptions: 
+|     HTTP/1.0 404 Not Found
+|     Content-Type: text/html; charset=UTF-8
+|     X-Request-Id: 3b113d2f-059b-48b2-84c1-16ef3129f3db
+|     X-Runtime: 0.001884
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     Content-Length: 1722
+|     <!DOCTYPE html>
+|     <html>
+|     <head>
+|     <title>The page you were looking for doesn't exist (404)</title>
+|     <meta name="viewport" content="width=device-width,initial-scale=1">
+|     <style>
+|     .rails-default-error-page {
+|     background-color: #EFEFEF;
+|     color: #2E2F30;
+|     text-align: center;
+|     font-family: arial, sans-serif;
+|     margin: 0;
+|     .rails-default-error-page div.dialog {
+|     width: 95%;
+|     max-width: 33em;
+|     margin: 4em auto 0;
+|     .rails-default-error-page div.dialog > div {
+|     border: 1px solid #CCC;
+|     border-right-color: #999;
+|     border-left-color: #999;
+|     border-bottom-color: #BBB;
+|     border-top: #B00100 solid 4px;
+|_    border-top-left-radius: 9p
+| ssl-cert: Subject: commonName=None/organizationName=evait/stateOrProvinceName=None/countryName=DE/localityName=None
+| Issuer: commonName=None/organizationName=evait/stateOrProvinceName=None/countryName=DE/localityName=None
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2020-09-30T22:19:49
+| Not valid after:  2021-09-30T22:19:49
+| MD5:   f3aa a5e4 a3c9 24e1 4700 b564 0d39 2b1b
+| SHA-1: 4f07 f8c2 c327 b625 65a1 cad2 2c86 e1b8 224e d686
+| -----BEGIN CERTIFICATE-----
+| MIIDdTCCAl2gAwIBAgIUD5+FYSbG/iTo/QegTwsxTUKt5BIwDQYJKoZIhvcNAQEL
+| BQAwSjELMAkGA1UEBhMCREUxDTALBgNVBAgMBE5vbmUxDTALBgNVBAcMBE5vbmUx
+| DjAMBgNVBAoMBWV2YWl0MQ0wCwYDVQQDDAROb25lMB4XDTIwMDkzMDIyMTk0OVoX
+| DTIxMDkzMDIyMTk0OVowSjELMAkGA1UEBhMCREUxDTALBgNVBAgMBE5vbmUxDTAL
+| BgNVBAcMBE5vbmUxDjAMBgNVBAoMBWV2YWl0MQ0wCwYDVQQDDAROb25lMIIBIjAN
+| BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzcskaeeLPWFqEPjaDCM4bJ5uQG6V
+| vIlzRi18HRpjGo8naQSnR644RvX18yEH+uXke5Z6UFJCGG4amNYVIdusrUhgbKAQ
+| cm4egLcyHhS2CG/xrHOu1GDOQpf4N6NwoUlDs+FHFtGLA5BLDwC4iZgqXnhrxQn+
+| SJSLHbN3tEt/Eywi66Rfp80jtvt6dW2GCHuUtXZwWF9xHRgAi7IiHHh/GrxdV2GW
+| EtypkFSWr8bDf/LAd18Jg+gbwm8DKNtUsOjwlGXnd/4IJ2L1fzIQg8GB34MFQ9Fd
+| 59j99EH9yK+m7bQGxTOcKBYA2SBdz9juY9GejlPlzjz+QKZXlX7Mmk8AiQIDAQAB
+| o1MwUTAdBgNVHQ4EFgQU24iLObyonj+NMeVD5KL3CQzDpYIwHwYDVR0jBBgwFoAU
+| 24iLObyonj+NMeVD5KL3CQzDpYIwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0B
+| AQsFAAOCAQEAt5lHaJeYRAeDDVPa+gZlSkMYcnC2Y481nHHVtKD1F4n0JmclQQ1V
+| VFBT65t1sEKFs2wDqNoCNbmQjbKBwo7neK3IimoGRme+VpjAcd9bxpVhEEhwkOS7
+| rbKc5OWhYilyOs/Y3a+hvl7tm8dfQzEXHKBaBK6UGJY90ghrz9uSntLEjToWJWfY
+| D2c1rGRoXmJ/OZikaHfiXVXemKeH06caPs1RzRKqPWHE+vcnijxEYXD+/omuiQxw
+| ZtkqRVuijIuIdB2Mh18blyV3UFBwBsDgycSenZNdG3SbRQdyzi0xEEcRtqBJdPFw
+| h3Xv62aPKjLsWVCXlEgDN0MLQP46xg1hEw==
+|_-----END CERTIFICATE-----
+|_ssl-date: TLS randomness does not represent time
+4444/tcp closed krb524   conn-refused
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port3000-TCP:V=7.91%T=SSL%I=7%D=6/30%Time=60DC0C82%P=x86_64-pc-linux-gn
+SF:u%r(GenericLines,1C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n")%r(Get
+SF:Request,16D,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\x20h
+SF:ttps://localhost/scans\r\nContent-Type:\x20text/html\r\nCache-Control:\
+SF:x20no-cache\r\nX-Request-Id:\x201d2a113f-6cb0-4c63-b5e9-bd8716f163e6\r\
+SF:nX-Runtime:\x200\.002603\r\nStrict-Transport-Security:\x20max-age=31536
+SF:000;\x20includeSubDomains\r\nContent-Length:\x2089\r\n\r\n<html><body>Y
+SF:ou\x20are\x20being\x20<a\x20href=\"https://localhost/scans\">redirected
+SF:</a>\.</body></html>")%r(HTTPOptions,79B,"HTTP/1\.0\x20404\x20Not\x20Fo
+SF:und\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nX-Request-Id:\x2
+SF:03b113d2f-059b-48b2-84c1-16ef3129f3db\r\nX-Runtime:\x200\.001884\r\nStr
+SF:ict-Transport-Security:\x20max-age=31536000;\x20includeSubDomains\r\nCo
+SF:ntent-Length:\x201722\r\n\r\n<!DOCTYPE\x20html>\n<html>\n<head>\n\x20\x
+SF:20<title>The\x20page\x20you\x20were\x20looking\x20for\x20doesn't\x20exi
+SF:st\x20\(404\)</title>\n\x20\x20<meta\x20name=\"viewport\"\x20content=\"
+SF:width=device-width,initial-scale=1\">\n\x20\x20<style>\n\x20\x20\.rails
+SF:-default-error-page\x20{\n\x20\x20\x20\x20background-color:\x20#EFEFEF;
+SF:\n\x20\x20\x20\x20color:\x20#2E2F30;\n\x20\x20\x20\x20text-align:\x20ce
+SF:nter;\n\x20\x20\x20\x20font-family:\x20arial,\x20sans-serif;\n\x20\x20\
+SF:x20\x20margin:\x200;\n\x20\x20}\n\n\x20\x20\.rails-default-error-page\x
+SF:20div\.dialog\x20{\n\x20\x20\x20\x20width:\x2095%;\n\x20\x20\x20\x20max
+SF:-width:\x2033em;\n\x20\x20\x20\x20margin:\x204em\x20auto\x200;\n\x20\x2
+SF:0}\n\n\x20\x20\.rails-default-error-page\x20div\.dialog\x20>\x20div\x20
+SF:{\n\x20\x20\x20\x20border:\x201px\x20solid\x20#CCC;\n\x20\x20\x20\x20bo
+SF:rder-right-color:\x20#999;\n\x20\x20\x20\x20border-left-color:\x20#999;
+SF:\n\x20\x20\x20\x20border-bottom-color:\x20#BBB;\n\x20\x20\x20\x20border
+SF:-top:\x20#B00100\x20solid\x204px;\n\x20\x20\x20\x20border-top-left-radi
+SF:us:\x209p")%r(RTSPRequest,1C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\
+SF:n")%r(RPCCheck,1C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n")%r(DNSVe
+SF:rsionBindReqTCP,1C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n");
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jun 30 02:18:34 2021 -- 1 IP address (1 host up) scanned in 127.15 seconds
