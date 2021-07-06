@@ -1,0 +1,12 @@
+hashcat (v6.1.1) starting...
+
+OpenCL API (OpenCL 1.2 pocl 1.6, None+Asserts, LLVM 9.0.1, RELOC, SLEEF, DISTRO, POCL_DEBUG) - Platform #1 [The pocl project]
+=============================================================================================================================
+* Device #1: pthread-Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz, 8689/8753 MB (4096 MB allocatable), 5MCU
+
+Minimum password length supported by kernel: 0
+Maximum password length supported by kernel: 256
+
+[33mHash '–stdout': Token length exception[0m
+Started: Sat Jun 26 01:58:21 2021
+[2KStopped: Sat Jun 26 01:58:22 2021
