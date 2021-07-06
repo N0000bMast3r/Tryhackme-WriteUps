@@ -1,0 +1,8 @@
+/media                (Status: 301) [Size: 336] [--> http://deliver.undiscovered.thm/media/]
+/templates            (Status: 301) [Size: 340] [--> http://deliver.undiscovered.thm/templates/]
+/files                (Status: 301) [Size: 336] [--> http://deliver.undiscovered.thm/files/]
+/data                 (Status: 301) [Size: 335] [--> http://deliver.undiscovered.thm/data/]
+/cms                  (Status: 301) [Size: 334] [--> http://deliver.undiscovered.thm/cms/]
+/js                   (Status: 301) [Size: 333] [--> http://deliver.undiscovered.thm/js/]
+/LICENSE              (Status: 200) [Size: 32472]
+/server-status        (Status: 403) [Size: 289]
