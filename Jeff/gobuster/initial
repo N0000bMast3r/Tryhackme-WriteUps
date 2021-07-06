@@ -1,0 +1,7 @@
+/admin                (Status: 301) [Size: 178] [--> http://jeff.thm/admin/]
+/assets               (Status: 301) [Size: 178] [--> http://jeff.thm/assets/]
+/backups              (Status: 301) [Size: 178] [--> http://jeff.thm/backups/]
+/uploads			  (Status: 200) [Size: 1178][--> http://jeff.thm/uploads/]
+/index.html           (Status: 200) [Size: 1178]
+/index.html           (Status: 200) [Size: 1178]
+/source_codes  		  (Status: 301) [Size: 178] [--> http://jeff.thm/source_codes/]
