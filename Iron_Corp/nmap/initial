@@ -1,0 +1,67 @@
+# Nmap 7.91 scan initiated Thu Jul  1 05:40:50 2021 as: nmap -sC -sV -A -Pn -p53,135,8080,3389,11025,49667,49670 -vv -oN nmap/initial ironcorp.me
+Nmap scan report for ironcorp.me (10.10.71.28)
+Host is up, received user-set (0.18s latency).
+Scanned at 2021-07-01 05:40:50 EDT for 68s
+
+PORT      STATE SERVICE       REASON  VERSION
+53/tcp    open  domain        syn-ack Simple DNS Plus
+135/tcp   open  msrpc         syn-ack Microsoft Windows RPC
+3389/tcp  open  ms-wbt-server syn-ack Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: WIN-8VMBKF3G815
+|   NetBIOS_Domain_Name: WIN-8VMBKF3G815
+|   NetBIOS_Computer_Name: WIN-8VMBKF3G815
+|   DNS_Domain_Name: WIN-8VMBKF3G815
+|   DNS_Computer_Name: WIN-8VMBKF3G815
+|   Product_Version: 10.0.14393
+|_  System_Time: 2021-07-01T09:41:48+00:00
+| ssl-cert: Subject: commonName=WIN-8VMBKF3G815
+| Issuer: commonName=WIN-8VMBKF3G815
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2021-06-30T09:32:40
+| Not valid after:  2021-12-30T09:32:40
+| MD5:   89db 3444 929d 1acd 1fbc 1ab2 e54d 54f8
+| SHA-1: 4074 3c52 0541 0c09 3bed 67b3 ed4b 6b9e e3b7 f486
+| -----BEGIN CERTIFICATE-----
+| MIIC4jCCAcqgAwIBAgIQcXDH36lPI6RJG7c+n7vhcDANBgkqhkiG9w0BAQsFADAa
+| MRgwFgYDVQQDEw9XSU4tOFZNQktGM0c4MTUwHhcNMjEwNjMwMDkzMjQwWhcNMjEx
+| MjMwMDkzMjQwWjAaMRgwFgYDVQQDEw9XSU4tOFZNQktGM0c4MTUwggEiMA0GCSqG
+| SIb3DQEBAQUAA4IBDwAwggEKAoIBAQC5ppTrElwB8mT1TjfGjMzTinoGBHPyKWM3
+| h5Z9VCZocjQYA568tqyowNxGvEQvxJl6j+wylde801ws4slcIvAv+1AEtAduOYQg
+| q9yHT5BB0sJyHHqYH6+dIyLN/JqFqzaMLeV5NIbAV6PQpl7aInbCWUFW6cy2wF3T
+| 8Wp8Rx/4nWhzPOsmXuBmBXDWM0sSLuIL84UNDtIWpCDmZVUDL5kdO3N0N/0G1A/6
+| LoUTqqPxTyKrloOCsPyQuoKH9DBwzAdzIbS3sgzEMFtgKbi3ljsNjNdecqj/zVo8
+| V0LXzXs2bfvj1hZvo/wFmqT+zV7CiZPTFW+vTQ07xJrlx3xGHtqZAgMBAAGjJDAi
+| MBMGA1UdJQQMMAoGCCsGAQUFBwMBMAsGA1UdDwQEAwIEMDANBgkqhkiG9w0BAQsF
+| AAOCAQEAfywFmqDeT/VRevGCgdCjfiOOkgY2R/9Y+84D+D+4Yph4j639ytKaPjuD
+| wqdTEqq22N1Pc3LlyKulA4R5+Kt+ulYC5LGSmYi9FgqxIYZLlYUtfkZtXqbW/YMq
+| 4dK+P/IGES2zRZ0XcP00c/QVzSOOqkosMubeZ0XfDzrhJIIzO1D8F5BUJ62PxQWc
+| M8zObbnJ+mR26wyAsUD+ETVHJtWUKD6lp2T509DXdqHU1/yFKypoZL4VFLTLz3v6
+| mXFpQZMvMg0LNHjPNQ3/GcxN9+GP3mSIhHL6NSXWhfqaB3tyihIfNgb78qPriGmg
+| LT5+3unVj3Die1cVKTOID+xk3JUBCg==
+|_-----END CERTIFICATE-----
+|_ssl-date: 2021-07-01T09:41:57+00:00; 0s from scanner time.
+8080/tcp  open  http          syn-ack Microsoft IIS httpd 10.0
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/10.0
+|_http-title: Dashtreme Admin - Free Dashboard for Bootstrap 4 by Codervent
+11025/tcp open  http          syn-ack Apache httpd 2.4.41 ((Win64) OpenSSL/1.1.1c PHP/7.4.4)
+| http-methods: 
+|   Supported Methods: HEAD GET POST OPTIONS TRACE
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.4.4
+|_http-title: Coming Soon - Start Bootstrap Theme
+49667/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49670/tcp open  msrpc         syn-ack Microsoft Windows RPC
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 0s, deviation: 0s, median: -1s
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Jul  1 05:41:58 2021 -- 1 IP address (1 host up) scanned in 68.29 seconds
